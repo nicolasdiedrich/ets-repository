@@ -627,7 +627,7 @@ let $messages :=
 	 return
 	 if (not($hierarchyLevelName)) then
 		local:addMessage('TR.noHierarchyLevelName', map { 'filename': local:filename($record), 'id': $rid })
-	 else if (string-length(normalize-space($hierarchyLevelName/text())) = 0) then
+	 else if (string-length(normalize-space($hierarchyLevelName)) = 0) then
 		local:addMessage('TR.emptyHierarchyLevelName', map { 'filename': local:filename($record), 'id': $rid })
 	 else ()
 	)[position() le $limitErrors]

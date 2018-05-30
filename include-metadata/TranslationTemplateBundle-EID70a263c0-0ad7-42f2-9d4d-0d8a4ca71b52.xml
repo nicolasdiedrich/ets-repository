@@ -404,7 +404,7 @@
 	  </LangTranslationTemplateCollection>
 	  <LangTranslationTemplateCollection name="TR.noHierarchyLevelName">
 	  <translationTemplates>
-	   <TranslationTemplate language="en" name="TR.noHierarchyLevelName">XML document '{filename}', record '{id}': Every metadata record must have an abstract, but this record does not have an 'HierarchyLevelName' property.</TranslationTemplate>
+	   <TranslationTemplate language="en" name="TR.noHierarchyLevelName">XML document '{filename}', record '{id}': Every metadata record must have an HierarchyLevelName, but this record does not have an 'HierarchyLevelName' property.</TranslationTemplate>
 	  </translationTemplates>
 	 </LangTranslationTemplateCollection>
 	  <LangTranslationTemplateCollection name="TR.emptyHierarchyLevelName">
