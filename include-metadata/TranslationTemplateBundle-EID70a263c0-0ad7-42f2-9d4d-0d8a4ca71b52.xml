@@ -402,6 +402,16 @@
 			<TranslationTemplate language="en" name="TR.hierarchyLevel">XML document '{filename}', record '{id}': The metadata record either has no hierarchy level or a level that is not one of the approved values: 'dataset', 'series' or 'service'. Values found: {hierarchyLevels}.</TranslationTemplate>
 		 </translationTemplates>
 	  </LangTranslationTemplateCollection>
+	  <LangTranslationTemplateCollection name="TR.noHierarchyLevelName">
+	  <translationTemplates>
+	   <TranslationTemplate language="en" name="TR.noHierarchyLevelName">XML document '{filename}', record '{id}': Every metadata record must have an abstract, but this record does not have an 'HierarchyLevelName' property.</TranslationTemplate>
+	  </translationTemplates>
+	 </LangTranslationTemplateCollection>
+	  <LangTranslationTemplateCollection name="TR.emptyHierarchyLevelName">
+	  <translationTemplates>
+	   <TranslationTemplate language="en" name="TR.emptyHierarchyLevelName">XML document '{filename}', record '{id}': Every metadata record must have an HierarchyLevelName. This record has an 'HierarchyLevelName' property, but it is empty.</TranslationTemplate>
+	  </translationTemplates>
+	 </LangTranslationTemplateCollection>
 	 <LangTranslationTemplateCollection name="TR.operatesOnWithoutXlink">
 	  <translationTemplates>
 	   <TranslationTemplate language="en" name="TR.operatesOnWithoutXlink">XML document '{filename}', record '{id}': The service metadata record has an 'operatesOn' property, but it does not have an xlink:href attribute.</TranslationTemplate>
