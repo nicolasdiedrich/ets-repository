@@ -612,6 +612,8 @@ return
 										<translationTemplate ref="TR.hierarchyLevel"/>
 									</translationTemplates>
 								</TestAssertion>
+								
+								<!-- this testAssertion does not exactly work as expected so far, it says that there is no hierarchyLevelElement, even though there is one bvut it is just empty (which should produce an empty error message)
 								<TestAssertion id="EIDcacf6ca7-b5df-49e3-8577-dbc76cd6d72b">
 									<label>md-iso.b.we: HierarchyLevelName</label>
 									<description><![CDATA[<p>wetransform-owned test: This test checks that a hierarchyLevelName is provided.</p>
@@ -642,7 +644,7 @@ return
 										<translationTemplate ref="TR.noHierarchyLevelName"/>
 										<translationTemplate ref="TR.emptyHierarchyLevelName"/>
 									</translationTemplates>
-								</TestAssertion>
+								</TestAssertion>-->
 							</testAssertions>
 						</TestStep>
 					</testSteps>
