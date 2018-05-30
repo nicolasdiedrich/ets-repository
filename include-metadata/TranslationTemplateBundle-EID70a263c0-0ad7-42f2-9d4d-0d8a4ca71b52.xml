@@ -652,6 +652,16 @@
 	   <TranslationTemplate language="en" name="TR.invalidMetadataLanguageCode">XML document '{filename}', record '{id}': A metadata record must have one gmd:language as direct child. The value must be a gmd:LanguageCode, with  a valid 3-letter language code (one of the values of enumeration type languageISO6392B in http://inspire.ec.europa.eu/schemas/common/1.0/common.xsd) in the XML attribute 'codeListValue'. The metadata record has such a gmd:language element, but the code value is not one of the allowed values. Found: '{invalidCode}'.</TranslationTemplate>
 	  </translationTemplates>
 	 </LangTranslationTemplateCollection>	
+	 <LangTranslationTemplateCollection name="TR.noCharacterSetCode">
+	  <translationTemplates>
+	   <TranslationTemplate language="en" name="TR.noCharacterSetCode">XML document '{filename}', record '{id}': A metadata record must have one gmd:CharacterSet property with a gmd:MD_CharacterSetCode value. The metadata record does not fulfill this requirement.</TranslationTemplate>
+	  </translationTemplates>
+	 </LangTranslationTemplateCollection>	 
+	 <LangTranslationTemplateCollection name="TR.invalidCharacterSetCode">
+	  <translationTemplates>
+	   <TranslationTemplate language="en" name="TR.invalidCharacterSetCode">XML document '{filename}', record '{id}': A metadata record must have one gmd:characterSet as direct child. The value must be a gmd:MD_CharacterSetCode, with one of the values 'utf8' or '8859part1'. The metadata record has such a gmd:characterSet element, but the code value is not one of the allowed values. Found: '{invalidCode}'.</TranslationTemplate>
+	  </translationTemplates>
+	 </LangTranslationTemplateCollection>	
 	 <LangTranslationTemplateCollection name="TR.wrongNumberOfLineageStatements">
 	  <translationTemplates>
 	   <TranslationTemplate language="en" name="TR.wrongNumberOfLineageStatements">XML document '{filename}', record '{id}': A dataset (series) metadata record must have exactly one data quality info with a lineage statement. The metadata record has {count} lineage statements.</TranslationTemplate>

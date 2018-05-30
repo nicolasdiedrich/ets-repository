@@ -338,12 +338,12 @@ let $messages :=
 	 let $metadataCharacterSet := $record/gmd:characterSet/gmd:MD_CharacterSetCode/@codeListValue
 	 return
 	 if (not($metadataCharacterSet)) then
-		local:addMessage('TR.noMetadataLanguageCode',  map { 'filename': local:filename($record), 'id': $rid })
+		local:addMessage('TR.noCharacterSetCode',  map { 'filename': local:filename($record), 'id': $rid })
 	 else 
 		let $wrongCodeValue := not($metadataCharacterSet = $codes)
 		return
 		if ($wrongCodeValue) then
-			local:addMessage('TR.invalidMetadataLanguageCode',  map { 'filename': local:filename($record), 'id': $rid, 'invalidCode' : data($metadataCharacterSet) })
+			local:addMessage('TR.invalidCharacterSetCode',  map { 'filename': local:filename($record), 'id': $rid, 'invalidCode' : data($metadataCharacterSet) })
 		else ()     
 	)[position() le $limitErrors] 
 return
