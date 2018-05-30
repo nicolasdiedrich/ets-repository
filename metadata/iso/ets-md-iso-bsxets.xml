@@ -283,7 +283,45 @@ return
 									</translationTemplates>
 								</TestAssertion>
 								<TestAssertion id="EID22ba60c4-0d3a-44a1-a0b1-db2d7c75836c">
-									<label>md-iso.a.6: characterSet</label>
+									<label>md-iso.a.6: Language</label>
+									<description><![CDATA[<p>The test checks that a gmd:LanguageCode object is given at gmd:language and contains a codeListValue attribute. It is then checked if the codeListValue attribute contains a valid 3-letter language code according to ISO 639-2/B of one of the official languages.</br></br>
+Relevant requirement(s):</p>
+<ul>
+<li>TG MD Requirement 39: The language property is not mandated by ISO 19115, but is mandated for conformance to the INSPIRE Metadata Regulation 1205/2008/EC.</li>
+</ul>
+<p>Source: <a href="http://inspire.ec.europa.eu/id/ats/metadata/1.3/iso-19115-19119/language" target="_blank">Abstract Test Case 'Language'</a></p>]]></description>
+									<parent ref="EID95a1a8a8-3132-453f-921a-c0334781e8bb"/>
+									<expectedResult>NOT_APPLICABLE</expectedResult>
+									<expression>
+let $codes := ('bul','hrv','cze','dan','dut','eng','est','fin','fre','ger','gre','hun','gle','ita','lav','lit','mlt','pol','por','rum','slo','slv','spa','swe')
+let $messages :=    
+	(for $record in $records    
+	 let $rid := $record/gmd:fileIdentifier/*/text()
+	 let $metadataLanguageCode := $record/gmd:language/gmd:LanguageCode/@codeListValue
+	 return
+	 if (not($metadataLanguageCode)) then
+		local:addMessage('TR.noMetadataLanguageCode',  map { 'filename': local:filename($record), 'id': $rid })
+	 else 
+		let $wrongCodeValue := not($metadataLanguageCode = $codes)
+		return
+		if ($wrongCodeValue) then
+			local:addMessage('TR.invalidMetadataLanguageCode',  map { 'filename': local:filename($record), 'id': $rid, 'invalidCode' : data($metadataLanguageCode) })
+		else ()     
+	)[position() le $limitErrors] 
+return
+(if ($messages) then 'FAILED' else 'PASSED',
+ local:error-statistics('TR.recordsWithErrors', count(fn:distinct-values($messages//etf:argument[@token='id']/text()))),
+ $messages)
+							  </expression>
+									<testItemType ref="EIDf0edc596-49d2-48d6-a1a1-1ac581dcde0a"/>
+									<translationTemplates>
+										<translationTemplate ref="TR.noMetadataLanguageCode"/>
+										<translationTemplate ref="TR.invalidMetadataLanguageCode"/>
+										<translationTemplate ref="TR.recordsWithErrors"/>
+									</translationTemplates>
+								</TestAssertion>
+								<TestAssertion id="EID22ba60c4-0d3a-44a1-a0b1-db2d7c75836d">
+									<label>md-iso.a.we: newTest</label>
 									<description><![CDATA[<p>The test checks that a gmd:LanguageCode object is given at gmd:language and contains a codeListValue attribute. It is then checked if the codeListValue attribute contains a valid 3-letter language code according to ISO 639-2/B of one of the official languages.</br></br>
 Relevant requirement(s):</p>
 <ul>
