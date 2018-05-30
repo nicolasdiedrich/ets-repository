@@ -616,19 +616,18 @@ return
 									<label>md-iso.b.we: HierarchyLevelName</label>
 									<description><![CDATA[<p>wetransform-owned test: This test checks that a hierarchyLevelName is provided as long as the hierarchyLevel is not "dataset".</p>
 <p>Relevant requirements:</p>
-<p>verpflichtend aus ISO 19115, wenn Hierarchiebene nicht "Geodatensatz" ist</p>]]></description>
+<p>verpflichtend aus ISO 19115, wenn Hierarchiebene nicht "Geodatensatz" ist - theoretisch bedingt, derzeit wird für jeden getesteten Metadatensatz gleichermaßen abgeprüft, ob ein hierarchyLevelName enthalten ist und dass dieser nicht leer ist.</p>]]></description>
 									<parent ref="EID9827676c-e48f-4241-b37c-3a15393c6324"/>
 									<expectedResult>NOT_APPLICABLE</expectedResult>
 									<expression>						
 let $messages := 
 	(for $record in $records
-	 let $rid := $record/gmd:fileIdentifier/gco:CharacterString/text()
-	 let $hierarchyLevelName := $record/gmd:hierarchyLevelName/gco:CharacterString/text()
-	 
+	 let $rid := $record/gmd:fileIdentifier/*/text()
+	 let $hierarchyLevelName := $record/gmd:hierarchyLevelName/*[1]
 	 return
 	 if (not($hierarchyLevelName)) then
 		local:addMessage('TR.noAbstract', map { 'filename': local:filename($record), 'id': $rid })
-	 else if (string-length(normalize-space($hierarchyLevelName)) = 0) then
+	 else if (string-length(normalize-space($hierarchyLevelName/text())) = 0) then
 		local:addMessage('TR.emptyAbstract', map { 'filename': local:filename($record), 'id': $rid })
 	 else ()
 	)[position() le $limitErrors]
