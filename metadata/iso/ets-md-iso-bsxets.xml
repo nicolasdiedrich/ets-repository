@@ -612,6 +612,38 @@ return
 										<translationTemplate ref="TR.hierarchyLevel"/>
 									</translationTemplates>
 								</TestAssertion>
+								<TestAssertion id="EIDcacf6ca7-b5df-49e3-8577-dbc76cd6d72b">
+									<label>md-iso.b.we: HierarchyLevelName</label>
+									<description><![CDATA[<p>wetransform-owned test: This test checks that a hierarchyLevelName is provided as long as the hierarchyLevel is not "dataset".</p>
+<p>Relevant requirements:</p>
+<p>verpflichtend aus ISO 19115, wenn Hierarchiebene nicht "Geodatensatz" ist</p>]]></description>
+									<parent ref="EID9827676c-e48f-4241-b37c-3a15393c6324"/>
+									<expectedResult>NOT_APPLICABLE</expectedResult>
+									<expression>						
+let $messages := 
+	(for $record in $records
+	 let $rid := $record/gmd:fileIdentifier/gco:CharacterString/text()
+	 let $hierarchyLevelName := $record/gmd:hierarchyLevelName/gco:CharacterString/text()
+	 
+	 return
+	 if (not($hierarchyLevelName)) then
+		local:addMessage('TR.noAbstract', map { 'filename': local:filename($record), 'id': $rid })
+	 else if (string-length(normalize-space($hierarchyLevelName/text())) = 0) then
+		local:addMessage('TR.emptyAbstract', map { 'filename': local:filename($record), 'id': $rid })
+	 else ()
+	)[position() le $limitErrors]
+return
+(if ($messages) then 'FAILED' else 'PASSED',
+ local:error-statistics('TR.recordsWithErrors', count(fn:distinct-values($messages//etf:argument[@token='id']/text()))),
+ $messages)
+									</expression>
+									<testItemType ref="EIDf0edc596-49d2-48d6-a1a1-1ac581dcde0a"/>
+									<translationTemplates>
+										<translationTemplate ref="TR.recordsWithErrors"/>
+										<translationTemplate ref="TR.noAbstract"/>
+										<translationTemplate ref="TR.emptyAbstract"/>
+									</translationTemplates>
+								</TestAssertion>
 							</testAssertions>
 						</TestStep>
 					</testSteps>
