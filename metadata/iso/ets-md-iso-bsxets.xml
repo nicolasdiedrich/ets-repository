@@ -283,7 +283,7 @@ return
 									</translationTemplates>
 								</TestAssertion>
 								<TestAssertion id="EID22ba60c4-0d3a-44a1-a0b1-db2d7c75836c">
-									<label>md-iso.a.6: Language</label>
+									<label>md-iso.a.6: characterSet</label>
 									<description><![CDATA[<p>The test checks that a gmd:LanguageCode object is given at gmd:language and contains a codeListValue attribute. It is then checked if the codeListValue attribute contains a valid 3-letter language code according to ISO 639-2/B of one of the official languages.</br></br>
 Relevant requirement(s):</p>
 <ul>
