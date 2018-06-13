@@ -764,7 +764,7 @@
 	  </LangTranslationTemplateCollection>
 	  <LangTranslationTemplateCollection name="TR.missingMandatoryTypeError">
 		 <translationTemplates>
-			<TranslationTemplate language="en" name="TR.missingMandatoryTypeError">The element {elementName} is mandatory in this Profile, but it wasn't found.</TranslationTemplate>
+			<TranslationTemplate language="en" name="TR.missingMandatoryTypeError">The element '{elementName}' is mandatory in this Profile, but it wasn't found.</TranslationTemplate>
 		 </translationTemplates>
 	  </LangTranslationTemplateCollection>	
 	</translationTemplateCollections>
