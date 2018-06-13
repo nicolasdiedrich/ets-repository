@@ -1586,7 +1586,7 @@ In other cases, gmd:otherConstraints shall include a non-empty free text element
 	 </LangTranslationTemplateCollection>
 	  <LangTranslationTemplateCollection name="TR.missingMandatoryTypeError">
 		 <translationTemplates>
-			<TranslationTemplate language="en" name="TR.missingMandatoryTypeError">The element {elementName} is mandatory in this Profile, but it wasn't found.</TranslationTemplate>
+			<TranslationTemplate language="en" name="TR.missingMandatoryTypeError">The element '{elementName}' is mandatory in this Profile, but it wasn't found.</TranslationTemplate>
 		 </translationTemplates>
 	  </LangTranslationTemplateCollection>	
 	</translationTemplateCollections>
