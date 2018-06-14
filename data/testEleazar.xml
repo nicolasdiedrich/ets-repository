@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExecutableTestSuite xmlns="http://www.interactive-instruments.de/etf/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EIDec7323d5-d8f0-4cfe-b23a-b826df86d58c" xsi:schemaLocation="http://www.interactive-instruments.de/etf/2.0 ../../schema/model/resultSet.xsd">
+   <itemHash>bQ==</itemHash>
+   <remoteResource>http://github.com/inspire-eu-validation/ets-repository/metadata/iso</remoteResource>
+   <localPath>/auto</localPath>
+   <label>Conformancee class: INSPIRE Profile based on EN ISO 19115 and EN ISO 19119</label>
+   <description><![CDATA[This test was generated automatically from a Schema profile in Haleconnect]]></description>
+   <reference>../../inspire-md-bsxets.xq</reference>
+   <version>version</version>
+   <author>author</author>
+   <creationDate>2018-06-14T14:16:45.247Z</creationDate>
+   <lastEditor>author</lastEditor>
+   <lastUpdateDate>2018-06-14T14:16:45.247Z</lastUpdateDate>
+	 <tags>
+ 		<tag ref="EIDfe1f3796-0ebf-4960-a6f7-f935e087fa4c"/>
+ 	</tags>
+   <testDriver ref="EID4dddc9e2-1b21-40b7-af70-6a2d156ad130" />
+   <translationTemplateBundle ref="EID70a263c0-0ad7-42f2-9d4d-0d8a4ca71b52" />
+   <ParameterList name="ETF Standard Parameters for XML test objects">
+      <parameter name="files_to_test" required="true">
+         <defaultValue>.*</defaultValue>
+         <allowedValues>.*</allowedValues>
+         <type>string</type>
+      </parameter>
+      <parameter name="tests_to_execute" required="false">
+         <defaultValue>.*</defaultValue>
+         <allowedValues>.*</allowedValues>
+         <type>string</type>
+      </parameter>
+   </ParameterList>
+   <supportedTestObjectTypes>
+      <testObjectType ref="EID4c5d8006-3ac6-43d9-a1a3-1e19bf163ff3" />
+   </supportedTestObjectTypes>
+   <testModules>
+      <TestModule id="EID117261ed-eea7-4b3b-b4d3-3409a13ddfdc">
+         <label>TestModule</label>
+         <description>Thisisatestmodule</description>
+         <parent ref="EIDec7323d5-d8f0-4cfe-b23a-b826df86d58c" />
+         <testCases>
+            <TestCase id="EIDf39d845e-92c5-45ba-bd47-c1ae4a4e9ad9">
+               <label>TestCase</label>
+               <description>ThisisaTestCase</description>
+               <parent ref="EID117261ed-eea7-4b3b-b4d3-3409a13ddfdc" />
+               <testSteps>
+                  <TestStep id="EIDf9122c06-a42d-4e77-9b56-7960e3b176e2">
+                     <label>testStep</label>
+                     <description>This is a test step</description>
+                     <parent ref="EIDf39d845e-92c5-45ba-bd47-c1ae4a4e9ad9" />
+                     <statementForExecution>not applicable</statementForExecution>
+                     <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0" />
+                     <testAssertions>
+                        <TestAssertion id="EIDa55bc1a2-3294-4aeb-8b16-2d87d3fa4e2d">
+                           <label>TestAssertion</label>
+                           <description>This is a test assertion</description>
+                           <parent ref="EIDf9122c06-a42d-4e77-9b56-7960e3b176e2" />
+                           <expectedResult>NOT_APPLICABLE</expectedResult>
+                           <expression>let $messages :=
+    (for $record in $records
+     let $title := count($record//*[local-name()='MD_CharacterSetCode' and namespace-uri()='http://www.isotc211.org/2005/gmd'])
+     return
+     if (not($title)) then
+      local:addMessage('TR.missingMandatoryTypeError', map { 'localName': 'typeLocalname', 'namespace': 'typeNamespace' })
+     else ()
+    )[position() le $limitErrors]
+  return
+  (if ($messages) then 'FAILED' else 'PASSED',
+   local:error-statistics('TR.recordsWithErrors', count(fn:distinct-values($messages//etf:argument[@token='id']/text()))),
+   $messages)</expression>
+                           <testItemType ref="EIDf0edc596-49d2-48d6-a1a1-1ac581dcde0a" />
+                           <translationTemplates>
+                              <translationTemplate ref="TR.recordsWithErrors" />
+                              <translationTemplate ref="TR.missingMandatoryTypeError" />
+                           </translationTemplates>
+                        </TestAssertion>
+                     </testAssertions>
+                  </TestStep>
+               </testSteps>
+            </TestCase>
+            <TestCase id="EIDf39d845e-92c5-45ba-bd47-c1ae4a4e9ad9">
+               <label>TestModule</label>
+               <description>This is a test module</description>
+               <parent ref="EID117261ed-eea7-4b3b-b4d3-3409a13ddfdc" />
+               <testSteps>
+                  <TestStep id="EIDd5dc6bac-c3b3-4cfe-a009-faff3f702cb2">
+                     <label>testStep</label>
+                     <description>This is a test step</description>
+                     <parent ref="EIDf39d845e-92c5-45ba-bd47-c1ae4a4e9ad9" />
+                     <statementForExecution>not applicable</statementForExecution>
+                     <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0" />
+                     <testAssertions>
+                        <TestAssertion id="EID097b7df1-a9ff-4a80-b181-9b3c905c4935">
+                           <label>TestAssertion</label>
+                           <description>This is a test assertion</description>
+                           <parent ref="EIDd5dc6bac-c3b3-4cfe-a009-faff3f702cb2" />
+                           <expectedResult>NOT_APPLICABLE</expectedResult>
+                           <expression>let $messages :=
+    (for $record in $records
+     let $title := count($record//*[local-name()='typeLocalname2' and namespace-uri()='typeNamespace2'])
+     return
+     if (not($title)) then
+      local:addMessage('TR.missingMandatoryTypeError', map { 'localName': 'typeLocalname2', 'namespace': 'typeNamespace2' })
+     else ()
+    )[position() le $limitErrors]
+  return
+  (if ($messages) then 'FAILED' else 'PASSED',
+   local:error-statistics('TR.recordsWithErrors', count(fn:distinct-values($messages//etf:argument[@token='id']/text()))),
+   $messages)</expression>
+                           <testItemType ref="EIDf0edc596-49d2-48d6-a1a1-1ac581dcde0a" />
+                           <translationTemplates>
+                              <translationTemplate ref="TR.recordsWithErrors" />
+                              <translationTemplate ref="TR.missingMandatoryTypeError" />
+                           </translationTemplates>
+                        </TestAssertion>
+                     </testAssertions>
+                  </TestStep>
+               </testSteps>
+            </TestCase>
+         </testCases>
+      </TestModule>
+   </testModules>
+</ExecutableTestSuite>
+
