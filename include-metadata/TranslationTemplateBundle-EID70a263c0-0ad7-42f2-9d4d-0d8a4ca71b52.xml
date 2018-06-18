@@ -1591,7 +1591,7 @@ In other cases, gmd:otherConstraints shall include a non-empty free text element
 	  </LangTranslationTemplateCollection>
 		<LangTranslationTemplateCollection name="TR.invalidPropertyValueError">
 		 <translationTemplates>
-			<TranslationTemplate language="en" name="TR.invalidPropertyValueError">The property '{propName}' in the element with localName '{localName}' and namespace '{namespace}' is contains an invalid value.</TranslationTemplate>
+			<TranslationTemplate language="en" name="TR.invalidPropertyValueError">The property '{propName}' in the element with localName '{localName}' and namespace '{namespace}' contains the invalid value '{valueFound}'. Allowed values are ({allowedValues})</TranslationTemplate>
 		 </translationTemplates>
 	  </LangTranslationTemplateCollection>
 	</translationTemplateCollections>
