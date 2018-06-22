@@ -5,7 +5,7 @@
 	<label>Conformance class: Data consistency, General requirements</label>
 	<description>This test was generated automatically from a Schema profile in haleconnect</description>
 	<reference>../../inspire-bsxets.xq</reference>
-	<version>1.5</version>
+	<version>0.2.1</version>
 	<author>interactive instruments GmbH</author>
 	<creationDate>2016-08-15T00:00:00Z</creationDate>
 	<lastEditor>interactive instruments GmbH</lastEditor>
