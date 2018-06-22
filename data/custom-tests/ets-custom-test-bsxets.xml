@@ -1,0 +1,83 @@
+<ExecutableTestSuite id="EID61070ae8-13cb-4303-a340-72c8b877b00a" xmlns="http://www.interactive-instruments.de/etf/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.interactive-instruments.de/etf/2.0 ../../schema/model/resultSet.xsd">
+	<itemHash>bQ==</itemHash>
+	<remoteResource>http://github.com/inspire-eu-validation/ets-repository/data/data-consistency</remoteResource>
+	<localPath>/auto</localPath>
+	<label>Schema Profile Test 'asdcas'</label>
+	<description>This test was generated automatically from a Schema profile in haleconnect</description>
+	<reference>../../inspire-bsxets.xq</reference>
+	<version>1.0.0</version>
+	<author>interactive instruments GmbH</author>
+	<creationDate>2016-08-15T00:00:00Z</creationDate>
+	<lastEditor>interactive instruments GmbH</lastEditor>
+	<lastUpdateDate>2017-05-16T12:00:00Z</lastUpdateDate>
+	<tags>
+		<tag ref="EIDfe1f3796-0ebf-4960-a6f7-f935e087fa4c"/>
+	</tags>
+	<testDriver ref="EID4dddc9e2-1b21-40b7-af70-6a2d156ad130"/>
+	<translationTemplateBundle ref="EID70a263c0-0ad7-42f2-9d4d-0d8a4ca71b52"/>
+	<ParameterList name="ETF Standard Parameters for XML test objects">
+		<parameter name="files_to_test" required="true">
+			<defaultValue>.*</defaultValue>
+			<description ref="TR.filesToTest"/>
+			<allowedValues>.*</allowedValues>
+			<type>string</type>
+		</parameter>
+		<parameter name="tests_to_execute" required="false">
+			<defaultValue>.*</defaultValue>
+			<description ref="TR.testsToExecute"/>
+			<allowedValues>.*</allowedValues>
+			<type>string</type>
+		</parameter>
+	</ParameterList>
+	<supportedTestObjectTypes>
+	  <testObjectType ref="EID5a60dded-0cb0-4977-9b06-16c6c2321d2e"/>
+	</supportedTestObjectTypes>
+	<testModules>
+    <TestModule id="EIDe458ae29-f9bd-4260-bd1d-58b6e4549e23">
+      <label>TestModule</label>
+      <description>This is a test module</description>
+      <parent ref="EIDec7323d5-d8f0-4cfe-b23a-b826df86d58c"/>
+      <testCases>
+        <TestCase id="EID3a79e323-4a84-413b-8f83-04697ebe2dd7">
+          <label>TestModule</label>
+          <description>This is a test module</description>
+          <parent ref="EIDe458ae29-f9bd-4260-bd1d-58b6e4549e23"/>
+          <testSteps>
+            <TestStep id="EID398522a3-2f80-47aa-8915-3b9471c9ecbc">
+              <label>testStep</label>
+              <description>This is a test step</description>
+              <parent ref="EID3a79e323-4a84-413b-8f83-04697ebe2dd7"/>
+              <statementForExecution>not applicable</statementForExecution>
+              <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
+              <testAssertions>
+                <TestAssertion id="EID40213503-471f-4aa2-9a20-daa1b46a700c">
+                  <label>TestAssertion</label>
+                  <description>This is a test assertion</description>
+                  <parent ref="EID398522a3-2f80-47aa-8915-3b9471c9ecbc"/>
+                  <expectedResult>NOT_APPLICABLE</expectedResult>
+                  <expression>let $messages :=
+    (for $record in $db
+     let $title := count($record//*[local-name()='hierarchyLevelName' and namespace-uri()='http://www.isotc211.org/2005/gmd'])
+     return
+     if (not($title)) then
+      local:addMessage('TR.missingMandatoryTypeError', map { 'localName': 'Schulstandorte', 'namespace': 'http://www.esdi-humboldt.eu/hale/shp' })
+     else ()
+    )[position() le $limitErrors]
+  return
+  (if ($messages) then 'FAILED' else 'PASSED',
+   local:error-statistics('TR.recordsWithErrors', count(fn:distinct-values($messages//etf:argument[@token='id']/text()))),
+   $messages)</expression>
+                  <testItemType ref="EIDf0edc596-49d2-48d6-a1a1-1ac581dcde0a"/>
+                  <translationTemplates>
+                    <translationTemplate ref="TR.recordsWithErrors"/>
+                    <translationTemplate ref="TR.missingMandatoryTypeError"/>
+                  </translationTemplates>
+                </TestAssertion>
+              </testAssertions>
+            </TestStep>
+          </testSteps>
+        </TestCase>
+      </testCases>
+    </TestModule>
+  </testModules>
+</ExecutableTestSuite>
