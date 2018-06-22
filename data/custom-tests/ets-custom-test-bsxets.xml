@@ -76,45 +76,6 @@ return
             </TestStep>
           </testSteps>
         </TestCase>
-        <TestCase id="EIDe34fe4a7-fe2a-406b-a248-31a548cd2678">
-          <label>TestModule</label>
-          <description>This is a test module</description>
-          <parent ref="EID789f828a-e3aa-447a-87f4-d8e5d0366a84"/>
-          <testSteps>
-            <TestStep id="EIDcf62ab07-322e-40a4-a711-3263e5eabde3">
-              <label>testStep</label>
-              <description>This is a test step</description>
-              <parent ref="EIDe34fe4a7-fe2a-406b-a248-31a548cd2678"/>
-              <statementForExecution>not applicable</statementForExecution>
-              <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
-              <testAssertions>
-                <TestAssertion id="EID08acaa94-fdc0-4e08-a91f-6e3159b99229">
-                  <label>TestAssertion</label>
-                  <description>The type with localName Schulstandorte and namespace http://www.esdi-humboldt.eu/hale/shp should be present in the file</description>
-                  <parent ref="EIDcf62ab07-322e-40a4-a711-3263e5eabde3"/>
-                  <expectedResult>NOT_APPLICABLE</expectedResult>
-                  <expression>let $messages :=
-    (for $record in $db
-     let $title := count($record//*[local-name()='Schulstandorte' and namespace-uri()='http://www.esdi-humboldt.eu/hale/shp'])
-     return
-     if (not($title)) then
-      local:addMessage('TR.missingMandatoryTypeError', map { 'localName': 'Schulstandorte', 'namespace': 'http://www.esdi-humboldt.eu/hale/shp' })
-     else ()
-    )[position() le $limitErrors]
-return
-(if ($messages) then 'FAILED' else 'PASSED',
- local:error-statistics('TR.recordsWithErrors', count(fn:distinct-values($messages//etf:argument[@token='id']/text()))),
- $messages)</expression>
-                  <testItemType ref="EIDf0edc596-49d2-48d6-a1a1-1ac581dcde0a"/>
-                  <translationTemplates>
-                    <translationTemplate ref="TR.recordsWithErrors"/>
-                    <translationTemplate ref="TR.missingMandatoryTypeError"/>
-                  </translationTemplates>
-                </TestAssertion>
-              </testAssertions>
-            </TestStep>
-          </testSteps>
-        </TestCase>
       </testCases>
     </TestModule>
   </testModules>
