@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<ExecutableTestSuite xmlns="http://www.interactive-instruments.de/etf/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EID510fdd26-9bb2-4619-94b0-36a0b51d14fa" xsi:schemaLocation="http://www.interactive-instruments.de/etf/2.0 ../../schema/model/resultSet.xsd">
+<ExecutableTestSuite xmlns="http://www.interactive-instruments.de/etf/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EIDada56dab-4e47-406d-8aca-b6302e16594f" xsi:schemaLocation="http://www.interactive-instruments.de/etf/2.0 ../../schema/model/resultSet.xsd">
   <itemHash>bQ==</itemHash>
   <remoteResource>http://github.com/inspire-eu-validation/ets-repository/metadata/iso</remoteResource>
   <localPath>/auto</localPath>
@@ -12,7 +12,7 @@
   <lastEditor>Berserker Seven</lastEditor>
   <lastUpdateDate>2018-06-14T15:45:30.727Z</lastUpdateDate>
   <tags>
-  	<tag ref="EIDfe1f3796-0ebf-4960-a6f7-f935e087fa4c"/>
+    <tag ref="EIDfe1f3796-0ebf-4960-a6f7-f935e087fa4c"/>
   </tags>
   <testDriver ref="EID4dddc9e2-1b21-40b7-af70-6a2d156ad130"/>
   <translationTemplateBundle ref="EID70a263c0-0ad7-42f2-9d4d-0d8a4ca71b52"/>
@@ -32,27 +32,27 @@
     <testObjectType ref="EID5a60dded-0cb0-4977-9b06-16c6c2321d2e"/>
   </supportedTestObjectTypes>
   <testModules>
-    <TestModule id="EID789f828a-e3aa-447a-87f4-d8e5d0366a84">
+    <TestModule id="EID2193b212-b3a6-43d1-ab7b-2ba5f5d5f5dd">
       <label>TestModule</label>
       <description>This is a test module</description>
-      <parent ref="EID510fdd26-9bb2-4619-94b0-36a0b51d14fa"/>
+      <parent ref="EIDada56dab-4e47-406d-8aca-b6302e16594f"/>
       <testCases>
-        <TestCase id="EIDe34fe4a7-fe2a-406b-a248-31a548cd2678">
+        <TestCase id="EID831de84a-4261-47ab-8dea-840cf5425a21">
           <label>TestModule</label>
           <description>This is a test module</description>
-          <parent ref="EID789f828a-e3aa-447a-87f4-d8e5d0366a84"/>
+          <parent ref="EID2193b212-b3a6-43d1-ab7b-2ba5f5d5f5dd"/>
           <testSteps>
-            <TestStep id="EID290c5f70-1882-4e3e-8d91-675d3ab3e4b8">
+            <TestStep id="EIDd03d1043-3003-4990-8fe0-eea40e46fb43">
               <label>testStep</label>
               <description>This is a test step</description>
-              <parent ref="EIDe34fe4a7-fe2a-406b-a248-31a548cd2678"/>
+              <parent ref="EID831de84a-4261-47ab-8dea-840cf5425a21"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EIDa78b4023-ccda-44fc-9f1a-a51cb444156b">
+                <TestAssertion id="EID1654cce5-e405-484a-899f-c2fb987c5f6a">
                   <label>TestAssertion</label>
                   <description>The type with localName Schulbezirke and namespace http://www.esdi-humboldt.eu/hale/shp should be present in the file</description>
-                  <parent ref="EID290c5f70-1882-4e3e-8d91-675d3ab3e4b8"/>
+                  <parent ref="EIDd03d1043-3003-4990-8fe0-eea40e46fb43"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $messages :=
     (for $record in $db
@@ -60,6 +60,45 @@
      return
      if (not($title)) then
       local:addMessage('TR.missingMandatoryTypeError', map { 'localName': 'Schulbezirke', 'namespace': 'http://www.esdi-humboldt.eu/hale/shp' })
+     else ()
+    )[position() le $limitErrors]
+return
+(if ($messages) then 'FAILED' else 'PASSED',
+ local:error-statistics('TR.recordsWithErrors', count(fn:distinct-values($messages//etf:argument[@token='id']/text()))),
+ $messages)</expression>
+                  <testItemType ref="EIDf0edc596-49d2-48d6-a1a1-1ac581dcde0a"/>
+                  <translationTemplates>
+                    <translationTemplate ref="TR.recordsWithErrors"/>
+                    <translationTemplate ref="TR.missingMandatoryTypeError"/>
+                  </translationTemplates>
+                </TestAssertion>
+              </testAssertions>
+            </TestStep>
+          </testSteps>
+        </TestCase>
+        <TestCase id="EIDeefe94f3-9f2f-48df-b759-a78ee0303c86">
+          <label>TestModule</label>
+          <description>This is a test module</description>
+          <parent ref="EID2193b212-b3a6-43d1-ab7b-2ba5f5d5f5dd"/>
+          <testSteps>
+            <TestStep id="EID4b79688b-9e44-438e-98d9-cbb7e91167e5">
+              <label>testStep</label>
+              <description>This is a test step</description>
+              <parent ref="EIDeefe94f3-9f2f-48df-b759-a78ee0303c86"/>
+              <statementForExecution>not applicable</statementForExecution>
+              <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
+              <testAssertions>
+                <TestAssertion id="EIDa8a426ba-59c5-4fe8-8a17-3b8e445b1e0a">
+                  <label>TestAssertion</label>
+                  <description>The type with localName Schulstandorte and namespace http://www.esdi-humboldt.eu/hale/shp should be present in the file</description>
+                  <parent ref="EID4b79688b-9e44-438e-98d9-cbb7e91167e5"/>
+                  <expectedResult>NOT_APPLICABLE</expectedResult>
+                  <expression>let $messages :=
+    (for $record in $db
+     let $title := count($record//*[local-name()='Schulstandorte' and namespace-uri()='http://www.esdi-humboldt.eu/hale/shp'])
+     return
+     if (not($title)) then
+      local:addMessage('TR.missingMandatoryTypeError', map { 'localName': 'Schulstandorte', 'namespace': 'http://www.esdi-humboldt.eu/hale/shp' })
      else ()
     )[position() le $limitErrors]
 return
