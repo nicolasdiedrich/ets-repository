@@ -3,7 +3,7 @@
 	<remoteResource>http://github.com/inspire-eu-validation/ets-repository/data/data-consistency</remoteResource>
 	<localPath>/auto</localPath>
 	<label>Conformance class: Data consistency, General requirements</label>
-	<description><![CDATA[This test was generated automatically from a Schema profile in haleconnect]]></description>
+	<description>This test was generated automatically from a Schema profile in haleconnect</description>
 	<reference>../../inspire-bsxets.xq</reference>
 	<version>1.5</version>
 	<author>interactive instruments GmbH</author>
