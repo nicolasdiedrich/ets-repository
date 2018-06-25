@@ -51,7 +51,7 @@
               <testAssertions>
                 <TestAssertion id="EID642dc0ff-c5c4-44d6-bc4d-e8dbc6bc03ac">
                   <label>TestAssertion</label>
-                  <description>The type with localName Schulbezirke and namespace http://www.esdi-humboldt.eu/hale/shp should be present in the file</description>
+                  <description>The type with localName Schulbezirke and namespace should be present in the file</description>
                   <parent ref="EID0b8fe8fb-24cc-48a3-948f-e14cc429337d"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $messages :=
