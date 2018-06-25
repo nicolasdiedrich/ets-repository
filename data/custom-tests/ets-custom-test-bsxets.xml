@@ -3,7 +3,7 @@
   <itemHash>bQ==</itemHash>
   <remoteResource>http://github.com/inspire-eu-validation/ets-repository/metadata/iso</remoteResource>
   <localPath>/auto</localPath>
-  <label>Schema Profile Test 'bergstrasse54678 prof'</label>
+  <label>Schema Profile Test 'bergstrasse prof'</label>
   <description>This test was generated automatically from a Schema profile in haleconnect</description>
   <reference>../../inspire-md-bsxets.xq</reference>
   <version>1.0.0</version>
@@ -31,41 +31,4 @@
   <supportedTestObjectTypes>
     <testObjectType ref="EID5a60dded-0cb0-4977-9b06-16c6c2321d2e"/>
   </supportedTestObjectTypes>
-  <testModules>
-    <TestModule id="EID419c8537-7dcc-48f3-96a9-4267681ec7ac">
-      <label>TestModule</label>
-      <description>This is a test module</description>
-      <parent ref="EID45f02f75-0f18-4c55-8ad5-caba9cec6580"/>
-      <testCases>
-        <TestCase id="EID33e24f4d-0bc3-4e72-bc9b-c9d43b1fcca0">
-          <label>TestModule</label>
-          <description>This is a test module</description>
-          <parent ref="EID419c8537-7dcc-48f3-96a9-4267681ec7ac"/>
-          <testSteps>
-            <TestStep id="EID0b8fe8fb-24cc-48a3-948f-e14cc429337d">
-              <label>testStep</label>
-              <description>This is a test step</description>
-              <parent ref="EID33e24f4d-0bc3-4e72-bc9b-c9d43b1fcca0"/>
-              <statementForExecution>not applicable</statementForExecution>
-              <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
-              <testAssertions>
-                <TestAssertion id="EID642dc0ff-c5c4-44d6-bc4d-e8dbc6bc03ac">
-                  <label>TestAssertion</label>
-                  <description>The type with localName Schulbezirke and namespace should be present in the file</description>
-                  <parent ref="EID0b8fe8fb-24cc-48a3-948f-e14cc429337d"/>
-                  <expectedResult>NOT_APPLICABLE</expectedResult>
-                  <expression>'PASSED'</expression>
-                  <testItemType ref="EIDf0edc596-49d2-48d6-a1a1-1ac581dcde0a"/>
-                  <translationTemplates>
-                    <translationTemplate ref="TR.recordsWithErrors"/>
-                    <translationTemplate ref="TR.missingMandatoryTypeError"/>
-                  </translationTemplates>
-                </TestAssertion>
-              </testAssertions>
-            </TestStep>
-          </testSteps>
-        </TestCase>
-      </testCases>
-    </TestModule>
-  </testModules>
 </ExecutableTestSuite>
