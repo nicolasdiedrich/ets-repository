@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<ExecutableTestSuite xmlns="http://www.interactive-instruments.de/etf/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EIDada56dab-4e47-406d-8aca-b6302e16594f" xsi:schemaLocation="http://www.interactive-instruments.de/etf/2.0 ../../schema/model/resultSet.xsd">
+<ExecutableTestSuite xmlns="http://www.interactive-instruments.de/etf/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EID45f02f75-0f18-4c55-8ad5-caba9cec6580" xsi:schemaLocation="http://www.interactive-instruments.de/etf/2.0 ../../schema/model/resultSet.xsd">
   <itemHash>bQ==</itemHash>
   <remoteResource>http://github.com/inspire-eu-validation/ets-repository/metadata/iso</remoteResource>
   <localPath>/auto</localPath>
-  <label>Schema Profile Test 'bergstrasse4 prof'</label>
+  <label>Schema Profile Test 'bergstrasse54 prof'</label>
   <description><![CDATA[This test was generated automatically from a Schema profile in haleconnect]]></description>
   <reference>../../inspire-md-bsxets.xq</reference>
   <version>1.0.0</version>
@@ -32,27 +32,27 @@
     <testObjectType ref="EID5a60dded-0cb0-4977-9b06-16c6c2321d2e"/>
   </supportedTestObjectTypes>
   <testModules>
-    <TestModule id="EID2193b212-b3a6-43d1-ab7b-2ba5f5d5f5dd">
+    <TestModule id="EID419c8537-7dcc-48f3-96a9-4267681ec7ac">
       <label>TestModule</label>
       <description>This is a test module</description>
-      <parent ref="EIDada56dab-4e47-406d-8aca-b6302e16594f"/>
+      <parent ref="EID45f02f75-0f18-4c55-8ad5-caba9cec6580"/>
       <testCases>
-        <TestCase id="EID831de84a-4261-47ab-8dea-840cf5425a21">
+        <TestCase id="EID33e24f4d-0bc3-4e72-bc9b-c9d43b1fcca0">
           <label>TestModule</label>
           <description>This is a test module</description>
-          <parent ref="EID2193b212-b3a6-43d1-ab7b-2ba5f5d5f5dd"/>
+          <parent ref="EID419c8537-7dcc-48f3-96a9-4267681ec7ac"/>
           <testSteps>
-            <TestStep id="EIDd03d1043-3003-4990-8fe0-eea40e46fb43">
+            <TestStep id="EID0b8fe8fb-24cc-48a3-948f-e14cc429337d">
               <label>testStep</label>
               <description>This is a test step</description>
-              <parent ref="EID831de84a-4261-47ab-8dea-840cf5425a21"/>
+              <parent ref="EID33e24f4d-0bc3-4e72-bc9b-c9d43b1fcca0"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EID1654cce5-e405-484a-899f-c2fb987c5f6a">
+                <TestAssertion id="EID642dc0ff-c5c4-44d6-bc4d-e8dbc6bc03ac">
                   <label>TestAssertion</label>
                   <description>The type with localName Schulbezirke and namespace http://www.esdi-humboldt.eu/hale/shp should be present in the file</description>
-                  <parent ref="EIDd03d1043-3003-4990-8fe0-eea40e46fb43"/>
+                  <parent ref="EID0b8fe8fb-24cc-48a3-948f-e14cc429337d"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $messages :=
     (for $record in $db
@@ -76,22 +76,22 @@ return
             </TestStep>
           </testSteps>
         </TestCase>
-        <TestCase id="EIDeefe94f3-9f2f-48df-b759-a78ee0303c86">
+        <TestCase id="EID9c15c2c3-706d-4ecf-b700-aea4e9e3f98e">
           <label>TestModule</label>
           <description>This is a test module</description>
-          <parent ref="EID2193b212-b3a6-43d1-ab7b-2ba5f5d5f5dd"/>
+          <parent ref="EID419c8537-7dcc-48f3-96a9-4267681ec7ac"/>
           <testSteps>
-            <TestStep id="EID4b79688b-9e44-438e-98d9-cbb7e91167e5">
+            <TestStep id="EID0698177a-63f2-4a6b-9749-0d6c10408d6f">
               <label>testStep</label>
               <description>This is a test step</description>
-              <parent ref="EIDeefe94f3-9f2f-48df-b759-a78ee0303c86"/>
+              <parent ref="EID9c15c2c3-706d-4ecf-b700-aea4e9e3f98e"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EIDa8a426ba-59c5-4fe8-8a17-3b8e445b1e0a">
+                <TestAssertion id="EID72fa446f-98eb-4a95-8f33-d3dcc8284313">
                   <label>TestAssertion</label>
                   <description>The type with localName Schulstandorte and namespace http://www.esdi-humboldt.eu/hale/shp should be present in the file</description>
-                  <parent ref="EID4b79688b-9e44-438e-98d9-cbb7e91167e5"/>
+                  <parent ref="EID0698177a-63f2-4a6b-9749-0d6c10408d6f"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $messages :=
     (for $record in $db
