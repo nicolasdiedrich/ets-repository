@@ -55,7 +55,7 @@
                   <parent ref="EID0b8fe8fb-24cc-48a3-948f-e14cc429337d"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $messages :=
-    (for $record in $db
+    (for $record in $records
      let $title := count($record//*[local-name()='Schulbezirke' and namespace-uri()='http://www.esdi-humboldt.eu/hale/shp'])
      return
      if (not($title)) then
