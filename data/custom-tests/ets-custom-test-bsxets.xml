@@ -3,7 +3,7 @@
   <itemHash>bQ==</itemHash>
   <remoteResource>http://github.com/inspire-eu-validation/ets-repository/metadata/iso</remoteResource>
   <localPath>/auto</localPath>
-  <label>Schema Profile Test 'bergstrasse54 prof'</label>
+  <label>Schema Profile Test 'bergstrasse5467 prof'</label>
   <description><![CDATA[This test was generated automatically from a Schema profile in haleconnect]]></description>
   <reference>../../inspire-md-bsxets.xq</reference>
   <version>1.0.0</version>
@@ -54,19 +54,7 @@
                   <description>The type with localName Schulbezirke and namespace should be present in the file</description>
                   <parent ref="EID0b8fe8fb-24cc-48a3-948f-e14cc429337d"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
-                  <expression>
- let $messages :=
-    (for $record in $db
-     let $title := count($record//*[local-name()='Schulbezirke' and namespace-uri()='http://www.esdi-humboldt.eu/hale/shp'])
-     return
-     if (not($title)) then
-      local:addMessage('TR.missingMandatoryTypeError', map { 'localName': 'Schulbezirke', 'namespace': 'http://www.esdi-humboldt.eu/hale/shp' })
-     else ()
-    )[position() le $limitErrors]
-return
-(if ($messages) then 'FAILED' else 'PASSED',
- local:error-statistics('TR.recordsWithErrors', count(fn:distinct-values($messages//etf:argument[@token='id']/text()))),
- $messages)</expression>
+                  <expression>'PASSED'</expression>
                   <testItemType ref="EIDf0edc596-49d2-48d6-a1a1-1ac581dcde0a"/>
                   <translationTemplates>
                     <translationTemplate ref="TR.recordsWithErrors"/>
