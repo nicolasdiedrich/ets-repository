@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<ExecutableTestSuite xmlns="http://www.interactive-instruments.de/etf/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EID20848399-e5fa-4c28-9b4d-9030b7b55b46" xsi:schemaLocation="http://www.interactive-instruments.de/etf/2.0 ../../schema/model/resultSet.xsd">
+<ExecutableTestSuite xmlns="http://www.interactive-instruments.de/etf/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EIDde5ddab2-9365-4e64-8d55-4bfee08bcd8d" xsi:schemaLocation="http://www.interactive-instruments.de/etf/2.0 ../../schema/model/resultSet.xsd">
   <itemHash>bQ==</itemHash>
   <remoteResource>http://github.com/inspire-eu-validation/ets-repository/metadata/iso</remoteResource>
   <localPath>/auto</localPath>
-  <label>Schema Profile Test: bergstrasse4 prof</label>
+  <label>Schema Profile Test: nur standorte2 Profile</label>
   <description><![CDATA[This test was generated automatically from a Schema profile in haleconnect]]></description>
   <reference>../../inspire-md-bsxets.xq</reference>
   <version>1.0.0</version>
-  <author>Berserker Seven</author>
-  <creationDate>2018-06-14T15:45:30.727Z</creationDate>
-  <lastEditor>Berserker Seven</lastEditor>
-  <lastUpdateDate>2018-06-14T15:45:30.727Z</lastUpdateDate>
+  <author>e2eOrgAdmin</author>
+  <creationDate>2018-06-13T08:23:53.167Z</creationDate>
+  <lastEditor>e2eOrgAdmin</lastEditor>
+  <lastUpdateDate>2018-06-13T08:23:53.167Z</lastUpdateDate>
   <tags>
     <tag ref="EIDfe1f3796-0ebf-4960-a6f7-f935e087fa4c"/>
   </tags>
@@ -32,27 +32,27 @@
     <testObjectType ref="EID5a60dded-0cb0-4977-9b06-16c6c2321d2e"/>
   </supportedTestObjectTypes>
   <testModules>
-    <TestModule id="EIDd0f90640-94bf-4e11-9ebc-1ce3ecf3f8ac">
+    <TestModule id="EID39509f91-385c-4f79-91f8-d33c12ceb61a">
       <label>TestModule</label>
       <description>This is a test module</description>
-      <parent ref="EID20848399-e5fa-4c28-9b4d-9030b7b55b46"/>
+      <parent ref="EIDde5ddab2-9365-4e64-8d55-4bfee08bcd8d"/>
       <testCases>
-        <TestCase id="EID85f6acfa-4795-4e1b-b179-9c6f39125393">
+        <TestCase id="EID5bde01a9-d0c5-448e-996f-3dcea45c535a">
           <label>TestModule</label>
           <description>This is a test module</description>
-          <parent ref="EIDd0f90640-94bf-4e11-9ebc-1ce3ecf3f8ac"/>
+          <parent ref="EID39509f91-385c-4f79-91f8-d33c12ceb61a"/>
           <testSteps>
-            <TestStep id="EID7d297968-c170-41a2-a2c6-452bbbea8159">
+            <TestStep id="EIDea86aeb3-5183-4875-9b7b-a75d2dd2866a">
               <label>testStep</label>
               <description>This is a test step</description>
-              <parent ref="EID85f6acfa-4795-4e1b-b179-9c6f39125393"/>
+              <parent ref="EID5bde01a9-d0c5-448e-996f-3dcea45c535a"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EIDd9679aab-76f6-431a-8734-8c5097ba94d5">
+                <TestAssertion id="EIDa23bf03f-b7ef-4fa1-a9d6-2621c08e9215">
                   <label>TestAssertion</label>
                   <description>The type with localName Schulstandorte and namespace http://www.esdi-humboldt.eu/hale/shp should be present in the file</description>
-                  <parent ref="EID7d297968-c170-41a2-a2c6-452bbbea8159"/>
+                  <parent ref="EIDea86aeb3-5183-4875-9b7b-a75d2dd2866a"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $messages :=
     (for $record in $db
