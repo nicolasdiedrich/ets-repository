@@ -33,18 +33,18 @@
   </supportedTestObjectTypes>
   <testModules>
     <TestModule id="EID419c8537-7dcc-48f3-96a9-4267681ec7ac">
-      <label>IGNORE</label>
-      <description>IGNORE</description>
+      <label>Test string</label>
+      <description>Test string</description>
       <parent ref="EID45f02f75-0f18-4c55-8ad5-caba9cec6580"/>
       <testCases>
         <TestCase id="EID33e24f4d-0bc3-4e72-bc9b-c9d43b1fcca0">
-          <label>IGNORE</label>
-          <description>IGNORE</description>
+          <label>Test string</label>
+          <description>Test string</description>
           <parent ref="EID419c8537-7dcc-48f3-96a9-4267681ec7ac"/>
           <testSteps>
             <TestStep id="EID0b8fe8fb-24cc-48a3-948f-e14cc429337d">
-              <label>IGNORE</label>
-              <description>IGNORE</description>
+              <label>Test string</label>
+              <description>Test string</description>
               <parent ref="EID33e24f4d-0bc3-4e72-bc9b-c9d43b1fcca0"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
