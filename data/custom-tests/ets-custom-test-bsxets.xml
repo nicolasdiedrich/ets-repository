@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<ExecutableTestSuite xmlns="http://www.interactive-instruments.de/etf/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EID45f02f75-0f18-4c55-8ad5-caba9cec6580" xsi:schemaLocation="http://www.interactive-instruments.de/etf/2.0 ../../schema/model/resultSet.xsd">
+<ExecutableTestSuite xmlns="http://www.interactive-instruments.de/etf/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EID20848399-e5fa-4c28-9b4d-9030b7b55b46" xsi:schemaLocation="http://www.interactive-instruments.de/etf/2.0 ../../schema/model/resultSet.xsd">
   <itemHash>bQ==</itemHash>
   <remoteResource>http://github.com/inspire-eu-validation/ets-repository/metadata/iso</remoteResource>
   <localPath>/auto</localPath>
-  <label>Schema Profile Test 'bergstrasse54678 prof'</label>
-  <description>This test was generated automatically from a Schema profile in haleconnect</description>
+  <label>Schema Profile Test: bergstrasse4 prof</label>
+  <description><![CDATA[This test was generated automatically from a Schema profile in haleconnect]]></description>
   <reference>../../inspire-md-bsxets.xq</reference>
-<version>0.2.1</version>
-<author>interactive instruments GmbH</author>
-<creationDate>2016-08-15T00:00:00Z</creationDate>
-<lastEditor>interactive instruments GmbH</lastEditor>
-<lastUpdateDate>2017-05-16T12:00:00Z</lastUpdateDate>
+  <version>1.0.0</version>
+  <author>Berserker Seven</author>
+  <creationDate>2018-06-14T15:45:30.727Z</creationDate>
+  <lastEditor>Berserker Seven</lastEditor>
+  <lastUpdateDate>2018-06-14T15:45:30.727Z</lastUpdateDate>
   <tags>
     <tag ref="EIDfe1f3796-0ebf-4960-a6f7-f935e087fa4c"/>
   </tags>
@@ -32,45 +32,40 @@
     <testObjectType ref="EID5a60dded-0cb0-4977-9b06-16c6c2321d2e"/>
   </supportedTestObjectTypes>
   <testModules>
-    <TestModule id="EID419c8537-7dcc-48f3-96a9-4267681ec7ac">
-      <label>Test string</label>
-      <description>Test string</description>
-      <parent ref="EID45f02f75-0f18-4c55-8ad5-caba9cec6580"/>
+    <TestModule id="EIDd0f90640-94bf-4e11-9ebc-1ce3ecf3f8ac">
+      <label>TestModule</label>
+      <description>This is a test module</description>
+      <parent ref="EID20848399-e5fa-4c28-9b4d-9030b7b55b46"/>
       <testCases>
-        <TestCase id="EID33e24f4d-0bc3-4e72-bc9b-c9d43b1fcca0">
-          <label>Test string</label>
-          <description>Test string</description>
-          <parent ref="EID419c8537-7dcc-48f3-96a9-4267681ec7ac"/>
+        <TestCase id="EID85f6acfa-4795-4e1b-b179-9c6f39125393">
+          <label>TestModule</label>
+          <description>This is a test module</description>
+          <parent ref="EIDd0f90640-94bf-4e11-9ebc-1ce3ecf3f8ac"/>
           <testSteps>
-            <TestStep id="EID0b8fe8fb-24cc-48a3-948f-e14cc429337d">
-              <label>Test string</label>
-              <description>Test string</description>
-              <parent ref="EID33e24f4d-0bc3-4e72-bc9b-c9d43b1fcca0"/>
+            <TestStep id="EID7d297968-c170-41a2-a2c6-452bbbea8159">
+              <label>testStep</label>
+              <description>This is a test step</description>
+              <parent ref="EID85f6acfa-4795-4e1b-b179-9c6f39125393"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EID642dc0ff-c5c4-44d6-bc4d-e8dbc6bc03ac">
+                <TestAssertion id="EIDd9679aab-76f6-431a-8734-8c5097ba94d5">
                   <label>TestAssertion</label>
-                  <description>The type with localName Schulbezirke and namespace should be present in the file</description>
-                  <parent ref="EID0b8fe8fb-24cc-48a3-948f-e14cc429337d"/>
+                  <description>The type with localName Schulstandorte and namespace http://www.esdi-humboldt.eu/hale/shp should be present in the file</description>
+                  <parent ref="EID7d297968-c170-41a2-a2c6-452bbbea8159"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
-                  <expression>
-                  let $messages := 
-	(for $record in $records
-	 let $rid := $record/gmd:fileIdentifier/*/text()
-	 let $title := $record/gmd:identificationInfo[1]/*/gmd:citation/*/gmd:title/*[1]
-	 return
-	 if (not($title)) then
-		local:addMessage('TR.noTitle', map { 'filename': local:filename($record), 'id': $rid })
-	 else if (string-length(normalize-space($title/text())) = 0) then
-		local:addMessage('TR.emptyTitle', map { 'filename': local:filename($record), 'id': $rid })
-	 else ()
-	)[position() le $limitErrors]
+                  <expression>let $messages :=
+    (for $record in $db
+     let $title := count($record//*[local-name()='Schulstandorte' and namespace-uri()='http://www.esdi-humboldt.eu/hale/shp'])
+     return
+     if (not($title)) then
+      local:addMessage('TR.missingMandatoryTypeError', map { 'localName': 'Schulstandorte', 'namespace': 'http://www.esdi-humboldt.eu/hale/shp' })
+     else ()
+    )[position() le $limitErrors]
 return
 (if ($messages) then 'FAILED' else 'PASSED',
  local:error-statistics('TR.recordsWithErrors', count(fn:distinct-values($messages//etf:argument[@token='id']/text()))),
- $messages)
-                  </expression>
+ $messages)</expression>
                   <testItemType ref="EIDf0edc596-49d2-48d6-a1a1-1ac581dcde0a"/>
                   <translationTemplates>
                     <translationTemplate ref="TR.recordsWithErrors"/>
