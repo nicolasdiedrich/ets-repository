@@ -3,7 +3,7 @@
   <itemHash>bQ==</itemHash>
   <remoteResource>http://github.com/inspire-eu-validation/ets-repository/metadata/iso</remoteResource>
   <localPath>/auto</localPath>
-  <label>Schema Profile Test 'bergstrasse5467 prof'</label>
+  <label>Schema Profile Test 'bergstrasse54678 prof'</label>
   <description>This test was generated automatically from a Schema profile in haleconnect</description>
   <reference>../../inspire-md-bsxets.xq</reference>
   <version>1.0.0</version>
