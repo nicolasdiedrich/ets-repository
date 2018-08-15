@@ -56,7 +56,7 @@
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $messages :=
     (for $record in $db
-     let $ifPropertyCount := count($record//*[local-name()='Schulstandorte' and namespace-uri()='http://www.esdi-humboldt.eu/hale/shp']/*[local-name()='eleProp' and namespace-uri()='http://www.esdi-humboldt.eu/hale/shp'])
+     let $ifPropertyCount := count($record//*[local-name()='Schulstandorte' and namespace-uri()='http://www.esdi-humboldt.eu/hale/shp']/*[local-name()='eleProp' and namespace-uri()='http://www.esdi-humboldt.eu/hale/shp']/*[local-name()='eleSubProp' and namespace-uri()='simple.schema'])
      return
      if (not($ifPropertyCount)) then
       local:addMessage('TR.missingMandatoryTypeError', map { 'localName': 'llocal', 'namespace': 'nnamespace' })
