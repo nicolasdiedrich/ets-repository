@@ -56,10 +56,10 @@
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $messages :=
     (for $record in $db
-     let $title := count($record//*[local-name()='Schulstandorte' and namespace-uri()='http://www.esdi-humboldt.eu/hale/shp'])
+     let $ifPropertyCount := count($record//*[local-name()='Schulstandorte' and namespace-uri()='http://www.esdi-humboldt.eu/hale/shp']/*[local-name()='eleProp' and namespace-uri()='http://www.esdi-humboldt.eu/hale/shp'])
      return
      if (not($title)) then
-      local:addMessage('TR.missingMandatoryTypeError', map { 'localName': 'Schulstandorte', 'namespace': 'http://www.esdi-humboldt.eu/hale/shp' })
+      local:addMessage('TR.missingMandatoryTypeError', map { 'localName': 'llocal', 'namespace': 'nnamespace' })
      else ()
     )[position() le $limitErrors]
 return
