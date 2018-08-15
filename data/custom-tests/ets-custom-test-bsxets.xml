@@ -75,7 +75,12 @@
      else ()
     )[position() le $limitErrors]
 
-   let $messages := ($messages1, $messages2)
+   let $messages := 
+   (
+     return 
+     if ( (count($messages1) eq 0) or (count($messages2) eq 0)) then ()
+     else ($messages1, $messages2)
+   )
 return
 (if ($messages) then 'FAILED' else 'PASSED',
  local:error-statistics('TR.recordsWithErrors', count(fn:distinct-values($messages//etf:argument[@token='id']/text()))),
