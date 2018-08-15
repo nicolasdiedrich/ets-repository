@@ -58,7 +58,7 @@
     (for $record in $db
      let $ifPropertyCount := count($record//*[local-name()='Schulstandorte' and namespace-uri()='http://www.esdi-humboldt.eu/hale/shp']/*[local-name()='eleProp' and namespace-uri()='http://www.esdi-humboldt.eu/hale/shp'])
      return
-     if (not($title)) then
+     if (not($ifPropertyCount)) then
       local:addMessage('TR.missingMandatoryTypeError', map { 'localName': 'llocal', 'namespace': 'nnamespace' })
      else ()
     )[position() le $limitErrors]
