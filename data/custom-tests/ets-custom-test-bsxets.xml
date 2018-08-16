@@ -61,7 +61,7 @@ let $messages :=
      for $propertyFound in $propertiesFound
        return
          if (functx:all-whitespace($propertyFound)) then
-           local:addMessage('TR.invalidPropertyValueError', map { 'propName': 'CharacterString', 'localName': 'organisationName', 'namespace': 'http://www.isotc211.org/2005/gmd', 'valueFound': $propertyFound/text(), 'allowedValues': string-join( $codes, ', ') })
+           local:addMessage('TR.invalidPropertyValueError', map { 'propName': 'CharacterString', 'localName': 'organisationName', 'namespace': 'http://www.isotc211.org/2005/gmd', 'valueFound': $propertyFound/text(), 'allowedValues': 'aaad' })
  else ()
   )[position() le $limitErrors]
 return
