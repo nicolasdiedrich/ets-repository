@@ -40,16 +40,16 @@
         <TestCase id="EID5bde01a9-d0c5-448e-996f-3dcea45c535a">
           <label>TestModule</label>
           <description><![CDATA[
-TestCase for Consistency Condition
-Name: conditionName
-Description: asdsd
-Operator: XOR
-Subconditions: 
-- IF simpleType.simpleBoolean.simpleSubChild IS 'CustomValue1'
- THEN simpleType2.simpleBoolean2.simpleSubChild2 IS 'CustomValue2'
-- IF simpleType.simpleBoolean.simpleSubChild EXISTS
- THEN simpleType2.simpleBoolean2.simpleSubChild2 EXISTS
-]]></description>
+TestCase for Consistency Condition<br />
+<br />Name: conditionName
+<br />Description: asdsd
+<br />Operator: XOR
+<br />Subconditions: 
+<br />- IF simpleType.simpleBoolean.simpleSubChild IS 'CustomValue1'
+<br /> THEN simpleType2.simpleBoolean2.simpleSubChild2 IS 'CustomValue2'
+<br />- IF simpleType.simpleBoolean.simpleSubChild EXISTS
+<br /> THEN simpleType2.simpleBoolean2.simpleSubChild2 EXISTS
+<br />]]></description>
           <parent ref="EID39509f91-385c-4f79-91f8-d33c12ceb61a"/>
           <testSteps>
             <TestStep id="EIDea86aeb3-5183-4875-9b7b-a75d2dd2866a">
@@ -61,16 +61,16 @@ Subconditions:
               <testAssertions>
                 <TestAssertion id="EIDa23bf03f-b7ef-4fa1-a9d6-2621c08e9215">
                   <label>TestAssertion</label>
-                  <description><![CDATA[Test assertion for a condition with the following information:
-Name: conditionName
-Description: asdsd
-Operator: XOR
-Subconditions: 
-- IF simpleType.simpleBoolean.simpleSubChild IS 'CustomValue1'
- THEN simpleType2.simpleBoolean2.simpleSubChild2 IS 'CustomValue2'
-- IF simpleType.simpleBoolean.simpleSubChild EXISTS
- THEN simpleType2.simpleBoolean2.simpleSubChild2 EXISTS
-]]></description>
+                  <description><![CDATA[Test assertion for a condition with the following information:<br />
+<br />Name: conditionName
+<br />Description: asdsd
+<br />Operator: XOR
+<br />Subconditions: 
+<br />- IF simpleType.simpleBoolean.simpleSubChild IS 'CustomValue1'
+<br /> THEN simpleType2.simpleBoolean2.simpleSubChild2 IS 'CustomValue2'
+<br />- IF simpleType.simpleBoolean.simpleSubChild EXISTS
+<br /> THEN simpleType2.simpleBoolean2.simpleSubChild2 EXISTS
+<br />]]></description>
                   <parent ref="EIDea86aeb3-5183-4875-9b7b-a75d2dd2866a"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>
