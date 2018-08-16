@@ -772,6 +772,16 @@
 			<TranslationTemplate language="en" name="TR.missingTypeContentError">The element with localName '{localName}' and namespace '{namespace}' is required to not be empty, but no content was found.</TranslationTemplate>
 		 </translationTemplates>
 	  </LangTranslationTemplateCollection>
+	  <LangTranslationTemplateCollection name="TR.xorNoFailedConditions">
+		 <translationTemplates>
+			<TranslationTemplate language="en" name="TR.xorNoFailedConditions">Evaluation of XOR condition failed: All subconditions evaluations returned 'true'</TranslationTemplate>
+		 </translationTemplates>
+	  </LangTranslationTemplateCollection>
+	  <LangTranslationTemplateCollection name="TR.xorAllFailedConditions">
+		 <translationTemplates>
+			<TranslationTemplate language="en" name="TR.xorNoFailedConditions">Evaluation of XOR condition failed: All subconditions evaluations returned 'false'</TranslationTemplate>
+		 </translationTemplates>
+	  </LangTranslationTemplateCollection>
 		<LangTranslationTemplateCollection name="TR.invalidPropertyValueError">
 		 <translationTemplates>
 			<TranslationTemplate language="en" name="TR.invalidPropertyValueError">The property '{propName}' in the element with localName '{localName}' and namespace '{namespace}' contains the invalid value '{valueFound}'. Allowed values are ({allowedValues})</TranslationTemplate>
