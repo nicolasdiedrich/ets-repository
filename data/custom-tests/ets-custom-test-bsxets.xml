@@ -77,7 +77,7 @@ let $messages1 :=
  let $messages := 
   if($totalNumberErrors eq 1) then ()
   else if ($totalNumberErrors eq 0) then
-    local:addMessage('TR.missingMandatoryTypeError', map { 'localName': 'l5local', 'namespace': 'n5namespace' })                  
+    local:addMessage('TR.xorNoFailedConditions', map {})                 
   else ($messages0, $messages1)
 return
 (if ($messages) then 'FAILED' else 'PASSED',
