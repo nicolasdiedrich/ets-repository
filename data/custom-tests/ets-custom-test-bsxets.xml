@@ -55,29 +55,14 @@
                   <parent ref="EIDea86aeb3-5183-4875-9b7b-a75d2dd2866a"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>
-                      let $messages1 :=
+                      let $messages :=
     (for $record in $db
-     let $ifPropertyCount := count($record//*[local-name()='Schulstandorte' and namespace-uri()='http://www.esdi-humboldt.eu/hale/shp']/*[local-name()='eleProp' and namespace-uri()='http://www.esdi-humboldt.eu/hale/shp']/*[local-name()='eleSubProp' and namespace-uri()='simple.schema' and text()='CustomValue1'])
-     let $thenPropertyCount := count($record//*[local-name()='Schulstandorte' and namespace-uri()='http://www.esdi-humboldt.eu/hale/shp']/*[local-name()='eleProp2' and namespace-uri()='http://www.esdi-humboldt.eu/hale/shp']/*[local-name()='eleSubProp2' and namespace-uri()='simple.schema' and text()='CustomValue2'])
+     let $propertyCount := count($record//*[local-name()='Schulstandorte' and namespace-uri()='http://www.esdi-humboldt.eu/hale/shp']/*[local-name()='eleProp' and namespace-uri()='http://www.esdi-humboldt.eu/hale/shp']/*[local-name()='eleSubProp' and namespace-uri()='simple.schema'])
      return 
-     if ($ifPropertyCount gt $thenPropertyCount) then 
+     if (($ifPropertyCount lt 1) or ($ifPropertyCount gt 3)) then 
        local:addMessage('TR.missingMandatoryTypeError', map { 'localName': 'l2local', 'namespace': 'n2namespace' })
      else ()
     )[position() le $limitErrors]
-
-   let $messages2 :=
-    (for $record in $db
-     let $ifPropertyCount := count($record//*[local-name()='Schulstandorte' and namespace-uri()='http://www.esdi-humboldt.eu/hale/shp']/*[local-name()='eleProp' and namespace-uri()='http://www.esdi-humboldt.eu/hale/shp']/*[local-name()='eleSubProp' and namespace-uri()='simple.schema' and text()='CustomValue1'])
-     let $thenPropertyCount := count($record//*[local-name()='Schulstandorte' and namespace-uri()='http://www.esdi-humboldt.eu/hale/shp']/*[local-name()='eleProp3' and namespace-uri()='http://www.esdi-humboldt.eu/hale/shp']/*[local-name()='eleSubProp3' and namespace-uri()='simple.schema' and text()='CustomValue3'])
-     return 
-     if ($ifPropertyCount gt $thenPropertyCount) then 
-       local:addMessage('TR.missingMandatoryTypeError', map { 'localName': 'l3local', 'namespace': 'n3namespace' })
-     else ()
-    )[position() le $limitErrors]
-
-   let $messages := 
-     if ((count($messages1) eq 0) or (count($messages2) eq 0)) then ()
-     else ($messages1, $messages2)
 return
 (if ($messages) then 'FAILED' else 'PASSED',
  local:error-statistics('TR.recordsWithErrors', count(fn:distinct-values($messages//etf:argument[@token='id']/text()))),
