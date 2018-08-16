@@ -70,12 +70,14 @@ let $messages1 :=
      let $thenPropertyCount := count($record//*[local-name()='simpleType3' and namespace-uri()='simple.schema2']/*[local-name()='simpleBoolean3' and namespace-uri()='simple.schema2']/*[local-name()='simpleSubChild3' and namespace-uri()='simple.schema2'])
      return 
      if ($ifPropertyCount gt $thenPropertyCount) then 
-       local:addMessage('TR.missingMandatoryTypeError', map { 'localName': 'l2local', 'namespace': 'n2namespace' })
+       local:addMessage('TR.missingMandatoryTypeError', map { 'localName': 'l3local', 'namespace': 'n3namespace' })
      else ()
     )[position() le $limitErrors]
  let $totalNumberErrors := count(($messages0, $messages1))
  let $messages := 
   if($totalNumberErrors eq 1) then ()
+  else if ($totalNumberErrors eq 0) then
+    local:addMessage('TR.missingMandatoryTypeError', map { 'localName': 'l5local', 'namespace': 'n5namespace' })                  
   else ($messages0, $messages1)
 return
 (if ($messages) then 'FAILED' else 'PASSED',
