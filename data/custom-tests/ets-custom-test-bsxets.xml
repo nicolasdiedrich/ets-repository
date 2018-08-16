@@ -59,7 +59,7 @@
     (for $record in $db
      let $propertyCount := count($record//*[local-name()='Schulstandorte' and namespace-uri()='http://www.esdi-humboldt.eu/hale/shp']/*[local-name()='eleProp' and namespace-uri()='http://www.esdi-humboldt.eu/hale/shp']/*[local-name()='eleSubProp' and namespace-uri()='simple.schema'])
      return 
-     if (($ifPropertyCount lt 1) or ($ifPropertyCount gt 3)) then 
+     if (($propertyCount lt 1) or ($propertyCount gt 3)) then 
        local:addMessage('TR.missingMandatoryTypeError', map { 'localName': 'l2local', 'namespace': 'n2namespace' })
      else ()
     )[position() le $limitErrors]
