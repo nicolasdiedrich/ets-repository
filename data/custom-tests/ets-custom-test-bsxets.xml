@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<ExecutableTestSuite xmlns="http://www.interactive-instruments.de/etf/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EIDde5ddab2-9365-4e64-8d55-4bfee08bcd8d" xsi:schemaLocation="http://www.interactive-instruments.de/etf/2.0 ../../schema/model/resultSet.xsd">
+<ExecutableTestSuite xmlns="http://www.interactive-instruments.de/etf/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EIDd8add02d-bb69-4092-9dbc-53c78167ad03" xsi:schemaLocation="http://www.interactive-instruments.de/etf/2.0 ../../schema/model/resultSet.xsd">
   <itemHash>bQ==</itemHash>
   <remoteResource>http://github.com/inspire-eu-validation/ets-repository/metadata/iso</remoteResource>
   <localPath>/auto</localPath>
-  <label>Schema Profile Test: nur standorte5 Profile</label>
+  <label>name</label>
   <description><![CDATA[This test was generated automatically from a Schema profile in haleconnect]]></description>
   <reference>../../inspire-md-bsxets.xq</reference>
   <version>1.0.0</version>
-  <author>e2eOrgAdmin</author>
-  <creationDate>2018-06-13T08:23:53.167Z</creationDate>
-  <lastEditor>e2eOrgAdmin</lastEditor>
-  <lastUpdateDate>2018-06-13T08:23:53.167Z</lastUpdateDate>
+  <author>author</author>
+  <creationDate>2018-08-24T13:35:23.037Z</creationDate>
+  <lastEditor>author</lastEditor>
+  <lastUpdateDate>2018-08-24T13:35:23.037Z</lastUpdateDate>
   <tags>
     <tag ref="EIDfe1f3796-0ebf-4960-a6f7-f935e087fa4c"/>
   </tags>
@@ -32,72 +32,41 @@
     <testObjectType ref="EID5a60dded-0cb0-4977-9b06-16c6c2321d2e"/>
   </supportedTestObjectTypes>
   <testModules>
-    <TestModule id="EID39509f91-385c-4f79-91f8-d33c12ceb61a">
-      <label>TestModule</label>
-      <description>This is a test module</description>
-      <parent ref="EIDde5ddab2-9365-4e64-8d55-4bfee08bcd8d"/>
+    <TestModule id="EID9e7fcd76-99bc-4eef-aaf7-52c70c15a344">
+      <label>Default test module</label>
+      <description><![CDATA[This is the default test module]]></description>
+      <parent ref="EIDd8add02d-bb69-4092-9dbc-53c78167ad03"/>
       <testCases>
-        <TestCase id="EID5bde01a9-d0c5-448e-996f-3dcea45c535a">
-          <label>TestModule</label>
-          <description><![CDATA[
-TestCase for Consistency Condition<br />
-<br />Name: conditionName
-<br />Description: asdsd
-<br />Operator: XOR
-<br />Subconditions: 
-<br />- IF simpleType.simpleBoolean.simpleSubChild IS 'CustomValue1'
-<br /> THEN simpleType2.simpleBoolean2.simpleSubChild2 IS 'CustomValue2'
-<br />- IF simpleType.simpleBoolean.simpleSubChild EXISTS
-<br /> THEN simpleType2.simpleBoolean2.simpleSubChild2 EXISTS
-<br />]]></description>
-          <parent ref="EID39509f91-385c-4f79-91f8-d33c12ceb61a"/>
+        <TestCase id="EID7e7d7b41-e123-449f-aa7f-a4ad2382e6ae">
+          <label>TestCase label</label>
+          <description><![CDATA[Constraints TestCase for Feature Type with name 'organisationName' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
+          <parent ref="EID9e7fcd76-99bc-4eef-aaf7-52c70c15a344"/>
           <testSteps>
-            <TestStep id="EIDea86aeb3-5183-4875-9b7b-a75d2dd2866a">
+            <TestStep id="EIDc1c32b7b-94c8-4236-8d77-9faf73bee787">
               <label>testStep</label>
-              <description>This is a test step</description>
-              <parent ref="EID5bde01a9-d0c5-448e-996f-3dcea45c535a"/>
+              <description><![CDATA[This is a test step]]></description>
+              <parent ref="EID7e7d7b41-e123-449f-aa7f-a4ad2382e6ae"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EIDa23bf03f-b7ef-4fa1-a9d6-2621c08e9215">
+                <TestAssertion id="EID3b1e7a4b-5457-48e9-b8d7-5fb6325910ad">
                   <label>TestAssertion</label>
-                  <description><![CDATA[Test assertion for a condition with the following information:<br />
-<br />Name: conditionName
-<br />Description: asdsd
-<br />Operator: XOR
-<br />Subconditions: 
-<br />- IF simpleType.simpleBoolean.simpleSubChild IS 'CustomValue1'
-<br /> THEN simpleType2.simpleBoolean2.simpleSubChild2 IS 'CustomValue2'
-<br />- IF simpleType.simpleBoolean.simpleSubChild EXISTS
-<br /> THEN simpleType2.simpleBoolean2.simpleSubChild2 EXISTS
-<br />]]></description>
-                  <parent ref="EIDea86aeb3-5183-4875-9b7b-a75d2dd2866a"/>
+                  <description><![CDATA[The property with localName 'CharacterString' and namespace 'http://www.isotc211.org/2005/gco' should have a value that is contained in the list ['2', 'value1']]]></description>
+                  <parent ref="EIDc1c32b7b-94c8-4236-8d77-9faf73bee787"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>
-let $messages0 :=
-    (for $record in $db
-     let $ifPropertyCount := count($record//*[local-name()='simpleType' and namespace-uri()='simple.schema']/*[local-name()='simpleBoolean' and namespace-uri()='simple.schema']/*[local-name()='simpleSubChild' and namespace-uri()='simple.schema' and text()='CustomValue1'])
-     let $thenPropertyCount := count($record//*[local-name()='simpleType2' and namespace-uri()='simple.schema2']/*[local-name()='simpleBoolean2' and namespace-uri()='simple.schema2']/*[local-name()='simpleSubChild2' and namespace-uri()='simple.schema2' and text()='CustomValue2'])
-     return 
-     if ($ifPropertyCount gt $thenPropertyCount) then 
-       local:addMessage('TR.missingMandatoryTypeError', map { 'localName': 'l2local', 'namespace': 'n2namespace' })
-     else ()
-    )[position() le $limitErrors]
-let $messages1 :=
-    (for $record in $db
-     let $ifPropertyCount := count($record//*[local-name()='simpleType' and namespace-uri()='simple.schema']/*[local-name()='simpleBoolean' and namespace-uri()='simple.schema']/*[local-name()='simpleSubChild' and namespace-uri()='simple.schema'])
-     let $thenPropertyCount := count($record//*[local-name()='simpleType3' and namespace-uri()='simple.schema2']/*[local-name()='simpleBoolean3' and namespace-uri()='simple.schema2']/*[local-name()='simpleSubChild3' and namespace-uri()='simple.schema2'])
-     return 
-     if ($ifPropertyCount gt $thenPropertyCount) then 
-       local:addMessage('TR.missingMandatoryTypeError', map { 'localName': 'l3local', 'namespace': 'n3namespace' })
-     else ()
-    )[position() le $limitErrors]
- let $totalNumberErrors := count(($messages0, $messages1))
- let $messages := 
-  if($totalNumberErrors eq 1) then ()
-  else if ($totalNumberErrors eq 0) then
-    local:addMessage('TR.missingMandatoryTypeError', map { 'localName': 'l4local', 'namespace': 'n4namespace' })
-  else ($messages0, $messages1)
+let $messages :=
+  (for $record in $db
+     let $typesFound := $record//*[local-name()='myType' and namespace-uri()='simple.schema']
+     for $typeFound in $typesFound
+       let $countChoice1 := count($typeFound/*[local-name()='firstChoice' and namespace-uri()='simple.schema'])
+       let $countChoice2 := count($typeFound/*[local-name()='secondChoice' and namespace-uri()='simple.schema'])
+       if (($countChoice1 + $countChoice2) lt 1) then
+         local:addMessage('TR.invalidPropertyValueError', map { 'propName': 'CharacterString', 'localName': 'organisationName', 'namespace': 'http://www.isotc211.org/2005/gmd', 'valueFound': $propertyFound/text(), 'allowedValues': string-join( $codes, ', ') })
+       else if (($countChoice1 + $countChoice2) gt 1)
+         local:addMessage('TR.invalidPropertyValueError', map { 'propName': 'CharacterString', 'localName': 'organisationName', 'namespace': 'http://www.isotc211.org/2005/gmd', 'valueFound': $propertyFound/text(), 'allowedValues': string-join( $codes, ', ') })
+       else ()
+  )[position() le $limitErrors]
 return
 (if ($messages) then 'FAILED' else 'PASSED',
  local:error-statistics('TR.recordsWithErrors', count(fn:distinct-values($messages//etf:argument[@token='id']/text()))),
@@ -116,3 +85,4 @@ return
     </TestModule>
   </testModules>
 </ExecutableTestSuite>
+
