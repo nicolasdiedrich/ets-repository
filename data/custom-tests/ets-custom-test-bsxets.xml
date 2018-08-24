@@ -62,9 +62,9 @@ let $messages :=
        let $countChoice1 := count($typeFound/*[local-name()='firstChoice' and namespace-uri()='simple.schema'])
        let $countChoice2 := count($typeFound/*[local-name()='secondChoice' and namespace-uri()='simple.schema'])
        if (($countChoice1 + $countChoice2) lt 1) then
-         local:addMessage('TR.invalidPropertyValueError', map { 'propName': 'CharacterString', 'localName': 'organisationName', 'namespace': 'http://www.isotc211.org/2005/gmd', 'valueFound': $propertyFound/text(), 'allowedValues': string-join( $codes, ', ') })
+         local:addMessage('TR.missingTypeContentError', map { 'localName': 'propertyName1', 'namespace': 'http://www.isotc211.org/2005/gmd1' })
        else if (($countChoice1 + $countChoice2) gt 1)
-         local:addMessage('TR.invalidPropertyValueError', map { 'propName': 'CharacterString', 'localName': 'organisationName', 'namespace': 'http://www.isotc211.org/2005/gmd', 'valueFound': $propertyFound/text(), 'allowedValues': string-join( $codes, ', ') })
+         local:addMessage('TR.missingTypeContentError', map { 'localName': 'propertyName2', 'namespace': 'http://www.isotc211.org/2005/gmd2' })
        else ()
   )[position() le $limitErrors]
 return
