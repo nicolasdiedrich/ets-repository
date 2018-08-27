@@ -141,7 +141,7 @@ return
      for $propertyFound in $propertiesFound 
      return
        if (functx:all-whitespace($propertyFound)) then
-         local:addMessage('TR.missingMandatoryTypeError', map { 'localName': 'type3String', 'namespace': 'www.threetypes.com' })
+         local:addMessage('TR.missingTypeContentError', map { 'localName': 'type3String', 'namespace': 'www.threetypes.com' })
        else ()
   )[position() le $limitErrors]
 return
