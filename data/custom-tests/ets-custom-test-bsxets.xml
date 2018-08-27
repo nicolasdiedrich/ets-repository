@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<ExecutableTestSuite xmlns="http://www.interactive-instruments.de/etf/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EID1e3b4644-b2ce-4c8b-a16a-031f2978dfa3" xsi:schemaLocation="http://www.interactive-instruments.de/etf/2.0 ../../schema/model/resultSet.xsd">
+<ExecutableTestSuite xmlns="http://www.interactive-instruments.de/etf/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EID7effad82-5e59-4c0a-9583-cbc6fe608ff4" xsi:schemaLocation="http://www.interactive-instruments.de/etf/2.0 ../../schema/model/resultSet.xsd">
   <itemHash>bQ==</itemHash>
   <remoteResource>http://github.com/inspire-eu-validation/ets-repository/metadata/iso</remoteResource>
   <localPath>/auto</localPath>
@@ -32,27 +32,27 @@
     <testObjectType ref="EID5a60dded-0cb0-4977-9b06-16c6c2321d2e"/>
   </supportedTestObjectTypes>
   <testModules>
-    <TestModule id="EIDa90c780c-dbf5-4fc4-a018-3435d9fc42a7">
+    <TestModule id="EID6cdb044b-e75d-444e-866d-cb987e0ce817">
       <label>Default test module</label>
       <description><![CDATA[This is the default test module]]></description>
-      <parent ref="EID1e3b4644-b2ce-4c8b-a16a-031f2978dfa3"/>
+      <parent ref="EID7effad82-5e59-4c0a-9583-cbc6fe608ff4"/>
       <testCases>
-        <TestCase id="EIDc90d537b-70d2-4139-86c6-08a5bef5174a">
+        <TestCase id="EIDf6cf1fd8-fe3f-4732-9feb-986e081dd8b0">
           <label>TestCase label</label>
           <description><![CDATA[Constraints TestCase for Feature Type with name 'MD_ScopeDescription' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
-          <parent ref="EIDa90c780c-dbf5-4fc4-a018-3435d9fc42a7"/>
+          <parent ref="EID6cdb044b-e75d-444e-866d-cb987e0ce817"/>
           <testSteps>
-            <TestStep id="EID2c499afc-bc7e-42ee-956e-be5a28a90dbb">
+            <TestStep id="EID08e5bc2f-1a06-495b-a5b7-b2d9c6db2211">
               <label>testStep</label>
               <description><![CDATA[This is a test step]]></description>
-              <parent ref="EIDc90d537b-70d2-4139-86c6-08a5bef5174a"/>
+              <parent ref="EIDf6cf1fd8-fe3f-4732-9feb-986e081dd8b0"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EIDee32b2c7-79b8-4d67-8277-b989f9f8913b">
+                <TestAssertion id="EID7f6342a4-7b61-4007-bc27-59731f96ea17">
                   <label>TestAssertion</label>
-                  <description><![CDATA[The property with localName 'choice_1' and namespace 'http://www.isotc211.org/2005/gmd/MD_ScopeDescription_Type' must contain one and only one of the following options: <br><ul><li>other</li><li>attributes</li><li>features</li><li>dataset</li><li>featureInstances</li><li>attributeInstances</li></ul>]]></description>
-                  <parent ref="EID2c499afc-bc7e-42ee-956e-be5a28a90dbb"/>
+                  <description><![CDATA[The type with localName 'MD_ScopeDescription' and namespace 'http://www.isotc211.org/2005/gmd' must contain one and only one of the following options: <br><ul><li>other</li><li>attributes</li><li>features</li><li>dataset</li><li>featureInstances</li><li>attributeInstances</li></ul>]]></description>
+                  <parent ref="EID08e5bc2f-1a06-495b-a5b7-b2d9c6db2211"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $messages :=
   (for $record in $db
@@ -65,9 +65,9 @@
        let $countChoice3 := count($typeFound/*[local-name()='attributeInstances' and namespace-uri()='http://www.isotc211.org/2005/gmd'])
        return
        if ($countElements gt 1) then
-         local:addMessage('TR.moreThanOneOptionError', map { 'localName': 'More content', 'namespace': 'namespace2'  })
+         local:addMessage('TR.moreThanOneOptionError', map { 'localName': 'MD_ScopeDescription', 'namespace': 'http://www.isotc211.org/2005/gmd'  })
        else if (($countChoice0 + $countChoice1 + $countChoice2 + $countChoice3) lt 1) then 
-         local:addMessage('TR.noValidOptionError', map { 'localName': 'propertyName1', 'namespace': 'namespace3'  })
+         local:addMessage('TR.noValidOptionError', map { 'localName': 'MD_ScopeDescription', 'namespace': 'http://www.isotc211.org/2005/gmd'  })
        else ()
   )[position() le $limitErrors]
 return
