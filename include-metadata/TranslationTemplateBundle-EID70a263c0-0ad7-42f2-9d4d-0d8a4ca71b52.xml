@@ -779,7 +779,7 @@
 	  </LangTranslationTemplateCollection>
 	  <LangTranslationTemplateCollection name="TR.moreThanOneOptionError">
 		 <translationTemplates>
-			<TranslationTemplate language="en" name="TR.moreThanOneOptionError">The property choice '{localName}' with namespace '{namespace}' has more than one option specified.</TranslationTemplate>
+			<TranslationTemplate language="en" name="TR.moreThanOneOptionError">The property choice '{localName}' with namespace '{namespace}' has more than one valid option specified.</TranslationTemplate>
 		 </translationTemplates>
 	  </LangTranslationTemplateCollection>
 	  <LangTranslationTemplateCollection name="TR.noValidOptionError">
