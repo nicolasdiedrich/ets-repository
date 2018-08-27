@@ -183,7 +183,7 @@ return
      let $propertyCount := count($record//*[local-name()='type2' and namespace-uri()='www.threetypes.com']/*[local-name()='type2Double' and namespace-uri()='www.threetypes.com'])
      return
      if (($propertyCount lt 2) or ($propertyCount gt 4)) then
-      local:addMessage('TR.missingMandatoryTypeError', map { 'localName': 'type2', 'namespace': 'www.threetypes.com' })
+      local:addMessage('TR.invalidPropertyCardinalityError', map { 'localName': 'type2', 'namespace': 'www.threetypes.com', 'invalidCardinality': $propertyCount })
  else ()
   )[position() le $limitErrors]
 return
@@ -195,6 +195,7 @@ return
                     <translationTemplate ref="TR.recordsWithErrors"/>
                     <translationTemplate ref="TR.missingTypeContentError"/>
                     <translationTemplate ref="TR.missingMandatoryTypeError"/>
+                    <translationTemplate ref="TR.invalidPropertyCardinalityError"/>
                   </translationTemplates>
                 </TestAssertion>
               </testAssertions>
