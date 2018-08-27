@@ -764,7 +764,12 @@
 	  </LangTranslationTemplateCollection>
 	  <LangTranslationTemplateCollection name="TR.missingMandatoryTypeError">
 		 <translationTemplates>
-			<TranslationTemplate language="en" name="TR.missingMandatoryTypeError">The element with localName '{localName}' and namespace '{namespace}' is mandatory in this Profile, but it wasn't found.</TranslationTemplate>
+			<TranslationTemplate language="en" name="TR.missingMandatoryTypeError">The element with name '{localName}' and namespace '{namespace}' is mandatory in this Profile, but it wasn't found.</TranslationTemplate>
+		 </translationTemplates>
+	  </LangTranslationTemplateCollection>
+	  <LangTranslationTemplateCollection name="TR.missingTypeContentError">
+		 <translationTemplates>
+			<TranslationTemplate language="en" name="TR.missingTypeContentError">The property '{localName}' and namespace '{namespace}' was present in the file, but it didn't have any content.</TranslationTemplate>
 		 </translationTemplates>
 	  </LangTranslationTemplateCollection>
 		<LangTranslationTemplateCollection name="TR.invalidPropertyValueError">
