@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<ExecutableTestSuite xmlns="http://www.interactive-instruments.de/etf/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EID3b0f7c11-7add-4c6e-a139-291c916019ad" xsi:schemaLocation="http://www.interactive-instruments.de/etf/2.0 ../../schema/model/resultSet.xsd">
+<ExecutableTestSuite xmlns="http://www.interactive-instruments.de/etf/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EIDbc5523d0-5928-4029-8bfa-fe8fe3347d41" xsi:schemaLocation="http://www.interactive-instruments.de/etf/2.0 ../../schema/model/resultSet.xsd">
   <itemHash>bQ==</itemHash>
   <remoteResource>http://github.com/inspire-eu-validation/ets-repository/metadata/iso</remoteResource>
   <localPath>/auto</localPath>
@@ -32,27 +32,27 @@
     <testObjectType ref="EID5a60dded-0cb0-4977-9b06-16c6c2321d2e"/>
   </supportedTestObjectTypes>
   <testModules>
-    <TestModule id="EIDcab23ab5-9ace-4e1a-af6c-53db5d64befa">
+    <TestModule id="EIDdcb67712-abeb-47b3-a79e-52883ce3ade8">
       <label>Default test module</label>
       <description><![CDATA[This is the default test module]]></description>
-      <parent ref="EID3b0f7c11-7add-4c6e-a139-291c916019ad"/>
+      <parent ref="EIDbc5523d0-5928-4029-8bfa-fe8fe3347d41"/>
       <testCases>
-        <TestCase id="EID25d4a09a-c7f3-4f41-9345-80ace15c8a6d">
+        <TestCase id="EID07ca09fe-0c34-4cc4-bc29-c746891cbc74">
           <label>TestCase label</label>
           <description><![CDATA[Constraints TestCase for Feature Type with name 'type1' and namespace 'www.threetypes.com']]></description>
-          <parent ref="EIDcab23ab5-9ace-4e1a-af6c-53db5d64befa"/>
+          <parent ref="EIDdcb67712-abeb-47b3-a79e-52883ce3ade8"/>
           <testSteps>
-            <TestStep id="EID234446af-ad99-4d55-bba1-7b0deded5065">
+            <TestStep id="EID9e5b45a6-3a48-4e93-985b-b25c28d961ac">
               <label>testStep</label>
               <description><![CDATA[This is a test step]]></description>
-              <parent ref="EID25d4a09a-c7f3-4f41-9345-80ace15c8a6d"/>
+              <parent ref="EID07ca09fe-0c34-4cc4-bc29-c746891cbc74"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EIDa3c9ab8a-7c01-4a5d-929d-63873afec456">
+                <TestAssertion id="EID13bc27c8-733d-40ec-9b9c-d9d0f791d73e">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'type1Int' and namespace 'www.threetypes.com' should have a value that is contained in the list ['1', '3', '5']]]></description>
-                  <parent ref="EID234446af-ad99-4d55-bba1-7b0deded5065"/>
+                  <parent ref="EID9e5b45a6-3a48-4e93-985b-b25c28d961ac"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $codes := ('1', '3', '5')
 let $messages :=
@@ -72,6 +72,7 @@ return
                   <testItemType ref="EIDf0edc596-49d2-48d6-a1a1-1ac581dcde0a"/>
                   <translationTemplates>
                     <translationTemplate ref="TR.recordsWithErrors"/>
+                    <translationTemplate ref="TR.missingTypeContentError"/>
                     <translationTemplate ref="TR.missingMandatoryTypeError"/>
                   </translationTemplates>
                 </TestAssertion>
@@ -79,22 +80,22 @@ return
             </TestStep>
           </testSteps>
         </TestCase>
-        <TestCase id="EID765d81c0-8d16-442f-b1ce-786a43d22313">
+        <TestCase id="EIDd1ad69e2-a43d-4bd5-80f5-7084ecf18491">
           <label>TestCase label</label>
           <description><![CDATA[Constraints TestCase for Feature Type with name 'type3' and namespace 'www.threetypes.com']]></description>
-          <parent ref="EIDcab23ab5-9ace-4e1a-af6c-53db5d64befa"/>
+          <parent ref="EIDdcb67712-abeb-47b3-a79e-52883ce3ade8"/>
           <testSteps>
-            <TestStep id="EIDf8f65e89-6d6f-47f6-9032-dbc8c490f732">
+            <TestStep id="EIDfde4011a-80a1-4b2c-a09e-7862ab410f04">
               <label>testStep</label>
               <description><![CDATA[This is a test step]]></description>
-              <parent ref="EID765d81c0-8d16-442f-b1ce-786a43d22313"/>
+              <parent ref="EIDd1ad69e2-a43d-4bd5-80f5-7084ecf18491"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EIDf15cff38-14c7-48c9-b412-21c79711e583">
+                <TestAssertion id="EID273e8e64-3d8c-4146-8478-c05a02005e8e">
                   <label>TestAssertion</label>
                   <description><![CDATA[The type with localName 'type3' and namespace 'www.threetypes.com' should be present in the file]]></description>
-                  <parent ref="EIDf8f65e89-6d6f-47f6-9032-dbc8c490f732"/>
+                  <parent ref="EIDfde4011a-80a1-4b2c-a09e-7862ab410f04"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $messages :=
     (for $record in $db
@@ -111,6 +112,7 @@ return
                   <testItemType ref="EIDf0edc596-49d2-48d6-a1a1-1ac581dcde0a"/>
                   <translationTemplates>
                     <translationTemplate ref="TR.recordsWithErrors"/>
+                    <translationTemplate ref="TR.missingTypeContentError"/>
                     <translationTemplate ref="TR.missingMandatoryTypeError"/>
                   </translationTemplates>
                 </TestAssertion>
@@ -118,22 +120,22 @@ return
             </TestStep>
           </testSteps>
         </TestCase>
-        <TestCase id="EID409bda22-9b9f-4a5b-92f5-bd6882be2bf4">
+        <TestCase id="EID3cce9a91-8a89-49b0-9b2c-02a9f90172bd">
           <label>TestCase label</label>
           <description><![CDATA[Constraints TestCase for Feature Type with name 'type3' and namespace 'www.threetypes.com']]></description>
-          <parent ref="EIDcab23ab5-9ace-4e1a-af6c-53db5d64befa"/>
+          <parent ref="EIDdcb67712-abeb-47b3-a79e-52883ce3ade8"/>
           <testSteps>
-            <TestStep id="EID445141fa-4a34-47b7-85be-45521239979a">
+            <TestStep id="EID43cc2dd8-5607-4d06-bb00-5fbda0e4062f">
               <label>testStep</label>
               <description><![CDATA[This is a test step]]></description>
-              <parent ref="EID409bda22-9b9f-4a5b-92f5-bd6882be2bf4"/>
+              <parent ref="EID3cce9a91-8a89-49b0-9b2c-02a9f90172bd"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EID4bc3f979-0326-4ab3-9554-6aba9cc5edc0">
+                <TestAssertion id="EIDee6410b5-75b0-45c1-835b-3b2f901f46c9">
                   <label>TestAssertion</label>
-                  <description><![CDATA[The property with localName 'type3String' and namespace 'www.threetypes.com' should not be empty]]></description>
-                  <parent ref="EID445141fa-4a34-47b7-85be-45521239979a"/>
+                  <description><![CDATA[The property with localName 'type3String' and namespace 'www.threetypes.com' should not be empty if it's present]]></description>
+                  <parent ref="EID43cc2dd8-5607-4d06-bb00-5fbda0e4062f"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $messages :=
   (for $record in $db
@@ -151,6 +153,7 @@ return
                   <testItemType ref="EIDf0edc596-49d2-48d6-a1a1-1ac581dcde0a"/>
                   <translationTemplates>
                     <translationTemplate ref="TR.recordsWithErrors"/>
+                    <translationTemplate ref="TR.missingTypeContentError"/>
                     <translationTemplate ref="TR.missingMandatoryTypeError"/>
                   </translationTemplates>
                 </TestAssertion>
@@ -158,22 +161,22 @@ return
             </TestStep>
           </testSteps>
         </TestCase>
-        <TestCase id="EID871d78a1-ab8b-4337-962c-caf174158e14">
+        <TestCase id="EID89db6e5d-7327-49e1-8022-93756a462ddd">
           <label>type2 label</label>
           <description><![CDATA[type2 description]]></description>
-          <parent ref="EIDcab23ab5-9ace-4e1a-af6c-53db5d64befa"/>
+          <parent ref="EIDdcb67712-abeb-47b3-a79e-52883ce3ade8"/>
           <testSteps>
-            <TestStep id="EID169cfb1f-b026-40b1-b401-d03093433ca5">
+            <TestStep id="EIDf00caf78-f476-401f-9af9-ee9d1efe3489">
               <label>testStep</label>
               <description><![CDATA[This is a test step]]></description>
-              <parent ref="EID871d78a1-ab8b-4337-962c-caf174158e14"/>
+              <parent ref="EID89db6e5d-7327-49e1-8022-93756a462ddd"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EIDb1e9bb1d-45eb-4976-8b41-7c5e7fe0abef">
+                <TestAssertion id="EID9216745b-7a24-41cc-bcce-55839bd01294">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'type2Double' and namespace 'www.threetypes.com' should have a minimum cardinality of 2 and a maximum cardinality of 4]]></description>
-                  <parent ref="EID169cfb1f-b026-40b1-b401-d03093433ca5"/>
+                  <parent ref="EIDf00caf78-f476-401f-9af9-ee9d1efe3489"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $messages :=
   (for $record in $db
@@ -190,6 +193,7 @@ return
                   <testItemType ref="EIDf0edc596-49d2-48d6-a1a1-1ac581dcde0a"/>
                   <translationTemplates>
                     <translationTemplate ref="TR.recordsWithErrors"/>
+                    <translationTemplate ref="TR.missingTypeContentError"/>
                     <translationTemplate ref="TR.missingMandatoryTypeError"/>
                   </translationTemplates>
                 </TestAssertion>
