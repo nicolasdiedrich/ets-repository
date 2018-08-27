@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<ExecutableTestSuite xmlns="http://www.interactive-instruments.de/etf/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EIDbc5523d0-5928-4029-8bfa-fe8fe3347d41" xsi:schemaLocation="http://www.interactive-instruments.de/etf/2.0 ../../schema/model/resultSet.xsd">
+<ExecutableTestSuite xmlns="http://www.interactive-instruments.de/etf/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EID50b08f10-78e6-439d-bf26-0be00c90e8d5" xsi:schemaLocation="http://www.interactive-instruments.de/etf/2.0 ../../schema/model/resultSet.xsd">
   <itemHash>bQ==</itemHash>
   <remoteResource>http://github.com/inspire-eu-validation/ets-repository/metadata/iso</remoteResource>
   <localPath>/auto</localPath>
@@ -32,27 +32,27 @@
     <testObjectType ref="EID5a60dded-0cb0-4977-9b06-16c6c2321d2e"/>
   </supportedTestObjectTypes>
   <testModules>
-    <TestModule id="EIDdcb67712-abeb-47b3-a79e-52883ce3ade8">
+    <TestModule id="EID0f52395c-fc94-4e7f-bd29-6dd36a0ea4a4">
       <label>Default test module</label>
       <description><![CDATA[This is the default test module]]></description>
-      <parent ref="EIDbc5523d0-5928-4029-8bfa-fe8fe3347d41"/>
+      <parent ref="EID50b08f10-78e6-439d-bf26-0be00c90e8d5"/>
       <testCases>
-        <TestCase id="EID07ca09fe-0c34-4cc4-bc29-c746891cbc74">
+        <TestCase id="EID58d8c2cb-6dfb-4376-93fd-8d5f0f9ebf57">
           <label>TestCase label</label>
           <description><![CDATA[Constraints TestCase for Feature Type with name 'type1' and namespace 'www.threetypes.com']]></description>
-          <parent ref="EIDdcb67712-abeb-47b3-a79e-52883ce3ade8"/>
+          <parent ref="EID0f52395c-fc94-4e7f-bd29-6dd36a0ea4a4"/>
           <testSteps>
-            <TestStep id="EID9e5b45a6-3a48-4e93-985b-b25c28d961ac">
+            <TestStep id="EIDd5917a6e-44f9-4f9c-a648-86b2b9b38e76">
               <label>testStep</label>
               <description><![CDATA[This is a test step]]></description>
-              <parent ref="EID07ca09fe-0c34-4cc4-bc29-c746891cbc74"/>
+              <parent ref="EID58d8c2cb-6dfb-4376-93fd-8d5f0f9ebf57"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EID13bc27c8-733d-40ec-9b9c-d9d0f791d73e">
+                <TestAssertion id="EIDebb97921-cbd1-4617-9e0b-dbdb562699dc">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'type1Int' and namespace 'www.threetypes.com' should have a value that is contained in the list ['1', '3', '5']]]></description>
-                  <parent ref="EID9e5b45a6-3a48-4e93-985b-b25c28d961ac"/>
+                  <parent ref="EIDd5917a6e-44f9-4f9c-a648-86b2b9b38e76"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $codes := ('1', '3', '5')
 let $messages :=
@@ -74,28 +74,29 @@ return
                     <translationTemplate ref="TR.recordsWithErrors"/>
                     <translationTemplate ref="TR.missingTypeContentError"/>
                     <translationTemplate ref="TR.missingMandatoryTypeError"/>
+                    <translationTemplate ref="TR.invalidPropertyCardinalityError"/>
                   </translationTemplates>
                 </TestAssertion>
               </testAssertions>
             </TestStep>
           </testSteps>
         </TestCase>
-        <TestCase id="EIDd1ad69e2-a43d-4bd5-80f5-7084ecf18491">
+        <TestCase id="EID0569b29e-80a5-4ca8-b83e-3772e1fa3bd9">
           <label>TestCase label</label>
           <description><![CDATA[Constraints TestCase for Feature Type with name 'type3' and namespace 'www.threetypes.com']]></description>
-          <parent ref="EIDdcb67712-abeb-47b3-a79e-52883ce3ade8"/>
+          <parent ref="EID0f52395c-fc94-4e7f-bd29-6dd36a0ea4a4"/>
           <testSteps>
-            <TestStep id="EIDfde4011a-80a1-4b2c-a09e-7862ab410f04">
+            <TestStep id="EIDf1b80a20-ccc2-4d21-8790-83df79ee96b7">
               <label>testStep</label>
               <description><![CDATA[This is a test step]]></description>
-              <parent ref="EIDd1ad69e2-a43d-4bd5-80f5-7084ecf18491"/>
+              <parent ref="EID0569b29e-80a5-4ca8-b83e-3772e1fa3bd9"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EID273e8e64-3d8c-4146-8478-c05a02005e8e">
+                <TestAssertion id="EID17848403-64d0-4636-8a4e-3921808f5f2c">
                   <label>TestAssertion</label>
                   <description><![CDATA[The type with localName 'type3' and namespace 'www.threetypes.com' should be present in the file]]></description>
-                  <parent ref="EIDfde4011a-80a1-4b2c-a09e-7862ab410f04"/>
+                  <parent ref="EIDf1b80a20-ccc2-4d21-8790-83df79ee96b7"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $messages :=
     (for $record in $db
@@ -114,28 +115,29 @@ return
                     <translationTemplate ref="TR.recordsWithErrors"/>
                     <translationTemplate ref="TR.missingTypeContentError"/>
                     <translationTemplate ref="TR.missingMandatoryTypeError"/>
+                    <translationTemplate ref="TR.invalidPropertyCardinalityError"/>
                   </translationTemplates>
                 </TestAssertion>
               </testAssertions>
             </TestStep>
           </testSteps>
         </TestCase>
-        <TestCase id="EID3cce9a91-8a89-49b0-9b2c-02a9f90172bd">
+        <TestCase id="EID88eb33d1-f128-45fa-a90e-cdb5d2638c91">
           <label>TestCase label</label>
           <description><![CDATA[Constraints TestCase for Feature Type with name 'type3' and namespace 'www.threetypes.com']]></description>
-          <parent ref="EIDdcb67712-abeb-47b3-a79e-52883ce3ade8"/>
+          <parent ref="EID0f52395c-fc94-4e7f-bd29-6dd36a0ea4a4"/>
           <testSteps>
-            <TestStep id="EID43cc2dd8-5607-4d06-bb00-5fbda0e4062f">
+            <TestStep id="EID2e87f24d-c85c-45d2-bfea-f51716f85ddb">
               <label>testStep</label>
               <description><![CDATA[This is a test step]]></description>
-              <parent ref="EID3cce9a91-8a89-49b0-9b2c-02a9f90172bd"/>
+              <parent ref="EID88eb33d1-f128-45fa-a90e-cdb5d2638c91"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EIDee6410b5-75b0-45c1-835b-3b2f901f46c9">
+                <TestAssertion id="EIDccd8d4e9-28d9-4b80-bdbf-bf9cdf4a6629">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'type3String' and namespace 'www.threetypes.com' should not be empty if it's present]]></description>
-                  <parent ref="EID43cc2dd8-5607-4d06-bb00-5fbda0e4062f"/>
+                  <parent ref="EID2e87f24d-c85c-45d2-bfea-f51716f85ddb"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $messages :=
   (for $record in $db
@@ -155,36 +157,39 @@ return
                     <translationTemplate ref="TR.recordsWithErrors"/>
                     <translationTemplate ref="TR.missingTypeContentError"/>
                     <translationTemplate ref="TR.missingMandatoryTypeError"/>
+                    <translationTemplate ref="TR.invalidPropertyCardinalityError"/>
                   </translationTemplates>
                 </TestAssertion>
               </testAssertions>
             </TestStep>
           </testSteps>
         </TestCase>
-        <TestCase id="EID89db6e5d-7327-49e1-8022-93756a462ddd">
+        <TestCase id="EID93330bb3-2a06-4a70-b911-263e0be28958">
           <label>type2 label</label>
           <description><![CDATA[type2 description]]></description>
-          <parent ref="EIDdcb67712-abeb-47b3-a79e-52883ce3ade8"/>
+          <parent ref="EID0f52395c-fc94-4e7f-bd29-6dd36a0ea4a4"/>
           <testSteps>
-            <TestStep id="EIDf00caf78-f476-401f-9af9-ee9d1efe3489">
+            <TestStep id="EIDfd6686dc-2213-450b-aa37-fdf5c7a076d8">
               <label>testStep</label>
               <description><![CDATA[This is a test step]]></description>
-              <parent ref="EID89db6e5d-7327-49e1-8022-93756a462ddd"/>
+              <parent ref="EID93330bb3-2a06-4a70-b911-263e0be28958"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EID9216745b-7a24-41cc-bcce-55839bd01294">
+                <TestAssertion id="EID9fbb11a0-1a60-455f-a9e0-0e6125e46412">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'type2Double' and namespace 'www.threetypes.com' should have a minimum cardinality of 2 and a maximum cardinality of 4]]></description>
-                  <parent ref="EIDf00caf78-f476-401f-9af9-ee9d1efe3489"/>
+                  <parent ref="EIDfd6686dc-2213-450b-aa37-fdf5c7a076d8"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $messages :=
   (for $record in $db
-     let $propertyCount := count($record//*[local-name()='type2' and namespace-uri()='www.threetypes.com']/*[local-name()='type2Double' and namespace-uri()='www.threetypes.com'])
-     return
-     if (($propertyCount lt 2) or ($propertyCount gt 4)) then
-      local:addMessage('TR.invalidPropertyCardinalityError', map { 'localName': 'type2', 'namespace': 'www.threetypes.com', 'invalidCardinality': $propertyCount })
- else ()
+     let $typesFound := $record//*[local-name()='type2' and namespace-uri()='www.threetypes.com']
+     for $typeFound in $typesFound 
+       let $propertyCount := count($typeFound/*[local-name()='type2Double' and namespace-uri()='www.threetypes.com']) 
+       return
+       if (($propertyCount lt 2) or ($propertyCount gt 4)) then
+        local:addMessage('TR.invalidPropertyCardinalityError', map { 'localName': 'type2', 'namespace': 'www.threetypes.com', 'invalidCardinality': $propertyCount })
+       else ()
   )[position() le $limitErrors]
 return
 (if ($messages) then 'FAILED' else 'PASSED',
