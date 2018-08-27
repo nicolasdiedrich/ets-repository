@@ -59,10 +59,13 @@ let $messages :=
   (for $record in $db
      let $typesFound := $record//*[local-name()='myType' and namespace-uri()='simple.schema']
      for $typeFound in $typesFound
+       let $countElements := count($typeFound/*) 
        let $countChoice1 := count($typeFound/*[local-name()='firstChoice' and namespace-uri()='simple.schema'])
        let $countChoice2 := count($typeFound/*[local-name()='secondChoice' and namespace-uri()='simple.schema'])
-       return             
-       if (($countChoice1 + $countChoice2) lt 1) then
+       return
+       if ($countElements gt 1) then
+         local:addMessage('TR.missingMandatoryTypeError', map { 'localName': 'More content', 'namespace': $countElements })            
+       else if (($countChoice1 + $countChoice2) lt 1) then
          local:addMessage('TR.missingMandatoryTypeError', map { 'localName': $countChoice1, 'namespace': $countChoice2 })
        else if (($countChoice1 + $countChoice2) gt 1) then
          local:addMessage('TR.missingMandatoryTypeError', map { 'localName': 'propertyName2', 'namespace': 'http://www.isotc211.org/2005/gmd2' })
