@@ -1601,7 +1601,7 @@ In other cases, gmd:otherConstraints shall include a non-empty free text element
 	  </LangTranslationTemplateCollection>
 	  <LangTranslationTemplateCollection name="TR.moreThanOneOptionError">
 		 <translationTemplates>
-			<TranslationTemplate language="en" name="TR.moreThanOneOptionError">The property choice '{localName}' with namespace '{namespace}' has more than one option specified.</TranslationTemplate>
+			<TranslationTemplate language="en" name="TR.moreThanOneOptionError">The property choice '{localName}' with namespace '{namespace}' has more than one valid option specified.</TranslationTemplate>
 		 </translationTemplates>
 	  </LangTranslationTemplateCollection>
 	  <LangTranslationTemplateCollection name="TR.noValidOptionError">
