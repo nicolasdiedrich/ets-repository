@@ -769,7 +769,12 @@
 	  </LangTranslationTemplateCollection>
 	  <LangTranslationTemplateCollection name="TR.missingTypeContentError">
 		 <translationTemplates>
-			<TranslationTemplate language="en" name="TR.missingTypeContentError">The property '{localName}' and namespace '{namespace}' was present in the file, but it didn't have any content.</TranslationTemplate>
+			<TranslationTemplate language="en" name="TR.missingTypeContentError">The property '{localName}' with namespace '{namespace}' was present in the file, but it didn't have any content.</TranslationTemplate>
+		 </translationTemplates>
+	  </LangTranslationTemplateCollection>
+	  <LangTranslationTemplateCollection name="TR.invalidPropertyCardinalityError">
+		 <translationTemplates>
+			<TranslationTemplate language="en" name="TR.invalidPropertyCardinalityError">The property '{localName}' with namespace '{namespace}' has an invalid cardinality of '{invalidCardinality}'.</TranslationTemplate>
 		 </translationTemplates>
 	  </LangTranslationTemplateCollection>
 		<LangTranslationTemplateCollection name="TR.invalidPropertyValueError">
