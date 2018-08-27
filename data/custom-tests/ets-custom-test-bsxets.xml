@@ -63,7 +63,7 @@ let $messages :=
        let $countChoice2 := count($typeFound/*[local-name()='secondChoice' and namespace-uri()='simple.schema'])
        return             
        if (($countChoice1 + $countChoice2) lt 1) then
-         local:addMessage('TR.missingMandatoryTypeError', map { 'localName': 'propertyName1', 'namespace': 'http://www.isotc211.org/2005/gmd1' })
+         local:addMessage('TR.missingMandatoryTypeError', map { 'localName': $countChoice1, 'namespace': $countChoice2 })
        else if (($countChoice1 + $countChoice2) gt 1) then
          local:addMessage('TR.missingMandatoryTypeError', map { 'localName': 'propertyName2', 'namespace': 'http://www.isotc211.org/2005/gmd2' })
        else ()
