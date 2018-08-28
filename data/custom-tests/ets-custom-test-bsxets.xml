@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<ExecutableTestSuite xmlns="http://www.interactive-instruments.de/etf/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EID5be6b567-c94f-41f3-9b85-8abbb7d25905" xsi:schemaLocation="http://www.interactive-instruments.de/etf/2.0 ../../schema/model/resultSet.xsd">
+<ExecutableTestSuite xmlns="http://www.interactive-instruments.de/etf/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EIDffb46d85-950f-4a48-9d80-a16db54f1632" xsi:schemaLocation="http://www.interactive-instruments.de/etf/2.0 ../../schema/model/resultSet.xsd">
   <itemHash>bQ==</itemHash>
   <remoteResource>http://github.com/inspire-eu-validation/ets-repository/metadata/iso</remoteResource>
   <localPath>/auto</localPath>
@@ -32,27 +32,27 @@
     <testObjectType ref="EID5a60dded-0cb0-4977-9b06-16c6c2321d2e"/>
   </supportedTestObjectTypes>
   <testModules>
-    <TestModule id="EID9a787b99-dca2-40f5-9dac-4a5790888e1f">
+    <TestModule id="EIDb52a2da7-d1bb-4e71-993a-4153f6b4f547">
       <label>Default test module</label>
       <description><![CDATA[This is the default test module]]></description>
-      <parent ref="EID5be6b567-c94f-41f3-9b85-8abbb7d25905"/>
+      <parent ref="EIDffb46d85-950f-4a48-9d80-a16db54f1632"/>
       <testCases>
-        <TestCase id="EID3f8ed876-3f94-4171-b31f-717cf41dca97">
+        <TestCase id="EID3c4c4844-4522-4c99-ba82-9580ef9f679e">
           <label>TestCase label</label>
           <description><![CDATA[Constraints TestCase for Feature Type with name 'type1' and namespace 'www.threetypes.com']]></description>
-          <parent ref="EID9a787b99-dca2-40f5-9dac-4a5790888e1f"/>
+          <parent ref="EIDb52a2da7-d1bb-4e71-993a-4153f6b4f547"/>
           <testSteps>
-            <TestStep id="EID126ef049-ec1c-4495-b5e4-b974afb65e84">
+            <TestStep id="EIDc3e81f8d-4c19-424c-b271-e985331c0936">
               <label>testStep</label>
               <description><![CDATA[This is a test step]]></description>
-              <parent ref="EID3f8ed876-3f94-4171-b31f-717cf41dca97"/>
+              <parent ref="EID3c4c4844-4522-4c99-ba82-9580ef9f679e"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EID73e5e1f8-3600-4b4e-9b9b-0666a3dc9ca7">
+                <TestAssertion id="EID424ac0fe-a75d-4610-8d2f-ded70c7224f6">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'type1Int' and namespace 'www.threetypes.com' should have a value that corresponds to one from the following list: <br><ul><li>1</li><li>3</li><li>5</li></ul>]]></description>
-                  <parent ref="EID126ef049-ec1c-4495-b5e4-b974afb65e84"/>
+                  <parent ref="EIDc3e81f8d-4c19-424c-b271-e985331c0936"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $codes := ('1', '3', '5')
 let $messages :=
@@ -82,22 +82,22 @@ return
             </TestStep>
           </testSteps>
         </TestCase>
-        <TestCase id="EIDb4007942-73ff-41bf-8384-d1fdd1043b7b">
+        <TestCase id="EID1740ed2f-1fdc-4703-8f8f-a35e832870a1">
           <label>TestCase label</label>
           <description><![CDATA[Constraints TestCase for Feature Type with name 'type3' and namespace 'www.threetypes.com']]></description>
-          <parent ref="EID9a787b99-dca2-40f5-9dac-4a5790888e1f"/>
+          <parent ref="EIDb52a2da7-d1bb-4e71-993a-4153f6b4f547"/>
           <testSteps>
-            <TestStep id="EIDf0300cfd-eb3c-4b0b-8018-24bf782d90d0">
+            <TestStep id="EID6dc5649b-8175-4ae8-be30-1ff3dc120df2">
               <label>testStep</label>
               <description><![CDATA[This is a test step]]></description>
-              <parent ref="EIDb4007942-73ff-41bf-8384-d1fdd1043b7b"/>
+              <parent ref="EID1740ed2f-1fdc-4703-8f8f-a35e832870a1"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EID18fcaea6-d27f-4371-82a7-89833645e921">
+                <TestAssertion id="EID9f78cc20-dae5-49da-a1c1-5b63903876e9">
                   <label>TestAssertion</label>
                   <description><![CDATA[The type with localName 'type3' and namespace 'www.threetypes.com' should be present in the file]]></description>
-                  <parent ref="EIDf0300cfd-eb3c-4b0b-8018-24bf782d90d0"/>
+                  <parent ref="EID6dc5649b-8175-4ae8-be30-1ff3dc120df2"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $messages :=
     (for $record in $db
@@ -124,22 +124,22 @@ return
             </TestStep>
           </testSteps>
         </TestCase>
-        <TestCase id="EID317a670d-9afe-4b6d-b12a-2697e6a56610">
+        <TestCase id="EIDb5717f0a-79dc-41f8-b6de-c67ff1a32139">
           <label>TestCase label</label>
           <description><![CDATA[Constraints TestCase for Feature Type with name 'type3' and namespace 'www.threetypes.com']]></description>
-          <parent ref="EID9a787b99-dca2-40f5-9dac-4a5790888e1f"/>
+          <parent ref="EIDb52a2da7-d1bb-4e71-993a-4153f6b4f547"/>
           <testSteps>
-            <TestStep id="EID52552216-7762-42c7-afb6-6656ade2ba7a">
+            <TestStep id="EIDb9603f0c-9b60-4d2d-a5a5-8820ff2b32af">
               <label>testStep</label>
               <description><![CDATA[This is a test step]]></description>
-              <parent ref="EID317a670d-9afe-4b6d-b12a-2697e6a56610"/>
+              <parent ref="EIDb5717f0a-79dc-41f8-b6de-c67ff1a32139"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EIDd436ce20-d365-4f0d-b396-1279bf00d2df">
+                <TestAssertion id="EIDb35d1687-5ab9-4d7b-8bfe-e2aa1cb0198b">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'type3String' and namespace 'www.threetypes.com' should not be empty if it's present]]></description>
-                  <parent ref="EID52552216-7762-42c7-afb6-6656ade2ba7a"/>
+                  <parent ref="EIDb9603f0c-9b60-4d2d-a5a5-8820ff2b32af"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $messages :=
   (for $record in $db
@@ -167,22 +167,22 @@ return
             </TestStep>
           </testSteps>
         </TestCase>
-        <TestCase id="EID1a82ae6a-f9d7-49bd-8b8f-5a7f98429603">
+        <TestCase id="EID11fe5cae-0e7b-4037-accb-7944073c91e9">
           <label>type2 label</label>
           <description><![CDATA[type2 description]]></description>
-          <parent ref="EID9a787b99-dca2-40f5-9dac-4a5790888e1f"/>
+          <parent ref="EIDb52a2da7-d1bb-4e71-993a-4153f6b4f547"/>
           <testSteps>
-            <TestStep id="EID5b394df7-5534-401a-a93a-ebff44bf201b">
+            <TestStep id="EID5e85d596-20ec-405c-9063-7d4514408194">
               <label>testStep</label>
               <description><![CDATA[This is a test step]]></description>
-              <parent ref="EID1a82ae6a-f9d7-49bd-8b8f-5a7f98429603"/>
+              <parent ref="EID11fe5cae-0e7b-4037-accb-7944073c91e9"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EIDcb1cc5f7-6ac7-4251-b550-11b9a7d95f38">
+                <TestAssertion id="EID597cd801-18e7-4a43-9144-84db83e54fb3">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'type2Double' and namespace 'www.threetypes.com' should have a minimum cardinality of 2 and a maximum cardinality of 4]]></description>
-                  <parent ref="EID5b394df7-5534-401a-a93a-ebff44bf201b"/>
+                  <parent ref="EID5e85d596-20ec-405c-9063-7d4514408194"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $messages :=
   (for $record in $db
@@ -211,19 +211,19 @@ return
             </TestStep>
           </testSteps>
         </TestCase>
-        <TestCase id="EIDe384c0d7-bed7-4918-a2bd-1c6ef47ef34d">
+        <TestCase id="EIDdcaa13c7-6219-43e9-ba60-2229ee2fa794">
           <label>MyCondition</label>
           <description><![CDATA[MyDescription]]></description>
-          <parent ref="EID9a787b99-dca2-40f5-9dac-4a5790888e1f"/>
+          <parent ref="EIDb52a2da7-d1bb-4e71-993a-4153f6b4f547"/>
           <testSteps>
-            <TestStep id="EID915045a2-245f-4ee4-a310-952725a98dc2">
+            <TestStep id="EID141699fc-1a2b-42ab-92d5-4f14f079daf4">
               <label>testStep</label>
               <description><![CDATA[This is a test step]]></description>
-              <parent ref="EIDe384c0d7-bed7-4918-a2bd-1c6ef47ef34d"/>
+              <parent ref="EIDdcaa13c7-6219-43e9-ba60-2229ee2fa794"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EID589c7d63-f2e8-459e-9844-611cd219f5ec">
+                <TestAssertion id="EID0b5aa912-86fc-4ca9-bee9-6d9724e569a7">
                   <label>TestAssertion</label>
                   <description><![CDATA[Test assertion for a condition with the following information:
 <br />Name: MyCondition
@@ -232,7 +232,7 @@ return
 <br />- IF type1.type1Int IS 'int'
 <br /> THEN type1.type1String IS 'string'
 <br />]]></description>
-                  <parent ref="EID915045a2-245f-4ee4-a310-952725a98dc2"/>
+                  <parent ref="EID141699fc-1a2b-42ab-92d5-4f14f079daf4"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>
 let $messages0 :=
@@ -259,19 +259,19 @@ return
             </TestStep>
           </testSteps>
         </TestCase>
-        <TestCase id="EID5ae4abc3-2598-4770-bca2-871e58c3c117">
+        <TestCase id="EIDbc268d2a-4ba2-4600-9f4d-5b49b1f7925f">
           <label>asdas</label>
           <description><![CDATA[asdas]]></description>
-          <parent ref="EID9a787b99-dca2-40f5-9dac-4a5790888e1f"/>
+          <parent ref="EIDb52a2da7-d1bb-4e71-993a-4153f6b4f547"/>
           <testSteps>
-            <TestStep id="EIDf4a1579b-2efb-4fa1-b749-cb3b6dc68359">
+            <TestStep id="EIDef1e4161-5439-49b0-9ea0-fe2879667e7c">
               <label>testStep</label>
               <description><![CDATA[This is a test step]]></description>
-              <parent ref="EID5ae4abc3-2598-4770-bca2-871e58c3c117"/>
+              <parent ref="EIDbc268d2a-4ba2-4600-9f4d-5b49b1f7925f"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EIDe8078a76-4183-4670-a80f-22e66c7ba5b1">
+                <TestAssertion id="EIDa9d463b2-0763-4974-87dd-8bc057a6fbf0">
                   <label>TestAssertion</label>
                   <description><![CDATA[Test assertion for a condition with the following information:
 <br />Name: asdas
@@ -280,7 +280,7 @@ return
 <br />- IF type3.type3String EXISTS
 <br /> THEN type3.type3Int EXISTS
 <br />]]></description>
-                  <parent ref="EIDf4a1579b-2efb-4fa1-b749-cb3b6dc68359"/>
+                  <parent ref="EIDef1e4161-5439-49b0-9ea0-fe2879667e7c"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>
 let $messages0 :=
@@ -307,22 +307,22 @@ return
             </TestStep>
           </testSteps>
         </TestCase>
-        <TestCase id="EID089adfe5-8bf9-4d47-a774-005267513bad">
-          <label>xor</label>
+        <TestCase id="EIDbc0371e8-4966-47da-a6d7-c65080e03110">
+          <label>xor1</label>
           <description><![CDATA[xordesc]]></description>
-          <parent ref="EID9a787b99-dca2-40f5-9dac-4a5790888e1f"/>
+          <parent ref="EIDb52a2da7-d1bb-4e71-993a-4153f6b4f547"/>
           <testSteps>
-            <TestStep id="EID985d1f8e-6c74-49b2-adfa-8be453083dae">
+            <TestStep id="EIDedd88205-d4c3-4665-9698-469a1b4cbfaa">
               <label>testStep</label>
               <description><![CDATA[This is a test step]]></description>
-              <parent ref="EID089adfe5-8bf9-4d47-a774-005267513bad"/>
+              <parent ref="EIDbc0371e8-4966-47da-a6d7-c65080e03110"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EID0ec7c3f5-86d4-41e8-bac6-1de14567893c">
+                <TestAssertion id="EID59bc3e1b-e461-40c4-96ab-17223d1ae363">
                   <label>TestAssertion</label>
                   <description><![CDATA[Test assertion for a condition with the following information:
-<br />Name: xor
+<br />Name: xor1
 <br />Description: xordesc
 <br />Operator: XOR
 <br />Subconditions: 
@@ -331,7 +331,7 @@ return
 <br />- IF type3.type3Int IS 'int'
 <br /> THEN type3.type3String IS 'string'
 <br />]]></description>
-                  <parent ref="EID985d1f8e-6c74-49b2-adfa-8be453083dae"/>
+                  <parent ref="EIDedd88205-d4c3-4665-9698-469a1b4cbfaa"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>
 let $messages0 :=
