@@ -1614,6 +1614,16 @@ In other cases, gmd:otherConstraints shall include a non-empty free text element
 			<TranslationTemplate language="en" name="TR.conditionNotExistingValue">According to the condition, the property '{localName}' with namespace '{namespace}' was expected to be present, but it was not found.</TranslationTemplate>
 		 </translationTemplates>
 	  </LangTranslationTemplateCollection>
+	  <LangTranslationTemplateCollection name="TR.conditionNotMatchingValue">
+		 <translationTemplates>
+			<TranslationTemplate language="en" name="TR.conditionNotMatchingValue">According to the condition, the property '{localName}' with namespace '{namespace}' was expected to be have a value of '{expectedValue}', but that was not the case.</TranslationTemplate>
+		 </translationTemplates>
+	  </LangTranslationTemplateCollection>
+	  <LangTranslationTemplateCollection name="TR.xorAllConditionsMatched">
+		 <translationTemplates>
+			<TranslationTemplate language="en" name="TR.xorAllConditionsMatched">Evaluation of the XOR conditon failed: All conditions were matched</TranslationTemplate>
+		 </translationTemplates>
+	  </LangTranslationTemplateCollection>
 		<LangTranslationTemplateCollection name="TR.invalidPropertyValueError">
 		 <translationTemplates>
 			<TranslationTemplate language="en" name="TR.invalidPropertyValueError">The property '{propName}' in the element with localName '{localName}' and namespace '{namespace}' contains the invalid value '{valueFound}'. Allowed values are ({allowedValues})</TranslationTemplate>
