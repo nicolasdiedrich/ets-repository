@@ -356,7 +356,7 @@ let $messages1 :=
  let $messages := 
   if($totalNumberErrors eq 1) then ()
   else if ($totalNumberErrors eq 0) then
-    local:addMessage('TR.xorAllConditionsMatched')
+    local:addMessage('TR.xorAllConditionsMatched', map {})
 
   else ($messages0, $messages1)
 return
