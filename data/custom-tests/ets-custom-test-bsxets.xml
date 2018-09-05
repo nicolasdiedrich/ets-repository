@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<ExecutableTestSuite xmlns="http://www.interactive-instruments.de/etf/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EID9f46d444-3691-4714-96d7-c84ac022031f" xsi:schemaLocation="http://www.interactive-instruments.de/etf/2.0 ../../schema/model/resultSet.xsd">
+<ExecutableTestSuite xmlns="http://www.interactive-instruments.de/etf/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EID1fb0ff72-d704-4ee2-988a-d6009504a209" xsi:schemaLocation="http://www.interactive-instruments.de/etf/2.0 ../../schema/model/resultSet.xsd">
   <itemHash>bQ==</itemHash>
   <remoteResource>http://github.com/inspire-eu-validation/ets-repository/metadata/iso</remoteResource>
   <localPath>/auto</localPath>
@@ -32,44 +32,176 @@
     <testObjectType ref="EID5a60dded-0cb0-4977-9b06-16c6c2321d2e"/>
   </supportedTestObjectTypes>
   <testModules>
-    <TestModule id="EID30d74782-ab52-4e5e-9a82-a91b31be975f">
+    <TestModule id="EIDa3e1cbfc-7a1b-4c39-86e7-be0af9e24ed7">
       <label>Default test module</label>
       <description><![CDATA[This is the default test module]]></description>
-      <parent ref="EID9f46d444-3691-4714-96d7-c84ac022031f"/>
+      <parent ref="EID1fb0ff72-d704-4ee2-988a-d6009504a209"/>
       <testCases>
-        <TestCase id="EID77590092-43d1-4e8b-a9f1-3888e86c5ae0">
-          <label>Inspireidentifiziert mit Thesaurus Angabe</label>
-          <description><![CDATA[Inspireidentifiziert mit Thesaurus Angabe]]></description>
-          <parent ref="EID30d74782-ab52-4e5e-9a82-a91b31be975f"/>
+        <TestCase id="EID49be1b47-20ad-4077-ae2c-ca66d2985297">
+          <label>TestCase label</label>
+          <description><![CDATA[Constraints TestCase for Feature Type with name 'AbstractDQ_Element' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
+          <parent ref="EIDa3e1cbfc-7a1b-4c39-86e7-be0af9e24ed7"/>
           <testSteps>
-            <TestStep id="EID3e188be9-3268-4232-b87d-91b7478b576d">
+            <TestStep id="EIDd621f280-eecd-43bd-a85c-659bc1934e2e">
               <label>testStep</label>
               <description><![CDATA[This is a test step]]></description>
-              <parent ref="EID77590092-43d1-4e8b-a9f1-3888e86c5ae0"/>
+              <parent ref="EID49be1b47-20ad-4077-ae2c-ca66d2985297"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EID86a01d38-bb99-4dc9-91bf-ad3d68a26fc6">
+                <TestAssertion id="EID7950a331-adef-4545-8f88-2b74c6a65461">
+                  <label>TestAssertion</label>
+                  <description><![CDATA[The property with localName 'nameOfMeasure' and namespace 'http://www.isotc211.org/2005/gmd' should have a minimum cardinality of 1 and a maximum cardinality of 1]]></description>
+                  <parent ref="EIDd621f280-eecd-43bd-a85c-659bc1934e2e"/>
+                  <expectedResult>NOT_APPLICABLE</expectedResult>
+                  <expression>let $messages :=
+  (for $record in $db
+     let $typesFound := $record//*[local-name()='AbstractDQ_Element' and namespace-uri()='http://www.isotc211.org/2005/gmd']
+     for $typeFound in $typesFound 
+       let $propertyCount := count($typeFound/*[local-name()='nameOfMeasure' and namespace-uri()='http://www.isotc211.org/2005/gmd']) 
+       return
+       if (($propertyCount lt 1) or ($propertyCount gt 1)) then
+        local:addMessage('TR.invalidPropertyCardinalityError', map { 'localName': 'AbstractDQ_Element', 'namespace': 'http://www.isotc211.org/2005/gmd', 'invalidCardinality': $propertyCount })
+       else ()
+  )[position() le $limitErrors]
+return
+(if ($messages) then 'FAILED' else 'PASSED',
+ local:error-statistics('TR.recordsWithErrors', count(fn:distinct-values($messages//etf:argument[@token='id']/text()))),
+ $messages)</expression>
+                  <testItemType ref="EIDf0edc596-49d2-48d6-a1a1-1ac581dcde0a"/>
+                  <translationTemplates>
+                    <translationTemplate ref="TR.recordsWithErrors"/>
+                    <translationTemplate ref="TR.missingTypeContentError"/>
+                    <translationTemplate ref="TR.missingMandatoryTypeError"/>
+                    <translationTemplate ref="TR.invalidPropertyCardinalityError"/>
+                    <translationTemplate ref="TR.invalidPropertyValueError"/>
+                  </translationTemplates>
+                </TestAssertion>
+              </testAssertions>
+            </TestStep>
+          </testSteps>
+        </TestCase>
+        <TestCase id="EID8cd50403-6b96-4c10-ac50-5d8634767ae1">
+          <label>TestCase label</label>
+          <description><![CDATA[Constraints TestCase for Feature Type with name 'AbstractDQ_Element' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
+          <parent ref="EIDa3e1cbfc-7a1b-4c39-86e7-be0af9e24ed7"/>
+          <testSteps>
+            <TestStep id="EID9c63dfd9-e431-4a97-8fd0-e9b13d08a98a">
+              <label>testStep</label>
+              <description><![CDATA[This is a test step]]></description>
+              <parent ref="EID8cd50403-6b96-4c10-ac50-5d8634767ae1"/>
+              <statementForExecution>not applicable</statementForExecution>
+              <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
+              <testAssertions>
+                <TestAssertion id="EID9d461da7-e5a8-4ea4-90d5-701008a0a148">
+                  <label>TestAssertion</label>
+                  <description><![CDATA[The property with localName 'nameOfMeasure' and namespace 'http://www.isotc211.org/2005/gmd' should not be empty if it's present]]></description>
+                  <parent ref="EID9c63dfd9-e431-4a97-8fd0-e9b13d08a98a"/>
+                  <expectedResult>NOT_APPLICABLE</expectedResult>
+                  <expression>let $messages :=
+  (for $record in $db
+     let $propertiesFound := $record//*[local-name()='AbstractDQ_Element' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='nameOfMeasure' and namespace-uri()='http://www.isotc211.org/2005/gmd']
+     for $propertyFound in $propertiesFound 
+     return
+       if (functx:all-whitespace($propertyFound)) then
+         local:addMessage('TR.missingTypeContentError', map { 'localName': 'nameOfMeasure', 'namespace': 'http://www.isotc211.org/2005/gmd' })
+       else ()
+  )[position() le $limitErrors]
+return
+(if ($messages) then 'FAILED' else 'PASSED',
+ local:error-statistics('TR.recordsWithErrors', count(fn:distinct-values($messages//etf:argument[@token='id']/text()))),
+ $messages)</expression>
+                  <testItemType ref="EIDf0edc596-49d2-48d6-a1a1-1ac581dcde0a"/>
+                  <translationTemplates>
+                    <translationTemplate ref="TR.recordsWithErrors"/>
+                    <translationTemplate ref="TR.missingTypeContentError"/>
+                    <translationTemplate ref="TR.missingMandatoryTypeError"/>
+                    <translationTemplate ref="TR.invalidPropertyCardinalityError"/>
+                    <translationTemplate ref="TR.invalidPropertyValueError"/>
+                  </translationTemplates>
+                </TestAssertion>
+              </testAssertions>
+            </TestStep>
+          </testSteps>
+        </TestCase>
+        <TestCase id="EID04ecd3e8-b47c-41b0-bda8-fb48f2c9ea54">
+          <label>TestCase label</label>
+          <description><![CDATA[Constraints TestCase for Feature Type with name 'AbstractDQ_Element' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
+          <parent ref="EIDa3e1cbfc-7a1b-4c39-86e7-be0af9e24ed7"/>
+          <testSteps>
+            <TestStep id="EID06f9aebb-8893-4399-8d3f-37f3714e1c66">
+              <label>testStep</label>
+              <description><![CDATA[This is a test step]]></description>
+              <parent ref="EID04ecd3e8-b47c-41b0-bda8-fb48f2c9ea54"/>
+              <statementForExecution>not applicable</statementForExecution>
+              <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
+              <testAssertions>
+                <TestAssertion id="EID490c4a12-81e1-4596-acca-0f939ff47088">
+                  <label>TestAssertion</label>
+                  <description><![CDATA[The property with localName 'evaluationMethodType' and namespace 'http://www.isotc211.org/2005/gmd' should have a value that corresponds to one from the following list: <br><ul><li>indirect</li><li>directExternal</li><li>directInternal</li></ul>]]></description>
+                  <parent ref="EID06f9aebb-8893-4399-8d3f-37f3714e1c66"/>
+                  <expectedResult>NOT_APPLICABLE</expectedResult>
+                  <expression>let $codes := ('indirect', 'directExternal', 'directInternal')
+let $messages :=
+  (for $record in $db
+     let $typesFound := $record//*[local-name()='AbstractDQ_Element' and namespace-uri()='http://www.isotc211.org/2005/gmd']
+     for $typeFound in $typesFound
+       let $propertyFound := $typeFound/*[local-name()='evaluationMethodType' and namespace-uri()='http://www.isotc211.org/2005/gmd']
+       return
+         if ($propertyFound and not($propertyFound/text() = $codes)) then
+           local:addMessage('TR.invalidPropertyValueError', map { 'propName': 'evaluationMethodType', 'localName': 'AbstractDQ_Element', 'namespace': 'http://www.isotc211.org/2005/gmd', 'valueFound': $propertyFound/text(), 'allowedValues': string-join( $codes, ', ') })
+ else ()
+  )[position() le $limitErrors]
+return
+(if ($messages) then 'FAILED' else 'PASSED',
+ local:error-statistics('TR.recordsWithErrors', count(fn:distinct-values($messages//etf:argument[@token='id']/text()))),
+ $messages)</expression>
+                  <testItemType ref="EIDf0edc596-49d2-48d6-a1a1-1ac581dcde0a"/>
+                  <translationTemplates>
+                    <translationTemplate ref="TR.recordsWithErrors"/>
+                    <translationTemplate ref="TR.missingTypeContentError"/>
+                    <translationTemplate ref="TR.missingMandatoryTypeError"/>
+                    <translationTemplate ref="TR.invalidPropertyCardinalityError"/>
+                    <translationTemplate ref="TR.invalidPropertyValueError"/>
+                  </translationTemplates>
+                </TestAssertion>
+              </testAssertions>
+            </TestStep>
+          </testSteps>
+        </TestCase>
+        <TestCase id="EID418e7018-0920-4af9-8fa1-46c78e92efd5">
+          <label>inspireidentifiziert</label>
+          <description><![CDATA[inspireidentifiziert]]></description>
+          <parent ref="EIDa3e1cbfc-7a1b-4c39-86e7-be0af9e24ed7"/>
+          <testSteps>
+            <TestStep id="EID5e1569d6-e079-4056-9f0e-dfdf8f40def9">
+              <label>testStep</label>
+              <description><![CDATA[This is a test step]]></description>
+              <parent ref="EID418e7018-0920-4af9-8fa1-46c78e92efd5"/>
+              <statementForExecution>not applicable</statementForExecution>
+              <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
+              <testAssertions>
+                <TestAssertion id="EID11956f86-225f-45d3-abf2-f64dd938bb28">
                   <label>TestAssertion</label>
                   <description><![CDATA[Test assertion for a condition with the following information:
-<br />Name: Inspireidentifiziert mit Thesaurus Angabe
-<br />Description: Inspireidentifiziert mit Thesaurus Angabe
+<br />Name: inspireidentifiziert
+<br />Description: inspireidentifiziert
 <br />Subconditions: 
-<br />- IF MD_DataIdentification.descriptiveKeywords.MD_Keywords.keyword.CharacterString IS 'inspireidentifiziert'
-<br /> THEN MD_DataIdentification.descriptiveKeywords.MD_Keywords.thesaurusName.CI_Citation.title.CharacterString IS 'GEMET - INSPIRE themes, version 1.0'
+<br />- IF MD_Metadata.identificationInfo.MD_DataIdentification.descriptiveKeywords.MD_Keywords.keyword EXISTS
+<br /> THEN MD_Metadata.identificationInfo.MD_DataIdentification.descriptiveKeywords.MD_Keywords.keyword.CharacterString IS 'inspireidentifiziert'
 <br />]]></description>
-                  <parent ref="EID3e188be9-3268-4232-b87d-91b7478b576d"/>
+                  <parent ref="EID5e1569d6-e079-4056-9f0e-dfdf8f40def9"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>
 let $messages0 :=
     (for $record in $db
-     let $typesFound := $record//*[local-name()='MD_DataIdentification' and namespace-uri()='http://www.isotc211.org/2005/gmd']
+     let $typesFound := $record//*[local-name()='MD_Metadata' and namespace-uri()='http://www.isotc211.org/2005/gmd']
      for $typeFound in $typesFound 
-     let $ifPropertyCount := count($record//*[local-name()='descriptiveKeywords' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_Keywords' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='keyword' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='CharacterString' and namespace-uri()='http://www.isotc211.org/2005/gco' and text()='inspireidentifiziert'])
-     let $thenPropertyCount := count($record//*[local-name()='descriptiveKeywords' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_Keywords' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='thesaurusName' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='CI_Citation' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='title' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='CharacterString' and namespace-uri()='http://www.isotc211.org/2005/gco' and text()='GEMET - INSPIRE themes, version 1.0'])
+     let $ifPropertyCount := count($typeFound//*[local-name()='identificationInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_DataIdentification' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='descriptiveKeywords' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_Keywords' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='keyword' and namespace-uri()='http://www.isotc211.org/2005/gmd'])
+     let $thenPropertyCount := count($typeFound//*[local-name()='identificationInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_DataIdentification' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='descriptiveKeywords' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_Keywords' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='keyword' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='CharacterString' and namespace-uri()='http://www.isotc211.org/2005/gco' and text()='inspireidentifiziert'])
      return 
      if ($ifPropertyCount gt $thenPropertyCount) then 
-       local:addMessage('TR.conditionNotMatchingValue', map { 'localName': 'CharacterString', 'namespace': 'http://www.isotc211.org/2005/gco', 'expectedValue': 'GEMET - INSPIRE themes, version 1.0' })
+       local:addMessage('TR.conditionNotMatchingValue', map { 'localName': 'CharacterString', 'namespace': 'http://www.isotc211.org/2005/gco', 'expectedValue': 'inspireidentifiziert' })
      else ()
     )[position() le $limitErrors]
  let $messages := ($messages0)
