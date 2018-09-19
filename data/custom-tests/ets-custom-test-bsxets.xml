@@ -50,7 +50,7 @@
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
                 <TestAssertion id="EIDa5d54856-2061-4d09-9b96-5c2ad83a5106">
-                  <label>TestAssertion</label>
+                  <label>Hello</label>
                   <description><![CDATA[Test assertion for a condition with the following information:
 <br />Name: inspireidentifiziert
 <br />Description: inspireidentifiziert
@@ -61,24 +61,40 @@
                   <parent ref="EID4498a863-bed0-4bdf-b8be-14bebf837aca"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>
-let $messages0 :=
+let $messages :=
     (for $record in $db
      let $typesFound := $record//*[local-name()='MD_Metadata' and namespace-uri()='http://www.isotc211.org/2005/gmd']
      for $typeFound in $typesFound 
-       let $ifPropertyCount := count($typeFound//*[local-name()='identificationInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_DataIdentification' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='descriptiveKeywords' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_Keywords' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='keyword' and namespace-uri()='http://www.isotc211.org/2005/gmd'])
-       let $thenPropertyCount := count($typeFound//*[local-name()='identificationInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_DataIdentification' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='descriptiveKeywords' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_Keywords' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='keyword' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='CharacterString' and namespace-uri()='http://www.isotc211.org/2005/gco' and text()='inspireidentifiziert'])
-       return               
-       if ($ifPropertyCount gt 0) then 
-         if ($thenPropertyCount eq 0) then 
-           local:addMessage('TR.conditionNotMatchingValue', map { 'localName': 'CharacterString', 'namespace': 'http://www.isotc211.org/2005/gco', 'expectedValue': 'inspireidentifiziert' })
-         else ()
-       else ()
+
+      let $messages0 :=
+      (for $typeFound in $typesFound 
+        let $ifPropertyCount := count($typeFound//*[local-name()='result' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='DQ_ConformanceResult' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='specification' and namespace-uri()='http://www.isotc211.org/2005/gmd'])
+        return 
+        if ($ifPropertyCount eq 0) then 
+          local:addMessage('TR.conditionNotExistingValue', map { 'localName': 'specification', 'namespace': 'http://www.isotc211.org/2005/gmd' })
+        else ()
+      )[position() le $limitErrors]
+
+      let $messages1 :=
+        (for $typeFound in $typesFound 
+          let $ifPropertyCount := count($typeFound//*[local-name()='result' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='DQ_ConformanceResult' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='specification' and namespace-uri()='http://www.isotc211.org/2005/gmd'])
+          return 
+          if ($ifPropertyCount eq 0) then 
+            local:addMessage('TR.conditionNotExistingValue', map { 'localName': 'specification', 'namespace': 'http://www.isotc211.org/2005/gmd' })
+          else ()
+        )[position() le $limitErrors]
+
+      let $messagesC := 
+        if ((count($messages0 eq 0) or (count($messages1 eq 0)) then ()
+        else ($messages0, $messages1)
+      return $messagesC
     )[position() le $limitErrors]
- let $messages := ($messages0)
+
 return
 (if ($messages) then 'FAILED' else 'PASSED',
  local:error-statistics('TR.recordsWithErrors', count(fn:distinct-values($messages//etf:argument[@token='id']/text()))),
- $messages)</expression>
+ $messages)
+                  </expression>
                   <testItemType ref="EIDf0edc596-49d2-48d6-a1a1-1ac581dcde0a"/>
                   <translationTemplates>
                     <translationTemplate ref="TR.recordsWithErrors"/>
