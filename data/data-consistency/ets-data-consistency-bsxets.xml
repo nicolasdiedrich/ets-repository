@@ -61,7 +61,7 @@ Pre-requisite conformance classes:
 					  <TestAssertion id="EIDc88de361-bf4d-4fdb-8cc0-68d1a62e5eae">
 						 <label>dc.a.1: Version lifespan plausible</label>
 						 <description><![CDATA[Verify that all endLifespanVersion values are from the allowed range. For all features verify that either
-<ul>						 
+<ul>
 <li>beginLifespanVersion or endLifespanVersion are missing or nil or</li>
 <Li>endLifespanVersion is not before the value of beginLifespanVersion.</li>
 </ul>

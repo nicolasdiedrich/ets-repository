@@ -286,7 +286,7 @@
 		 <translationTemplates>
 			<TranslationTemplate language="en" name="TR.noCadastralParcel">The XML documents representing the spatial data set do not contain a feature of CadastralParcel. If you have expected to find CadastralParcel spatial objects in the data set, please consult the statistics information to see the spatial object types that have been found.</TranslationTemplate>
 		 </translationTemplates>
-	  </LangTranslationTemplateCollection>	  
+	  </LangTranslationTemplateCollection>
 	  <LangTranslationTemplateCollection name="TR.notWithin">
 		 <translationTemplates>
 			<TranslationTemplate language="en" name="TR.notWithin">XML document '{filename}', {featureType} '{gmlid}': The dataset includes not only spatial objects with the network representation, but also spatial objects with the corresponding topographic area representation. However, the geometry of this network object is not within the polygons of the corresponding topographic objects. The two representations may be spatially inconsistent, but it may also be that the topographic objects for this part of the network are not included in the dataset. Please review the spatial consistency of this network object with any topographic objects in the area, typically by using a GIS.</TranslationTemplate>
@@ -451,12 +451,12 @@
 		 <translationTemplates>
 			<TranslationTemplate language="en" name="TR.noIdentifier">XML document '{filename}', record '{id}': Every metadata record for a dataset or series must have a unique identifier, but this record has no identifier property.</TranslationTemplate>
 		 </translationTemplates>
-	  </LangTranslationTemplateCollection>	 
+	  </LangTranslationTemplateCollection>
 	 <LangTranslationTemplateCollection name="TR.noKeywords">
 	  <translationTemplates>
 	   <TranslationTemplate language="en" name="TR.noKeywords">XML document '{filename}', record '{id}': Every metadata record must have at least one keyword to describe the subject, but this record has no keyword property.</TranslationTemplate>
 	  </translationTemplates>
-	 </LangTranslationTemplateCollection>	
+	 </LangTranslationTemplateCollection>
 	 <LangTranslationTemplateCollection name="TR.noTitleForThesaurus">
 	  <translationTemplates>
 	   <TranslationTemplate language="en" name="TR.noTitleForThesaurus">XML document '{filename}', record '{id}': The metadata record has keywords which originate from a controlled vocabulary (indicated by the presence of a 'thesaurusName' property), but no title is provided for it. The keywords are: {keywords}.</TranslationTemplate>
@@ -536,12 +536,12 @@
 	  <translationTemplates>
 	   <TranslationTemplate language="en" name="TR.noTypeFromSpatialDataServiceType">XML document '{filename}', record '{id}': Every service metadata record must have a service type that is one of the codes from the code list at {url}. Found: {type}.</TranslationTemplate>
 	  </translationTemplates>
-	 </LangTranslationTemplateCollection>	
+	 </LangTranslationTemplateCollection>
 	 <LangTranslationTemplateCollection name="TR.noKeywordFromSpatialDataServiceCategory">
 	  <translationTemplates>
 	   <TranslationTemplate language="en" name="TR.noKeywordFromSpatialDataServiceCategory">XML document '{filename}', record '{id}': At least one at least one keyword of a service metadata record must originate from EU commission regulation No. 1205/2008, Annex part D, No. 4. The code list is: {url}. None of the keywords matches the title of any code that is defined in the official INSPIRE language representations of the code list.  The detected keywords are: {keywords}.</TranslationTemplate>
 	  </translationTemplates>
-	 </LangTranslationTemplateCollection>	
+	 </LangTranslationTemplateCollection>
 	 <LangTranslationTemplateCollection name="TR.operatesOnWithoutDatasetOrSeriesRecord">
 	  <translationTemplates>
 	   <TranslationTemplate language="en" name="TR.operatesOnWithoutDatasetOrSeriesRecord">XML document '{filename}', record '{id}': The service metadata record has an 'operatesOn' property in its service identification. The value is referenced via an xlink:href that references: '{url}'. The referenced value must be a dataset or series metadata record, but it is not. Found: '{hierarchyLevel}'.</TranslationTemplate>
@@ -586,17 +586,17 @@
 	  <translationTemplates>
 	   <TranslationTemplate language="en" name="TR.declareNoConformityEvaluationAsUnknown">XML document '{filename}', record '{id}': If the conformity of a dataset or service has not been evaluated, the according metadata record must contain a domain consistency element with a conformance result. The conformance result must have a 'pass' property that, if empty, indicates that conformity has not been evaluated yet. In this case, the 'pass' property element must have an XML attribute gco:nilReason='unknown'. This record has a conformance result with empty 'pass' property element but without such an XML attribute.</TranslationTemplate>
 	  </translationTemplates>
-	 </LangTranslationTemplateCollection>	 
+	 </LangTranslationTemplateCollection>
 	 <LangTranslationTemplateCollection name="TR.noLanguageCode">
 	  <translationTemplates>
 	   <TranslationTemplate language="en" name="TR.noLanguageCode">XML document '{filename}', record '{id}': A dataset (series) metadata record must have a gmd:Language code within its identification information. No gmd:LanguageCode is provided in this metadata record.</TranslationTemplate>
 	  </translationTemplates>
-	 </LangTranslationTemplateCollection>	 
+	 </LangTranslationTemplateCollection>
 	 <LangTranslationTemplateCollection name="TR.invalidLanguageCode">
 	  <translationTemplates>
 	   <TranslationTemplate language="en" name="TR.invalidLanguageCode">XML document '{filename}', record '{id}': A dataset (series) metadata record must have a gmd:Language code with a valid 3-letter language code (one of the values of enumeration type languageISO6392B in http://inspire.ec.europa.eu/schemas/common/1.0/common.xsd) within its gmd:identificationInfo. The metadata record has a gmd:LanguageCode within its gmd:identificationInfo, but the code value is not one of the allowed values. Found: {invalidCodes}.</TranslationTemplate>
 	  </translationTemplates>
-	 </LangTranslationTemplateCollection>	 
+	 </LangTranslationTemplateCollection>
 	 <LangTranslationTemplateCollection name="TR.noKeywordFromINSPIREThemes">
 	  <translationTemplates>
 	   <TranslationTemplate language="en" name="TR.noKeywordFromINSPIREThemes">XML document '{filename}', record '{id}': A dataset (series) metadata record that uses 'GEMET - INSPIRE themes, version 1.0' as the title of the vocabulary that belongs to a block of descriptive keywords must have one keyword in this block that is a language specific or language neutral code value from the codelist at {url}. The detected keywords are: {keywords}.</TranslationTemplate>
@@ -631,7 +631,7 @@
 	  <translationTemplates>
 	   <TranslationTemplate language="en" name="TR.noGeographicBoundingBox">XML document '{filename}', record '{id}': A dataset (series) metadata record must have a bounding box that defines the extent of the resource in geographic space. The metadata record does not have such a bounding box.</TranslationTemplate>
 	  </translationTemplates>
-	 </LangTranslationTemplateCollection>	
+	 </LangTranslationTemplateCollection>
 	 <LangTranslationTemplateCollection name="TR.invalidGeographicBoundingBox">
 	  <translationTemplates>
 	   <TranslationTemplate language="en" name="TR.invalidGeographicBoundingBox">XML document '{filename}', record '{id}': A dataset (series) metadata record must have a valid bounding box that defines the extent of the resource in geographic space. The bounding box is valid if: 1) it has four coordinates (given in decimal degree with a precision of at least 2 decimals), 2) both west- and east-bound longitude are greater than or equal to -180.00, and smaller than or equal to 180.00, 3) both south- and north-bound latitude are greater than or equal to -90.00, and smaller than or equal to 90.00, 4) south-bound latitude is smaller than or equal to north-bound latitude. At least one of these criteria is not fulfilled for one of the geographic bounding boxes of this metadata record. The provided values of this bounding box are: west-bound longitude = '{west}',  east-bound longitude = '{east}',  south-bound latitude = '{south}', north-bound latitude = '{north}'.</TranslationTemplate>
@@ -646,67 +646,67 @@
 	  <translationTemplates>
 	   <TranslationTemplate language="en" name="TR.noMetadataLanguageCode">XML document '{filename}', record '{id}': A metadata record must have one gmd:language property with a gmd:LanguageCode value. The metadata record does not fulfill this requirement.</TranslationTemplate>
 	  </translationTemplates>
-	 </LangTranslationTemplateCollection>	 
+	 </LangTranslationTemplateCollection>
 	 <LangTranslationTemplateCollection name="TR.invalidMetadataLanguageCode">
 	  <translationTemplates>
 	   <TranslationTemplate language="en" name="TR.invalidMetadataLanguageCode">XML document '{filename}', record '{id}': A metadata record must have one gmd:language as direct child. The value must be a gmd:LanguageCode, with  a valid 3-letter language code (one of the values of enumeration type languageISO6392B in http://inspire.ec.europa.eu/schemas/common/1.0/common.xsd) in the XML attribute 'codeListValue'. The metadata record has such a gmd:language element, but the code value is not one of the allowed values. Found: '{invalidCode}'.</TranslationTemplate>
 	  </translationTemplates>
-	 </LangTranslationTemplateCollection>	
+	 </LangTranslationTemplateCollection>
 	 <LangTranslationTemplateCollection name="TR.wrongNumberOfLineageStatements">
 	  <translationTemplates>
 	   <TranslationTemplate language="en" name="TR.wrongNumberOfLineageStatements">XML document '{filename}', record '{id}': A dataset (series) metadata record must have exactly one data quality info with a lineage statement. The metadata record has {count} lineage statements.</TranslationTemplate>
 	  </translationTemplates>
-	 </LangTranslationTemplateCollection>	 
+	 </LangTranslationTemplateCollection>
 	 <LangTranslationTemplateCollection name="TR.emptyLineageStatement">
 	  <translationTemplates>
 	   <TranslationTemplate language="en" name="TR.emptyLineageStatement">XML document '{filename}', record '{id}': A dataset (series) metadata record must have exactly one data quality info with non-empty lineage statement. The metadata record has a lineage statement, but it is empty.</TranslationTemplate>
 	  </translationTemplates>
-	 </LangTranslationTemplateCollection>	
+	 </LangTranslationTemplateCollection>
 	 <LangTranslationTemplateCollection name="TR.noMetadataContactOrganisationName">
 	  <translationTemplates>
 	   <TranslationTemplate language="en" name="TR.noMetadataContactOrganisationName">XML document '{filename}', record '{id}': Each contact information in a metadata record must have a non-empty organisationName. The metadata record does not fulfill this requirement.</TranslationTemplate>
 	  </translationTemplates>
-	 </LangTranslationTemplateCollection>	 
+	 </LangTranslationTemplateCollection>
 	 <LangTranslationTemplateCollection name="TR.noMetadataContactEmailAddress">
 	  <translationTemplates>
 	   <TranslationTemplate language="en" name="TR.noMetadataContactEmailAddress">XML document '{filename}', record '{id}': Each contact information in a metadata record must have at least on electronic mail address. The metadata record does not fulfill this requirement.</TranslationTemplate>
 	  </translationTemplates>
-	 </LangTranslationTemplateCollection>	
+	 </LangTranslationTemplateCollection>
 	 <LangTranslationTemplateCollection name="TR.invalidMetadataContactEmailAddress">
 	  <translationTemplates>
 	   <TranslationTemplate language="en" name="TR.invalidMetadataContactEmailAddress">XML document '{filename}', record '{id}': Each electronic mail address in the contact information must match the regular expression '^[a-zA-Z0-9\._%\+-]+@[a-zA-Z0-9\.-]+\.[a-zA-Z]{2,}$'. The metadata record does not fulfill this requirement. Found: '{email}'.</TranslationTemplate>
 	  </translationTemplates>
-	 </LangTranslationTemplateCollection>	
+	 </LangTranslationTemplateCollection>
 	 <LangTranslationTemplateCollection name="TR.noMetadataContactRole">
 	  <translationTemplates>
 	   <TranslationTemplate language="en" name="TR.noMetadataContactRole">XML document '{filename}', record '{id}': The role information of the responsible party serving as metadata point of contact must have 'pointOfContact' as role (in gmd:CI_RoleCode/@codeListValue). The metadata record does not fulfill this requirement. Found: {pocs}.</TranslationTemplate>
 	  </translationTemplates>
-	 </LangTranslationTemplateCollection>	
+	 </LangTranslationTemplateCollection>
 	 <LangTranslationTemplateCollection name="TR.moreThanOneCreationDate">
 	  <translationTemplates>
 	   <TranslationTemplate language="en" name="TR.moreThanOneCreationDate">XML document '{filename}', record '{id}': A metadata record must not have more than one creation date (within its identification information). The metadata record does not fulfill this requirement.</TranslationTemplate>
 	  </translationTemplates>
-	 </LangTranslationTemplateCollection>	
+	 </LangTranslationTemplateCollection>
 	 <LangTranslationTemplateCollection name="TR.noPointOfContact">
 	  <translationTemplates>
 	   <TranslationTemplate language="en" name="TR.noPointOfContact">XML document '{filename}', record '{id}': A metadata record must have at least one point of contact (within its identification info). The metadata record does not fulfill this requirement.</TranslationTemplate>
 	  </translationTemplates>
-	 </LangTranslationTemplateCollection>	
+	 </LangTranslationTemplateCollection>
 	 <LangTranslationTemplateCollection name="TR.noPOCOrganisationName">
 	  <translationTemplates>
 	   <TranslationTemplate language="en" name="TR.noPOCOrganisationName">XML document '{filename}', record '{id}': Each point of contact (within the identification info) of a metadata record must have a non-empty organisationName. The metadata record does not fulfill this requirement.</TranslationTemplate>
 	  </translationTemplates>
-	 </LangTranslationTemplateCollection>	 
+	 </LangTranslationTemplateCollection>
 	 <LangTranslationTemplateCollection name="TR.noPOCEmailAddress">
 	  <translationTemplates>
 	   <TranslationTemplate language="en" name="TR.noPOCEmailAddress">XML document '{filename}', record '{id}': Each point of contact (within the identification info) of a metadata record must have at least on electronic mail address. The metadata record does not fulfill this requirement.</TranslationTemplate>
 	  </translationTemplates>
-	 </LangTranslationTemplateCollection>	
+	 </LangTranslationTemplateCollection>
 	 <LangTranslationTemplateCollection name="TR.invalidPOCEmailAddress">
 	  <translationTemplates>
 	   <TranslationTemplate language="en" name="TR.invalidPOCEmailAddress">XML document '{filename}', record '{id}': Each electronic mail address in the identification information must match the regular expression '^[a-zA-Z0-9\._%\+-]+@[a-zA-Z0-9\.-]+\.[a-zA-Z]{2,}$'. The metadata record does not fulfill this requirement. Found: '{email}'.</TranslationTemplate>
 	  </translationTemplates>
-	 </LangTranslationTemplateCollection>	
+	 </LangTranslationTemplateCollection>
 	 <LangTranslationTemplateCollection name="TR.noPointOfContactRole">
 	  <translationTemplates>
 	   <TranslationTemplate language="en" name="TR.noPointOfContactRole">XML document '{filename}', record '{id}': The role information of the responsible party / point of contact must have one of the role codes defined by ISO 19115 CI_RoleCode (see section B.5.5 in ISO 19115) as role (in gmd:CI_RoleCode/@codeListValue). The metadata record does not fulfill this requirement. Found: {pocs}.</TranslationTemplate>
@@ -721,7 +721,7 @@
 		 <translationTemplates>
 			<TranslationTemplate language="en" name="TR.incorrectLowerLevelArea">XML document '{filename}': '{featureType}' '{gmlid}' of '{level}' does not refer to all its respective lower level units using the lowerLevelUnit association role.</TranslationTemplate>
 		 </translationTemplates>
-	  </LangTranslationTemplateCollection>		 		 
+	  </LangTranslationTemplateCollection>
 	  <LangTranslationTemplateCollection name="TR.incorrectCoAdministered">
 		 <translationTemplates>
 			<TranslationTemplate language="en" name="TR.incorrectCoAdministered">XML document '{filename}': '{featureType}' '{gmlid}' refers to '{url}' in its administredBy association role, but the referenced administrative unit does to refer back using its coAdminister association role.</TranslationTemplate>
@@ -761,6 +761,51 @@
 		 <translationTemplates>
 			<TranslationTemplate language="en" name="TR.wrongIntermodalConnection">XML document '{filename}':'{featureType}' '{gmlid}' : an inter-model connection shall always reference two elements which belong to different networks.</TranslationTemplate>
 		 </translationTemplates>
-	  </LangTranslationTemplateCollection>				 
+	  </LangTranslationTemplateCollection>
+	  <LangTranslationTemplateCollection name="TR.missingMandatoryTypeError">
+		 <translationTemplates>
+			<TranslationTemplate language="en" name="TR.missingMandatoryTypeError">The element with name '{localName}' and namespace '{namespace}' is mandatory in this Profile, but it wasn't found.</TranslationTemplate>
+		 </translationTemplates>
+	  </LangTranslationTemplateCollection>
+	  <LangTranslationTemplateCollection name="TR.missingTypeContentError">
+		 <translationTemplates>
+			<TranslationTemplate language="en" name="TR.missingTypeContentError">The property '{localName}' with namespace '{namespace}' was present in the file, but it didn't have any content.</TranslationTemplate>
+		 </translationTemplates>
+	  </LangTranslationTemplateCollection>
+	  <LangTranslationTemplateCollection name="TR.invalidPropertyCardinalityError">
+		 <translationTemplates>
+			<TranslationTemplate language="en" name="TR.invalidPropertyCardinalityError">The property '{localName}' with namespace '{namespace}' has an invalid cardinality of '{invalidCardinality}'.</TranslationTemplate>
+		 </translationTemplates>
+	  </LangTranslationTemplateCollection>
+	  <LangTranslationTemplateCollection name="TR.moreThanOneOptionError">
+		 <translationTemplates>
+			<TranslationTemplate language="en" name="TR.moreThanOneOptionError">The type choice '{localName}' with namespace '{namespace}' has more than one valid option specified.</TranslationTemplate>
+		 </translationTemplates>
+	  </LangTranslationTemplateCollection>
+	  <LangTranslationTemplateCollection name="TR.noValidOptionError">
+		 <translationTemplates>
+			<TranslationTemplate language="en" name="TR.noValidOptionError">The type choice '{localName}' with namespace '{namespace}' needs to specify one option, but none was found.</TranslationTemplate>
+		 </translationTemplates>
+	  </LangTranslationTemplateCollection>
+	  <LangTranslationTemplateCollection name="TR.conditionNotExistingValue">
+		 <translationTemplates>
+			<TranslationTemplate language="en" name="TR.conditionNotExistingValue">According to the condition, the property '{localName}' with namespace '{namespace}' was expected to be present, but it was not found.</TranslationTemplate>
+		 </translationTemplates>
+	  </LangTranslationTemplateCollection>
+	  <LangTranslationTemplateCollection name="TR.conditionNotMatchingValue">
+		 <translationTemplates>
+			<TranslationTemplate language="en" name="TR.conditionNotMatchingValue">According to the condition, the property '{localName}' with namespace '{namespace}' was expected to be have a value of '{expectedValue}', but that was not the case.</TranslationTemplate>
+		 </translationTemplates>
+	  </LangTranslationTemplateCollection>
+	  <LangTranslationTemplateCollection name="TR.xorAllConditionsMatched">
+		 <translationTemplates>
+			<TranslationTemplate language="en" name="TR.xorAllConditionsMatched">Evaluation of the XOR conditon failed: All conditions were matched</TranslationTemplate>
+		 </translationTemplates>
+	  </LangTranslationTemplateCollection>
+		<LangTranslationTemplateCollection name="TR.invalidPropertyValueError">
+		 <translationTemplates>
+			<TranslationTemplate language="en" name="TR.invalidPropertyValueError">The property '{propName}' in the element with localName '{localName}' and namespace '{namespace}' contains the invalid value '{valueFound}'. Allowed values are ({allowedValues})</TranslationTemplate>
+		 </translationTemplates>
+	  </LangTranslationTemplateCollection>
 	</translationTemplateCollections>
 </TranslationTemplateBundle>
