@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<ExecutableTestSuite xmlns="http://www.interactive-instruments.de/etf/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EIDa2045574-44b5-4432-a92e-06611def1592" xsi:schemaLocation="http://www.interactive-instruments.de/etf/2.0 ../../schema/model/resultSet.xsd">
+<ExecutableTestSuite xmlns="http://www.interactive-instruments.de/etf/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EIDc76b2625-6b10-42e3-86ab-a1de3aafcaca" xsi:schemaLocation="http://www.interactive-instruments.de/etf/2.0 ../../schema/model/resultSet.xsd">
   <itemHash>bQ==</itemHash>
   <remoteResource>http://github.com/inspire-eu-validation/ets-repository/metadata/iso</remoteResource>
   <localPath>/auto</localPath>
@@ -32,27 +32,115 @@
     <testObjectType ref="EID5a60dded-0cb0-4977-9b06-16c6c2321d2e"/>
   </supportedTestObjectTypes>
   <testModules>
-    <TestModule id="EID44e1042f-8edf-4900-b6ce-782702d8f737">
+    <TestModule id="EID37ddc409-600f-4537-ae9b-9993edefa739">
       <label>Default test module</label>
       <description><![CDATA[This is the default test module]]></description>
-      <parent ref="EIDa2045574-44b5-4432-a92e-06611def1592"/>
+      <parent ref="EIDc76b2625-6b10-42e3-86ab-a1de3aafcaca"/>
       <testCases>
-        <TestCase id="EID63bb0a98-aa8d-4afc-8b90-68d418f24439">
-          <label>test cond2</label>
-          <description><![CDATA[test cond2]]></description>
-          <parent ref="EID44e1042f-8edf-4900-b6ce-782702d8f737"/>
+        <TestCase id="EIDccd5407c-ec27-47e7-8803-d4a688aed590">
+          <label>TestCase label</label>
+          <description><![CDATA[Constraints TestCase for Feature Type with name 'CI_ResponsibleParty' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
+          <parent ref="EID37ddc409-600f-4537-ae9b-9993edefa739"/>
           <testSteps>
-            <TestStep id="EID2c534657-2493-40ec-bbb7-7dd2669dcce6">
-              <label>test cond2</label>
-              <description><![CDATA[test cond2]]></description>
-              <parent ref="EID63bb0a98-aa8d-4afc-8b90-68d418f24439"/>
+            <TestStep id="EID6b1e1ffb-f3ef-4938-a910-6a3749d1618a">
+              <label>FIXME-Label</label>
+              <description><![CDATA[FIXME-Description]]></description>
+              <parent ref="EIDccd5407c-ec27-47e7-8803-d4a688aed590"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EID011b2c92-25b7-41e8-8b8a-55db292beb27">
+                <TestAssertion id="EID76e16bae-d095-4a1c-8270-52c484a5b6f8">
+                  <label>TestAssertion</label>
+                  <description><![CDATA[The property with localName 'id' should have a minimum cardinality of 1 and a maximum cardinality of 1]]></description>
+                  <parent ref="EID6b1e1ffb-f3ef-4938-a910-6a3749d1618a"/>
+                  <expectedResult>NOT_APPLICABLE</expectedResult>
+                  <expression>let $messages :=
+  (for $record in $db
+     let $typesFound := $record//*[local-name()='CI_ResponsibleParty' and namespace-uri()='http://www.isotc211.org/2005/gmd']
+     for $typeFound in $typesFound 
+       let $propertyCount := count($typeFound/*[local-name()='id']) 
+       return
+       if (($propertyCount lt 1) or ($propertyCount gt 1)) then
+        local:addMessage('TR.invalidPropertyCardinalityError', map { 'localName': 'CI_ResponsibleParty', 'namespace': 'http://www.isotc211.org/2005/gmd', 'invalidCardinality': $propertyCount })
+       else ()
+  )[position() le $limitErrors]
+return
+(if ($messages) then 'FAILED' else 'PASSED',
+ local:error-statistics('TR.recordsWithErrors', count(fn:distinct-values($messages//etf:argument[@token='id']/text()))),
+ $messages)</expression>
+                  <testItemType ref="EIDf0edc596-49d2-48d6-a1a1-1ac581dcde0a"/>
+                  <translationTemplates>
+                    <translationTemplate ref="TR.recordsWithErrors"/>
+                    <translationTemplate ref="TR.missingTypeContentError"/>
+                    <translationTemplate ref="TR.missingMandatoryTypeError"/>
+                    <translationTemplate ref="TR.invalidPropertyCardinalityError"/>
+                    <translationTemplate ref="TR.invalidPropertyValueError"/>
+                  </translationTemplates>
+                </TestAssertion>
+              </testAssertions>
+            </TestStep>
+          </testSteps>
+        </TestCase>
+        <TestCase id="EIDe4e0a875-3553-4f46-8c91-1871048f832d">
+          <label>TestCase label</label>
+          <description><![CDATA[Constraints TestCase for Feature Type with name 'CI_ResponsibleParty' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
+          <parent ref="EID37ddc409-600f-4537-ae9b-9993edefa739"/>
+          <testSteps>
+            <TestStep id="EIDad1d21cd-d5cd-42f2-ac0c-db6f76e5d683">
+              <label>FIXME-Label</label>
+              <description><![CDATA[FIXME-Description]]></description>
+              <parent ref="EIDe4e0a875-3553-4f46-8c91-1871048f832d"/>
+              <statementForExecution>not applicable</statementForExecution>
+              <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
+              <testAssertions>
+                <TestAssertion id="EID911bbd47-6675-47a7-be85-088247278b7a">
+                  <label>TestAssertion</label>
+                  <description><![CDATA[The property with localName 'uuid' should have a minimum cardinality of 1 and a maximum cardinality of 1]]></description>
+                  <parent ref="EIDad1d21cd-d5cd-42f2-ac0c-db6f76e5d683"/>
+                  <expectedResult>NOT_APPLICABLE</expectedResult>
+                  <expression>let $messages :=
+  (for $record in $db
+     let $typesFound := $record//*[local-name()='CI_ResponsibleParty' and namespace-uri()='http://www.isotc211.org/2005/gmd']
+     for $typeFound in $typesFound 
+       let $propertyCount := count($typeFound/*[local-name()='uuid']) 
+       return
+       if (($propertyCount lt 1) or ($propertyCount gt 1)) then
+        local:addMessage('TR.invalidPropertyCardinalityError', map { 'localName': 'CI_ResponsibleParty', 'namespace': 'http://www.isotc211.org/2005/gmd', 'invalidCardinality': $propertyCount })
+       else ()
+  )[position() le $limitErrors]
+return
+(if ($messages) then 'FAILED' else 'PASSED',
+ local:error-statistics('TR.recordsWithErrors', count(fn:distinct-values($messages//etf:argument[@token='id']/text()))),
+ $messages)</expression>
+                  <testItemType ref="EIDf0edc596-49d2-48d6-a1a1-1ac581dcde0a"/>
+                  <translationTemplates>
+                    <translationTemplate ref="TR.recordsWithErrors"/>
+                    <translationTemplate ref="TR.missingTypeContentError"/>
+                    <translationTemplate ref="TR.missingMandatoryTypeError"/>
+                    <translationTemplate ref="TR.invalidPropertyCardinalityError"/>
+                    <translationTemplate ref="TR.invalidPropertyValueError"/>
+                  </translationTemplates>
+                </TestAssertion>
+              </testAssertions>
+            </TestStep>
+          </testSteps>
+        </TestCase>
+        <TestCase id="EIDcc8b7c87-64ab-4794-b8f9-d8d9075a796d">
+          <label>test cond2</label>
+          <description><![CDATA[test cond2]]></description>
+          <parent ref="EID37ddc409-600f-4537-ae9b-9993edefa739"/>
+          <testSteps>
+            <TestStep id="EID63882f8f-576f-4927-8350-1fe68fc1c161">
+              <label>test cond2</label>
+              <description><![CDATA[test cond2]]></description>
+              <parent ref="EIDcc8b7c87-64ab-4794-b8f9-d8d9075a796d"/>
+              <statementForExecution>not applicable</statementForExecution>
+              <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
+              <testAssertions>
+                <TestAssertion id="EID88ea61ff-e3a1-4e9d-8fce-72879e5f7102">
                   <label>test cond2</label>
                   <description><![CDATA[test cond2]]></description>
-                  <parent ref="EID2c534657-2493-40ec-bbb7-7dd2669dcce6"/>
+                  <parent ref="EID63882f8f-576f-4927-8350-1fe68fc1c161"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>
 let $messages0 :=
@@ -68,7 +156,20 @@ let $messages0 :=
          else ()
        else ()
     )[position() le $limitErrors]
- let $messages := ($messages0)
+let $messages1 :=
+    (for $record in $db
+     let $typesFound := $record//*[local-name()='MD_Metadata' and namespace-uri()='http://www.isotc211.org/2005/gmd']
+     for $typeFound in $typesFound 
+       let $ifPropertyCount := count($typeFound//*[local-name()='locale' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='PT_Locale' and namespace-uri()='http://www.isotc211.org/2005/gmd'])
+       let $thenPropertyCount := count($typeFound//*[local-name()='spatialRepresentationInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_Georeferenceable' and namespace-uri()='http://www.isotc211.org/2005/gmd'])
+       return 
+       if ($ifPropertyCount gt 0) then 
+         if ($thenPropertyCount eq 0) then 
+           local:addMessage('TR.conditionNotExistingValue', map { 'localName': 'MD_Georeferenceable', 'namespace': 'http://www.isotc211.org/2005/gmd' })
+         else ()
+       else ()
+    )[position() le $limitErrors]
+ let $messages := ($messages0, $messages1)
 return
 (if ($messages) then 'FAILED' else 'PASSED',
  local:error-statistics('TR.recordsWithErrors', count(fn:distinct-values($messages//etf:argument[@token='id']/text()))),
