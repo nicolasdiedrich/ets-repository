@@ -3,7 +3,7 @@
   <itemHash>bQ==</itemHash>
   <remoteResource>http://github.com/inspire-eu-validation/ets-repository/metadata/iso</remoteResource>
   <localPath>/auto</localPath>
-  <label>BaW? Dienste</label>
+  <label>BaWlkk Dienste</label>
   <description><![CDATA[based on excel table 'ProfilTabellefuerWetransformAP3_V13_180516' using column F]]></description>
   <reference>../../inspire-md-bsxets.xq</reference>
   <version>1.0.0</version>
