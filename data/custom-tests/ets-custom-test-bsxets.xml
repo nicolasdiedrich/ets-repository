@@ -240,7 +240,7 @@ return
      let $propertiesFound := $record//*[local-name()='CI_Citation' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='alternateTitle' and namespace-uri()='http://www.isotc211.org/2005/gmd']
      for $propertyFound in $propertiesFound 
      return
-       if (functx:all-whitespace($propertyFound)) then
+       if ( ($propertyFound[not(text())]) or $propertyFound[not(node())]) ) then
          local:addMessage('TR.missingTypeContentError', map { 'localName': 'alternateTitle', 'namespace': 'http://www.isotc211.org/2005/gmd' })
        else ()
   )[position() le $limitErrors]
