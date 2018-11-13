@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<ExecutableTestSuite xmlns="http://www.interactive-instruments.de/etf/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-id="EID032cb77a-b7d1-4fbc-b878-91eecafec775">
+<ExecutableTestSuite xmlns="http://www.interactive-instruments.de/etf/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EID6bc561f9-f4a8-488b-a344-9d160218924f" xsi:schemaLocation="http://www.interactive-instruments.de/etf/2.0 ../../schema/model/resultSet.xsd">
   <itemHash>bQ==</itemHash>
   <remoteResource>http://github.com/inspire-eu-validation/ets-repository/metadata/iso</remoteResource>
   <localPath>/auto</localPath>
-  <label>BaWü Daten</label>
-  <description><![CDATA[based on excel table 'ProfilTabellefuerWetransformAP3_V13_180516' using column E]]></description>
+  <label>Test par</label>
+  <description><![CDATA[This test was generated automatically from a Schema profile in haleconnect]]></description>
   <reference>../../inspire-md-bsxets.xq</reference>
   <version>1.0.0</version>
-  <author>Johanna Ott</author>
-  <creationDate>2018-09-20T08:38:10.109Z</creationDate>
-  <lastEditor>Johanna Ott</lastEditor>
-  <lastUpdateDate>2018-09-20T08:38:10.109Z</lastUpdateDate>
+  <author>admin admin</author>
+  <creationDate>2018-11-13T16:20:41.180Z</creationDate>
+  <lastEditor>admin admin</lastEditor>
+  <lastUpdateDate>2018-11-13T16:20:41.180Z</lastUpdateDate>
   <tags>
     <tag ref="EIDfe1f3796-0ebf-4960-a6f7-f935e087fa4c"/>
   </tags>
@@ -33,227 +32,58 @@ id="EID032cb77a-b7d1-4fbc-b878-91eecafec775">
     <testObjectType ref="EID5a60dded-0cb0-4977-9b06-16c6c2321d2e"/>
   </supportedTestObjectTypes>
   <testModules>
-    <TestModule id="EIDbc469ee6-5214-448c-95b7-138ba50d4287">
+    <TestModule id="EIDeb4f441a-73c9-4f35-a6d0-d3fc79a55fbb">
       <label>Default test module</label>
       <description><![CDATA[This is the default test module]]></description>
-      <parent ref="EID032cb77a-b7d1-4fbc-b878-91eecafec775"/>
+      <parent ref="EID6bc561f9-f4a8-488b-a344-9d160218924f"/>
       <testCases>
-        <TestCase id="EID794376ba-ce1f-49d4-9121-d97d22f1cd29">
-          <label>laufende Nummer 101</label>
-          <description><![CDATA[verpflichtend aus INSPIRE-Metadaten-Verordnung zum Nachweis des Identifikators des INSPIRE-Konformitätstests, sofern die Geodaten der INSPIRE-Richtlinie unterliegen vgl. Nr. 80]]></description>
-          <parent ref="EIDbc469ee6-5214-448c-95b7-138ba50d4287"/>
+        <TestCase id="EIDc38e4c20-1e8e-4c4c-8cb3-9b18687aff6f">
+          <label>jhjhj</label>
+          <description><![CDATA[jhjhj]]></description>
+          <parent ref="EIDeb4f441a-73c9-4f35-a6d0-d3fc79a55fbb"/>
           <testSteps>
-            <TestStep id="EIDb061b68c-8d06-46e9-b43d-9fb1457fcfdb">
-              <label>laufende Nummer 101</label>
-              <description><![CDATA[verpflichtend aus INSPIRE-Metadaten-Verordnung zum Nachweis des Identifikators des INSPIRE-Konformitätstests, sofern die Geodaten der INSPIRE-Richtlinie unterliegen vgl. Nr. 80]]></description>
-              <parent ref="EID794376ba-ce1f-49d4-9121-d97d22f1cd29"/>
+            <TestStep id="EIDafea41a2-d97b-4a63-9c8d-077a58a30351">
+              <label>jhjhj</label>
+              <description><![CDATA[jhjhj]]></description>
+              <parent ref="EIDc38e4c20-1e8e-4c4c-8cb3-9b18687aff6f"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EID44b11c28-e16e-4019-988a-a58467832e72">
-                  <label>laufende Nummer 101</label>
-                  <description><![CDATA[verpflichtend aus INSPIRE-Metadaten-Verordnung zum Nachweis des Identifikators des INSPIRE-Konformitätstests, sofern die Geodaten der INSPIRE-Richtlinie unterliegen vgl. Nr. 80]]></description>
-                  <parent ref="EIDb061b68c-8d06-46e9-b43d-9fb1457fcfdb"/>
+                <TestAssertion id="EID982f41f1-44f9-4e84-95b7-d5a0f5938e86">
+                  <label>jhjhj</label>
+                  <description><![CDATA[jhjhj]]></description>
+                  <parent ref="EIDafea41a2-d97b-4a63-9c8d-077a58a30351"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>
 let $messages0 :=
     (for $record in $db
-     let $typesFound := $record//*[local-name()='MD_Metadata' and namespace-uri()='http://www.isotc211.org/2005/gmd']
+     let $typesFound := $record//*[local-name()='AbstractDQ_LogicalConsistency' and namespace-uri()='http://www.isotc211.org/2005/gmd']
      for $typeFound in $typesFound 
-       let $ifPropertyCount := count($typeFound//*[local-name()='identificationInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_DataIdentification' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='descriptiveKeywords' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_Keywords' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='keyword' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='CharacterString' and namespace-uri()='http://www.isotc211.org/2005/gco' and text()='inspireidentifiziert'])
-       let $thenPropertyCount := count($typeFound//*[local-name()='dataQualityInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='DQ_DataQuality' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='report' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='DQ_CompletenessCommission' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='measureIdentification' and namespace-uri()='http://www.isotc211.org/2005/gmd'])
+       let $ifPropertyCount := count($typeFound//*[local-name()='id' and text()='mjjh'])
+       let $thenPropertyCount := count($typeFound//*[local-name()='uuid' and text()='jhjhj'])
        return 
        if ($ifPropertyCount gt 0) then 
          if ($thenPropertyCount eq 0) then 
-           local:addMessage('TR.conditionNotExistingValue', map { 'localName': 'measureIdentification', 'namespace': 'http://www.isotc211.org/2005/gmd' })
+           local:addMessage('TR.conditionNotMatchingValue', map { 'localName': 'uuid', 'namespace': '', 'expectedValue': 'jhjhj' })
          else ()
        else ()
     )[position() le $limitErrors]
 let $messages1 :=
     (for $record in $db
-     let $typesFound := $record//*[local-name()='MD_Metadata' and namespace-uri()='http://www.isotc211.org/2005/gmd']
+     let $typesFound := $record//*[local-name()='DS_DataSet' and namespace-uri()='http://www.isotc211.org/2005/gmd']
      for $typeFound in $typesFound 
-       let $ifPropertyCount := count($typeFound//*[local-name()='identificationInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_DataIdentification' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='descriptiveKeywords' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_Keywords' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='keyword' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='CharacterString' and namespace-uri()='http://www.isotc211.org/2005/gco' and text()='inspireidentifiziert'])
-       let $thenPropertyCount := count($typeFound//*[local-name()='dataQualityInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='DQ_DataQuality' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='report' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='DQ_CompletenessOmission' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='measureIdentification' and namespace-uri()='http://www.isotc211.org/2005/gmd'])
+       let $ifPropertyCount := count($typeFound//*[local-name()='id'])
+       let $thenPropertyCount := count($typeFound//*[local-name()='uuid'])
        return 
-       if ($ifPropertyCount gt 0) then 
+       if ($ifPropertyCount eq 0) then 
          if ($thenPropertyCount eq 0) then 
-           local:addMessage('TR.conditionNotExistingValue', map { 'localName': 'measureIdentification', 'namespace': 'http://www.isotc211.org/2005/gmd' })
-         else ()
-       else ()
-    )[position() le $limitErrors]
-let $messages2 :=
-    (for $record in $db
-     let $typesFound := $record//*[local-name()='MD_Metadata' and namespace-uri()='http://www.isotc211.org/2005/gmd']
-     for $typeFound in $typesFound 
-       let $ifPropertyCount := count($typeFound//*[local-name()='identificationInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_DataIdentification' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='descriptiveKeywords' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_Keywords' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='keyword' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='CharacterString' and namespace-uri()='http://www.isotc211.org/2005/gco' and text()='inspireidentifiziert'])
-       let $thenPropertyCount := count($typeFound//*[local-name()='dataQualityInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='DQ_DataQuality' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='report' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='DQ_ConceptualConsistency' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='measureIdentification' and namespace-uri()='http://www.isotc211.org/2005/gmd'])
-       return 
-       if ($ifPropertyCount gt 0) then 
-         if ($thenPropertyCount eq 0) then 
-           local:addMessage('TR.conditionNotExistingValue', map { 'localName': 'measureIdentification', 'namespace': 'http://www.isotc211.org/2005/gmd' })
-         else ()
-       else ()
-    )[position() le $limitErrors]
-let $messages3 :=
-    (for $record in $db
-     let $typesFound := $record//*[local-name()='MD_Metadata' and namespace-uri()='http://www.isotc211.org/2005/gmd']
-     for $typeFound in $typesFound 
-       let $ifPropertyCount := count($typeFound//*[local-name()='identificationInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_DataIdentification' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='descriptiveKeywords' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_Keywords' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='keyword' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='CharacterString' and namespace-uri()='http://www.isotc211.org/2005/gco' and text()='inspireidentifiziert'])
-       let $thenPropertyCount := count($typeFound//*[local-name()='dataQualityInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='DQ_DataQuality' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='report' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='DQ_DomainConsistency' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='measureIdentification' and namespace-uri()='http://www.isotc211.org/2005/gmd'])
-       return 
-       if ($ifPropertyCount gt 0) then 
-         if ($thenPropertyCount eq 0) then 
-           local:addMessage('TR.conditionNotExistingValue', map { 'localName': 'measureIdentification', 'namespace': 'http://www.isotc211.org/2005/gmd' })
-         else ()
-       else ()
-    )[position() le $limitErrors]
-let $messages4 :=
-    (for $record in $db
-     let $typesFound := $record//*[local-name()='MD_Metadata' and namespace-uri()='http://www.isotc211.org/2005/gmd']
-     for $typeFound in $typesFound 
-       let $ifPropertyCount := count($typeFound//*[local-name()='identificationInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_DataIdentification' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='descriptiveKeywords' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_Keywords' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='keyword' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='CharacterString' and namespace-uri()='http://www.isotc211.org/2005/gco' and text()='inspireidentifiziert'])
-       let $thenPropertyCount := count($typeFound//*[local-name()='dataQualityInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='DQ_DataQuality' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='report' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='DQ_FormatConsistency' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='measureIdentification' and namespace-uri()='http://www.isotc211.org/2005/gmd'])
-       return 
-       if ($ifPropertyCount gt 0) then 
-         if ($thenPropertyCount eq 0) then 
-           local:addMessage('TR.conditionNotExistingValue', map { 'localName': 'measureIdentification', 'namespace': 'http://www.isotc211.org/2005/gmd' })
-         else ()
-       else ()
-    )[position() le $limitErrors]
-let $messages5 :=
-    (for $record in $db
-     let $typesFound := $record//*[local-name()='MD_Metadata' and namespace-uri()='http://www.isotc211.org/2005/gmd']
-     for $typeFound in $typesFound 
-       let $ifPropertyCount := count($typeFound//*[local-name()='identificationInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_DataIdentification' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='descriptiveKeywords' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_Keywords' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='keyword' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='CharacterString' and namespace-uri()='http://www.isotc211.org/2005/gco' and text()='inspireidentifiziert'])
-       let $thenPropertyCount := count($typeFound//*[local-name()='dataQualityInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='DQ_DataQuality' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='report' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='DQ_TopologicalConsistency' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='measureIdentification' and namespace-uri()='http://www.isotc211.org/2005/gmd'])
-       return 
-       if ($ifPropertyCount gt 0) then 
-         if ($thenPropertyCount eq 0) then 
-           local:addMessage('TR.conditionNotExistingValue', map { 'localName': 'measureIdentification', 'namespace': 'http://www.isotc211.org/2005/gmd' })
-         else ()
-       else ()
-    )[position() le $limitErrors]
-let $messages6 :=
-    (for $record in $db
-     let $typesFound := $record//*[local-name()='MD_Metadata' and namespace-uri()='http://www.isotc211.org/2005/gmd']
-     for $typeFound in $typesFound 
-       let $ifPropertyCount := count($typeFound//*[local-name()='identificationInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_DataIdentification' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='descriptiveKeywords' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_Keywords' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='keyword' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='CharacterString' and namespace-uri()='http://www.isotc211.org/2005/gco' and text()='inspireidentifiziert'])
-       let $thenPropertyCount := count($typeFound//*[local-name()='dataQualityInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='DQ_DataQuality' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='report' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='DQ_AbsoluteExternalPositionalAccuracy' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='measureIdentification' and namespace-uri()='http://www.isotc211.org/2005/gmd'])
-       return 
-       if ($ifPropertyCount gt 0) then 
-         if ($thenPropertyCount eq 0) then 
-           local:addMessage('TR.conditionNotExistingValue', map { 'localName': 'measureIdentification', 'namespace': 'http://www.isotc211.org/2005/gmd' })
-         else ()
-       else ()
-    )[position() le $limitErrors]
-let $messages7 :=
-    (for $record in $db
-     let $typesFound := $record//*[local-name()='MD_Metadata' and namespace-uri()='http://www.isotc211.org/2005/gmd']
-     for $typeFound in $typesFound 
-       let $ifPropertyCount := count($typeFound//*[local-name()='identificationInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_DataIdentification' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='descriptiveKeywords' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_Keywords' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='keyword' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='CharacterString' and namespace-uri()='http://www.isotc211.org/2005/gco' and text()='inspireidentifiziert'])
-       let $thenPropertyCount := count($typeFound//*[local-name()='dataQualityInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='DQ_DataQuality' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='report' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='DQ_GriddedDataPositionalAccuracy' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='measureIdentification' and namespace-uri()='http://www.isotc211.org/2005/gmd'])
-       return 
-       if ($ifPropertyCount gt 0) then 
-         if ($thenPropertyCount eq 0) then 
-           local:addMessage('TR.conditionNotExistingValue', map { 'localName': 'measureIdentification', 'namespace': 'http://www.isotc211.org/2005/gmd' })
-         else ()
-       else ()
-    )[position() le $limitErrors]
-let $messages8 :=
-    (for $record in $db
-     let $typesFound := $record//*[local-name()='MD_Metadata' and namespace-uri()='http://www.isotc211.org/2005/gmd']
-     for $typeFound in $typesFound 
-       let $ifPropertyCount := count($typeFound//*[local-name()='identificationInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_DataIdentification' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='descriptiveKeywords' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_Keywords' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='keyword' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='CharacterString' and namespace-uri()='http://www.isotc211.org/2005/gco' and text()='inspireidentifiziert'])
-       let $thenPropertyCount := count($typeFound//*[local-name()='dataQualityInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='DQ_DataQuality' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='report' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='DQ_RelativeInternalPositionalAccuracy' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='measureIdentification' and namespace-uri()='http://www.isotc211.org/2005/gmd'])
-       return 
-       if ($ifPropertyCount gt 0) then 
-         if ($thenPropertyCount eq 0) then 
-           local:addMessage('TR.conditionNotExistingValue', map { 'localName': 'measureIdentification', 'namespace': 'http://www.isotc211.org/2005/gmd' })
-         else ()
-       else ()
-    )[position() le $limitErrors]
-let $messages9 :=
-    (for $record in $db
-     let $typesFound := $record//*[local-name()='MD_Metadata' and namespace-uri()='http://www.isotc211.org/2005/gmd']
-     for $typeFound in $typesFound 
-       let $ifPropertyCount := count($typeFound//*[local-name()='identificationInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_DataIdentification' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='descriptiveKeywords' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_Keywords' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='keyword' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='CharacterString' and namespace-uri()='http://www.isotc211.org/2005/gco' and text()='inspireidentifiziert'])
-       let $thenPropertyCount := count($typeFound//*[local-name()='dataQualityInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='DQ_DataQuality' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='report' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='DQ_AccuracyOfATimeMeasurement' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='measureIdentification' and namespace-uri()='http://www.isotc211.org/2005/gmd'])
-       return 
-       if ($ifPropertyCount gt 0) then 
-         if ($thenPropertyCount eq 0) then 
-           local:addMessage('TR.conditionNotExistingValue', map { 'localName': 'measureIdentification', 'namespace': 'http://www.isotc211.org/2005/gmd' })
-         else ()
-       else ()
-    )[position() le $limitErrors]
-let $messages10 :=
-    (for $record in $db
-     let $typesFound := $record//*[local-name()='MD_Metadata' and namespace-uri()='http://www.isotc211.org/2005/gmd']
-     for $typeFound in $typesFound 
-       let $ifPropertyCount := count($typeFound//*[local-name()='identificationInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_DataIdentification' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='descriptiveKeywords' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_Keywords' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='keyword' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='CharacterString' and namespace-uri()='http://www.isotc211.org/2005/gco' and text()='inspireidentifiziert'])
-       let $thenPropertyCount := count($typeFound//*[local-name()='dataQualityInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='DQ_DataQuality' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='report' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='DQ_TemporalConsistency' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='measureIdentification' and namespace-uri()='http://www.isotc211.org/2005/gmd'])
-       return 
-       if ($ifPropertyCount gt 0) then 
-         if ($thenPropertyCount eq 0) then 
-           local:addMessage('TR.conditionNotExistingValue', map { 'localName': 'measureIdentification', 'namespace': 'http://www.isotc211.org/2005/gmd' })
-         else ()
-       else ()
-    )[position() le $limitErrors]
-let $messages11 :=
-    (for $record in $db
-     let $typesFound := $record//*[local-name()='MD_Metadata' and namespace-uri()='http://www.isotc211.org/2005/gmd']
-     for $typeFound in $typesFound 
-       let $ifPropertyCount := count($typeFound//*[local-name()='identificationInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_DataIdentification' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='descriptiveKeywords' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_Keywords' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='keyword' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='CharacterString' and namespace-uri()='http://www.isotc211.org/2005/gco' and text()='inspireidentifiziert'])
-       let $thenPropertyCount := count($typeFound//*[local-name()='dataQualityInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='DQ_DataQuality' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='report' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='DQ_TemporalValidity' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='measureIdentification' and namespace-uri()='http://www.isotc211.org/2005/gmd'])
-       return 
-       if ($ifPropertyCount gt 0) then 
-         if ($thenPropertyCount eq 0) then 
-           local:addMessage('TR.conditionNotExistingValue', map { 'localName': 'measureIdentification', 'namespace': 'http://www.isotc211.org/2005/gmd' })
-         else ()
-       else ()
-    )[position() le $limitErrors]
-let $messages12 :=
-    (for $record in $db
-     let $typesFound := $record//*[local-name()='MD_Metadata' and namespace-uri()='http://www.isotc211.org/2005/gmd']
-     for $typeFound in $typesFound 
-       let $ifPropertyCount := count($typeFound//*[local-name()='identificationInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_DataIdentification' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='descriptiveKeywords' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_Keywords' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='keyword' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='CharacterString' and namespace-uri()='http://www.isotc211.org/2005/gco' and text()='inspireidentifiziert'])
-       let $thenPropertyCount := count($typeFound//*[local-name()='dataQualityInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='DQ_DataQuality' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='report' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='DQ_NonQuantitativeAttributeAccuracy' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='measureIdentification' and namespace-uri()='http://www.isotc211.org/2005/gmd'])
-       return 
-       if ($ifPropertyCount gt 0) then 
-         if ($thenPropertyCount eq 0) then 
-           local:addMessage('TR.conditionNotExistingValue', map { 'localName': 'measureIdentification', 'namespace': 'http://www.isotc211.org/2005/gmd' })
-         else ()
-       else ()
-    )[position() le $limitErrors]
-let $messages13 :=
-    (for $record in $db
-     let $typesFound := $record//*[local-name()='MD_Metadata' and namespace-uri()='http://www.isotc211.org/2005/gmd']
-     for $typeFound in $typesFound 
-       let $ifPropertyCount := count($typeFound//*[local-name()='identificationInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_DataIdentification' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='descriptiveKeywords' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_Keywords' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='keyword' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='CharacterString' and namespace-uri()='http://www.isotc211.org/2005/gco' and text()='inspireidentifiziert'])
-       let $thenPropertyCount := count($typeFound//*[local-name()='dataQualityInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='DQ_DataQuality' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='report' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='DQ_QuantitativeAttributeAccuracy' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='measureIdentification' and namespace-uri()='http://www.isotc211.org/2005/gmd'])
-       return 
-       if ($ifPropertyCount gt 0) then 
-         if ($thenPropertyCount eq 0) then 
-           local:addMessage('TR.conditionNotExistingValue', map { 'localName': 'measureIdentification', 'namespace': 'http://www.isotc211.org/2005/gmd' })
-         else ()
-       else ()
-    )[position() le $limitErrors]
-let $messages14 :=
-    (for $record in $db
-     let $typesFound := $record//*[local-name()='MD_Metadata' and namespace-uri()='http://www.isotc211.org/2005/gmd']
-     for $typeFound in $typesFound 
-       let $ifPropertyCount := count($typeFound//*[local-name()='identificationInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_DataIdentification' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='descriptiveKeywords' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_Keywords' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='keyword' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='CharacterString' and namespace-uri()='http://www.isotc211.org/2005/gco' and text()='inspireidentifiziert'])
-       let $thenPropertyCount := count($typeFound//*[local-name()='dataQualityInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='DQ_DataQuality' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='report' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='DQ_ThematicClassificationCorrectness' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='measureIdentification' and namespace-uri()='http://www.isotc211.org/2005/gmd'])
-       return 
-       if ($ifPropertyCount gt 0) then 
-         if ($thenPropertyCount eq 0) then 
-           local:addMessage('TR.conditionNotExistingValue', map { 'localName': 'measureIdentification', 'namespace': 'http://www.isotc211.org/2005/gmd' })
+           local:addMessage('TR.conditionNotExistingValue', map { 'localName': 'uuid', 'namespace': '' })
          else ()
        else ()
     )[position() le $limitErrors]
  let $messages := 
-   if ((count($messages0 eq 0) or (count($messages1 eq 0) or (count($messages2 eq 0) or (count($messages3 eq 0) or (count($messages4 eq 0) or (count($messages5 eq 0) or (count($messages6 eq 0) or (count($messages7 eq 0) or (count($messages8 eq 0) or (count($messages9 eq 0) or (count($messages10 eq 0) or (count($messages11 eq 0) or (count($messages12 eq 0) or (count($messages13 eq 0) or (count($messages14 eq 0)) then ()
-   else ($messages0, $messages1, $messages2, $messages3, $messages4, $messages5, $messages6, $messages7, $messages8, $messages9, $messages10, $messages11, $messages12, $messages13, $messages14)
+   if ((count($messages0 eq 0) or (count($messages1 eq 0)) then ()
+   else ($messages0, $messages1)
 return
 (if ($messages) then 'FAILED' else 'PASSED',
  local:error-statistics('TR.recordsWithErrors', count(fn:distinct-values($messages//etf:argument[@token='id']/text()))),
