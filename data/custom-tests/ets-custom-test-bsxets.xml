@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<ExecutableTestSuite xmlns="http://www.interactive-instruments.de/etf/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EID6bc561f9-f4a8-488b-a344-9d160218924f" xsi:schemaLocation="http://www.interactive-instruments.de/etf/2.0 ../../schema/model/resultSet.xsd">
+<ExecutableTestSuite xmlns="http://www.interactive-instruments.de/etf/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EID95588f12-1dab-4012-8f28-be704efc2a34" xsi:schemaLocation="http://www.interactive-instruments.de/etf/2.0 ../../schema/model/resultSet.xsd">
   <itemHash>bQ==</itemHash>
   <remoteResource>http://github.com/inspire-eu-validation/ets-repository/metadata/iso</remoteResource>
   <localPath>/auto</localPath>
@@ -32,27 +32,27 @@
     <testObjectType ref="EID5a60dded-0cb0-4977-9b06-16c6c2321d2e"/>
   </supportedTestObjectTypes>
   <testModules>
-    <TestModule id="EIDeb4f441a-73c9-4f35-a6d0-d3fc79a55fbb">
+    <TestModule id="EID548ccb06-43b2-40e3-abc1-e78083cd0226">
       <label>Default test module</label>
       <description><![CDATA[This is the default test module]]></description>
-      <parent ref="EID6bc561f9-f4a8-488b-a344-9d160218924f"/>
+      <parent ref="EID95588f12-1dab-4012-8f28-be704efc2a34"/>
       <testCases>
-        <TestCase id="EIDc38e4c20-1e8e-4c4c-8cb3-9b18687aff6f">
+        <TestCase id="EIDe390cb16-8e8d-415c-84c7-565918928060">
           <label>jhjhj</label>
           <description><![CDATA[jhjhj]]></description>
-          <parent ref="EIDeb4f441a-73c9-4f35-a6d0-d3fc79a55fbb"/>
+          <parent ref="EID548ccb06-43b2-40e3-abc1-e78083cd0226"/>
           <testSteps>
-            <TestStep id="EIDafea41a2-d97b-4a63-9c8d-077a58a30351">
+            <TestStep id="EID7ba77059-5d68-4e7f-a3fe-15937014b0bd">
               <label>jhjhj</label>
               <description><![CDATA[jhjhj]]></description>
-              <parent ref="EIDc38e4c20-1e8e-4c4c-8cb3-9b18687aff6f"/>
+              <parent ref="EIDe390cb16-8e8d-415c-84c7-565918928060"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EID982f41f1-44f9-4e84-95b7-d5a0f5938e86">
+                <TestAssertion id="EID7bd13b91-7482-406e-9f02-c44f901de217">
                   <label>jhjhj</label>
                   <description><![CDATA[jhjhj]]></description>
-                  <parent ref="EIDafea41a2-d97b-4a63-9c8d-077a58a30351"/>
+                  <parent ref="EID7ba77059-5d68-4e7f-a3fe-15937014b0bd"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>
 let $messages0 :=
@@ -82,7 +82,7 @@ let $messages1 :=
        else ()
     )[position() le $limitErrors]
  let $messages := 
-   if ((count($messages0 eq 0) or (count($messages1 eq 0)) then ()
+   if ((count($messages0 eq 0)) or (count($messages1 eq 0))) then ()
    else ($messages0, $messages1)
 return
 (if ($messages) then 'FAILED' else 'PASSED',
