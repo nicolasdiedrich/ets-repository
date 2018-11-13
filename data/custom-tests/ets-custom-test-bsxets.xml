@@ -52,7 +52,7 @@ id="EID032cb77a-b7d1-4fbc-b878-91eecafec775">
               <testAssertions>
                 <TestAssertion id="EID44b11c28-e16e-4019-988a-a58467832e72">
                   <label>laufende Nummer 101</label>
-                  <description><![CDATA[verpflichtend aus INSPIRE-Metadaten-Verordnung zum Nachweis des Identifikators des INSPIRE-Konformitätstests, sofern die Geodaten der INSPIRE-Richtlinie unterliegen (vgl. Nr. 80)]]></description>
+                  <description><![CDATA[verpflichtend aus INSPIRE-Metadaten-Verordnung zum Nachweis des Identifikators des INSPIRE-Konformitätstests, sofern die Geodaten der INSPIRE-Richtlinie unterliegen vgl. Nr. 80]]></description>
                   <parent ref="EIDb061b68c-8d06-46e9-b43d-9fb1457fcfdb"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>
