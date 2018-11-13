@@ -40,12 +40,12 @@ id="EID032cb77a-b7d1-4fbc-b878-91eecafec775">
       <testCases>
         <TestCase id="EID794376ba-ce1f-49d4-9121-d97d22f1cd29">
           <label>laufende Nummer 101</label>
-          <description><![CDATA[verpflichtend aus INSPIRE-Metadaten-Verordnung zum Nachweis des Identifikators des INSPIRE-Konformitätstests, sofern die Geodaten der INSPIRE-Richtlinie unterliegen (vgl. Nr. 80)]]></description>
+          <description><![CDATA[verpflichtend aus INSPIRE-Metadaten-Verordnung zum Nachweis des Identifikators des INSPIRE-Konformitätstests, sofern die Geodaten der INSPIRE-Richtlinie unterliegen vgl. Nr. 80]]></description>
           <parent ref="EIDbc469ee6-5214-448c-95b7-138ba50d4287"/>
           <testSteps>
             <TestStep id="EIDb061b68c-8d06-46e9-b43d-9fb1457fcfdb">
               <label>laufende Nummer 101</label>
-              <description><![CDATA[verpflichtend aus INSPIRE-Metadaten-Verordnung zum Nachweis des Identifikators des INSPIRE-Konformitätstests, sofern die Geodaten der INSPIRE-Richtlinie unterliegen (vgl. Nr. 80)]]></description>
+              <description><![CDATA[verpflichtend aus INSPIRE-Metadaten-Verordnung zum Nachweis des Identifikators des INSPIRE-Konformitätstests, sofern die Geodaten der INSPIRE-Richtlinie unterliegen vgl. Nr. 80]]></description>
               <parent ref="EID794376ba-ce1f-49d4-9121-d97d22f1cd29"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
