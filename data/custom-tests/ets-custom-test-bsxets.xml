@@ -59,9 +59,9 @@ let $messages :=
   (for $record in $db
      let $typesFound := $record//*[local-name()='MD_Keywords' and namespace-uri()='http://www.isotc211.org/2005/gmd']
      for $typeFound in $typesFound
-       let $valueFound := $typeFound/*[local-name()='type' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*/@codeListValue
+       let $valueFound := $typeFound/*[local-name()='type' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*/data(@codeListValue)
        return
-         if ($valueFound and not(data($valueFound) = $codes)) then
+         if ($valueFound and not($valueFound = $codes)) then
            local:addMessage('TR.invalidPropertyValueError', map { 'propName': 'type', 'localName': 'MD_Keywords', 'namespace': 'http://www.isotc211.org/2005/gmd', 'valueFound': $valueFound, 'allowedValues': string-join( $codes, ', ') })
  else ()
   )[position() le $limitErrors]
