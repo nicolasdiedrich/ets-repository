@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<ExecutableTestSuite xmlns="http://www.interactive-instruments.de/etf/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EID0001405d-b069-47ed-9889-c56c64526428" xsi:schemaLocation="http://www.interactive-instruments.de/etf/2.0 ../../schema/model/resultSet.xsd">
+<ExecutableTestSuite xmlns="http://www.interactive-instruments.de/etf/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EID43294a87-f85f-45f4-8e86-c6b578ba0b98" xsi:schemaLocation="http://www.interactive-instruments.de/etf/2.0 ../../schema/model/resultSet.xsd">
   <itemHash>bQ==</itemHash>
   <remoteResource>http://github.com/inspire-eu-validation/ets-repository/metadata/iso</remoteResource>
   <localPath>/auto</localPath>
@@ -32,37 +32,37 @@
     <testObjectType ref="EID5a60dded-0cb0-4977-9b06-16c6c2321d2e"/>
   </supportedTestObjectTypes>
   <testModules>
-    <TestModule id="EID13644be1-ecb3-41e7-847c-b587f3e53a7d">
+    <TestModule id="EID8bb45e61-d442-4908-84ce-11525c01fee5">
       <label>Default test module</label>
       <description><![CDATA[This is the default test module]]></description>
-      <parent ref="EID0001405d-b069-47ed-9889-c56c64526428"/>
+      <parent ref="EID43294a87-f85f-45f4-8e86-c6b578ba0b98"/>
       <testCases>
-        <TestCase id="EID12d0e80e-7ec9-4475-adb9-791eff1927d4">
+        <TestCase id="EIDc39ae7bd-346f-4ed2-b83c-ec85b91f55d7">
           <label>TestCase label</label>
           <description><![CDATA[Constraints TestCase for Feature Type with name 'MD_Keywords' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
-          <parent ref="EID13644be1-ecb3-41e7-847c-b587f3e53a7d"/>
+          <parent ref="EID8bb45e61-d442-4908-84ce-11525c01fee5"/>
           <testSteps>
-            <TestStep id="EID48205273-b143-45bd-8b37-57c11033e0a7">
+            <TestStep id="EID0a38842d-1ade-4f75-af6d-6d713e2ee153">
               <label>FIXME-Label</label>
               <description><![CDATA[FIXME-Description]]></description>
-              <parent ref="EID12d0e80e-7ec9-4475-adb9-791eff1927d4"/>
+              <parent ref="EIDc39ae7bd-346f-4ed2-b83c-ec85b91f55d7"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EIDf3da466a-cce8-4147-8ac0-70d29fb3cbba">
+                <TestAssertion id="EID19d8a00b-c898-472b-b50e-ded07a022bf4">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'type' and namespace 'http://www.isotc211.org/2005/gmd' should have a value that corresponds to one from the following list: <br><ul><li>stratum</li><li>theme</li><li>discipline</li><li>place</li></ul>]]></description>
-                  <parent ref="EID48205273-b143-45bd-8b37-57c11033e0a7"/>
+                  <parent ref="EID0a38842d-1ade-4f75-af6d-6d713e2ee153"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $codes := ('stratum', 'theme', 'discipline', 'place')
 let $messages :=
   (for $record in $db
      let $typesFound := $record//*[local-name()='MD_Keywords' and namespace-uri()='http://www.isotc211.org/2005/gmd']
      for $typeFound in $typesFound
-       let $valueFound := $typeFound/*[local-name()='type' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*/data(@codeListValue)
+       let $propertyFound := $typeFound/*[local-name()='type' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*/data(@codeListValue)
        return
-         if ($valueFound and not($valueFound = $codes)) then
-           local:addMessage('TR.invalidPropertyValueError', map { 'propName': 'type', 'localName': 'MD_Keywords', 'namespace': 'http://www.isotc211.org/2005/gmd', 'valueFound': $valueFound, 'allowedValues': string-join( $codes, ', ') })
+         if ($propertyFound and not($propertyFound = $codes)) then
+           local:addMessage('TR.invalidPropertyValueError', map { 'propName': 'type', 'localName': 'MD_Keywords', 'namespace': 'http://www.isotc211.org/2005/gmd', 'valueFound': $propertyFound, 'allowedValues': string-join( $codes, ', ') })
  else ()
   )[position() le $limitErrors]
 return
