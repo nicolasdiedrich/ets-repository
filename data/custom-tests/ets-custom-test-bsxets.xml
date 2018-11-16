@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<ExecutableTestSuite xmlns="http://www.interactive-instruments.de/etf/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EID43294a87-f85f-45f4-8e86-c6b578ba0b98" xsi:schemaLocation="http://www.interactive-instruments.de/etf/2.0 ../../schema/model/resultSet.xsd">
+<ExecutableTestSuite xmlns="http://www.interactive-instruments.de/etf/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EID203b86a3-2f89-44b6-9236-a8ec12212265" xsi:schemaLocation="http://www.interactive-instruments.de/etf/2.0 ../../schema/model/resultSet.xsd">
   <itemHash>bQ==</itemHash>
   <remoteResource>http://github.com/inspire-eu-validation/ets-repository/metadata/iso</remoteResource>
   <localPath>/auto</localPath>
@@ -32,27 +32,27 @@
     <testObjectType ref="EID5a60dded-0cb0-4977-9b06-16c6c2321d2e"/>
   </supportedTestObjectTypes>
   <testModules>
-    <TestModule id="EID8bb45e61-d442-4908-84ce-11525c01fee5">
+    <TestModule id="EIDb72fe916-9884-4d27-a725-a8008b2beb0a">
       <label>Default test module</label>
       <description><![CDATA[This is the default test module]]></description>
-      <parent ref="EID43294a87-f85f-45f4-8e86-c6b578ba0b98"/>
+      <parent ref="EID203b86a3-2f89-44b6-9236-a8ec12212265"/>
       <testCases>
-        <TestCase id="EIDc39ae7bd-346f-4ed2-b83c-ec85b91f55d7">
+        <TestCase id="EIDe0976b2c-cc9e-4969-bac0-31f2d92b939d">
           <label>TestCase label</label>
           <description><![CDATA[Constraints TestCase for Feature Type with name 'MD_Keywords' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
-          <parent ref="EID8bb45e61-d442-4908-84ce-11525c01fee5"/>
+          <parent ref="EIDb72fe916-9884-4d27-a725-a8008b2beb0a"/>
           <testSteps>
-            <TestStep id="EID0a38842d-1ade-4f75-af6d-6d713e2ee153">
+            <TestStep id="EID9fc5931b-db81-440d-aae0-704bd21c1de0">
               <label>FIXME-Label</label>
               <description><![CDATA[FIXME-Description]]></description>
-              <parent ref="EIDc39ae7bd-346f-4ed2-b83c-ec85b91f55d7"/>
+              <parent ref="EIDe0976b2c-cc9e-4969-bac0-31f2d92b939d"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EID19d8a00b-c898-472b-b50e-ded07a022bf4">
+                <TestAssertion id="EID1fec40f4-32d1-4232-84bb-57f71c914c15">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'type' and namespace 'http://www.isotc211.org/2005/gmd' should have a value that corresponds to one from the following list: <br><ul><li>stratum</li><li>theme</li><li>discipline</li><li>place</li></ul>]]></description>
-                  <parent ref="EID0a38842d-1ade-4f75-af6d-6d713e2ee153"/>
+                  <parent ref="EID9fc5931b-db81-440d-aae0-704bd21c1de0"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $codes := ('stratum', 'theme', 'discipline', 'place')
 let $messages :=
@@ -76,6 +76,69 @@ return
                     <translationTemplate ref="TR.missingMandatoryTypeError"/>
                     <translationTemplate ref="TR.invalidPropertyCardinalityError"/>
                     <translationTemplate ref="TR.invalidPropertyValueError"/>
+                  </translationTemplates>
+                </TestAssertion>
+              </testAssertions>
+            </TestStep>
+          </testSteps>
+        </TestCase>
+        <TestCase id="EIDa346ded0-0ea4-40b8-8cc1-4fae0ac3725b">
+          <label>is theme</label>
+          <description><![CDATA[is theme]]></description>
+          <parent ref="EIDb72fe916-9884-4d27-a725-a8008b2beb0a"/>
+          <testSteps>
+            <TestStep id="EID646dbe56-cb38-4490-9dc7-0685caf423fe">
+              <label>is theme</label>
+              <description><![CDATA[is theme]]></description>
+              <parent ref="EIDa346ded0-0ea4-40b8-8cc1-4fae0ac3725b"/>
+              <statementForExecution>not applicable</statementForExecution>
+              <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
+              <testAssertions>
+                <TestAssertion id="EID4fc032ab-c451-4587-911c-dc05dc745de2">
+                  <label>is theme</label>
+                  <description><![CDATA[is theme]]></description>
+                  <parent ref="EID646dbe56-cb38-4490-9dc7-0685caf423fe"/>
+                  <expectedResult>NOT_APPLICABLE</expectedResult>
+                  <expression>
+let $messages0 :=
+    (for $record in $db
+     let $typesFound := $record//*[local-name()='MD_Keywords' and namespace-uri()='http://www.isotc211.org/2005/gmd']
+     for $typeFound in $typesFound 
+       let $ifPropertyCount := count($typeFound/*[local-name()='type' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_KeywordTypeCode' and namespace-uri()='http://www.isotc211.org/2005/gmd']/data(@codeListValue))
+       return 
+       if ($ifPropertyCount eq 0) then 
+         local:addMessage('TR.conditionNotMatchingValue', map { 'localName': 'codeListValue', 'namespace': '', 'expectedValue': 'theme' })
+       else ()
+    )[position() le $limitErrors]
+let $messages1 :=
+    (for $record in $db
+     let $typesFound := $record//*[local-name()='MD_Metadata' and namespace-uri()='http://www.isotc211.org/2005/gmd']
+     for $typeFound in $typesFound 
+       let $ifPropertyCount := count($typeFound/data(@id))
+       return 
+       if ($ifPropertyCount eq 0) then 
+         local:addMessage('TR.conditionNotExistingValue', map { 'localName': 'id', 'namespace': '' })
+       else ()
+    )[position() le $limitErrors]
+let $messages2 :=
+    (for $record in $db
+     let $typesFound := $record//*[local-name()='MD_Metadata' and namespace-uri()='http://www.isotc211.org/2005/gmd']
+     for $typeFound in $typesFound 
+       let $ifPropertyCount := count($typeFound/*[local-name()='fileIdentifier' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='CharacterString' and namespace-uri()='http://www.isotc211.org/2005/gco'])
+       return 
+       if ($ifPropertyCount eq 0) then 
+         local:addMessage('TR.conditionNotExistingValue', map { 'localName': 'CharacterString', 'namespace': 'http://www.isotc211.org/2005/gco' })
+       else ()
+    )[position() le $limitErrors]
+ let $messages := ($messages0, $messages1, $messages2)
+return
+(if ($messages) then 'FAILED' else 'PASSED',
+ local:error-statistics('TR.recordsWithErrors', count(fn:distinct-values($messages//etf:argument[@token='id']/text()))),
+ $messages)</expression>
+                  <testItemType ref="EIDf0edc596-49d2-48d6-a1a1-1ac581dcde0a"/>
+                  <translationTemplates>
+                    <translationTemplate ref="TR.recordsWithErrors"/>
+                    <translationTemplate ref="TR.missingMandatoryTypeError"/>
                   </translationTemplates>
                 </TestAssertion>
               </testAssertions>
