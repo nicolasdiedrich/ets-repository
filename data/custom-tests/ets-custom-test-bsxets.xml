@@ -1,89 +1,851 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<ExecutableTestSuite xmlns="http://www.interactive-instruments.de/etf/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EIDc030df5b-f7ca-40a7-a03d-c68da13c22b3" xsi:schemaLocation="http://www.interactive-instruments.de/etf/2.0 ../../schema/model/resultSet.xsd">
-  <itemHash>bQ==</itemHash>
-  <remoteResource>http://github.com/inspire-eu-validation/ets-repository/metadata/iso</remoteResource>
-  <localPath>/auto</localPath>
-  <label>prof</label>
-  <description><![CDATA[This test was generated automatically from a Schema profile in haleconnect]]></description>
-  <reference>../../inspire-md-bsxets.xq</reference>
-  <version>1.0.0</version>
-  <author>Voyager Taint</author>
-  <creationDate>2019-01-09T16:05:07.161Z</creationDate>
-  <lastEditor>Voyager Taint</lastEditor>
-  <lastUpdateDate>2019-01-09T16:05:07.161Z</lastUpdateDate>
-  <tags>
-    <tag ref="EIDfe1f3796-0ebf-4960-a6f7-f935e087fa4c"/>
-  </tags>
-  <testDriver ref="EID4dddc9e2-1b21-40b7-af70-6a2d156ad130"/>
-  <translationTemplateBundle ref="EID70a263c0-0ad7-42f2-9d4d-0d8a4ca71b52"/>
-  <ParameterList name="ETF Standard Parameters for XML test objects">
-    <parameter name="files_to_test" required="true">
-      <defaultValue>.*</defaultValue>
-      <allowedValues>.*</allowedValues>
-      <type>string</type>
-    </parameter>
-    <parameter name="tests_to_execute" required="false">
-      <defaultValue>.*</defaultValue>
-      <allowedValues>.*</allowedValues>
-      <type>string</type>
-    </parameter>
-  </ParameterList>
-  <supportedTestObjectTypes>
-    <testObjectType ref="EID5a60dded-0cb0-4977-9b06-16c6c2321d2e"/>
-  </supportedTestObjectTypes>
-  <testModules>
-    <TestModule id="EID7ff3627e-d293-4328-adb6-8fdd5a60591f">
-      <label>Default test module</label>
-      <description><![CDATA[This is the default test module]]></description>
-      <parent ref="EIDc030df5b-f7ca-40a7-a03d-c68da13c22b3"/>
-      <testCases>
-        <TestCase id="EID97e58a18-b363-455a-86d6-5f5f814cbef5">
-          <label>MyConditionName</label>
-          <description><![CDATA[MyConditionDescription]]></description>
-          <parent ref="EID7ff3627e-d293-4328-adb6-8fdd5a60591f"/>
-          <testSteps>
-            <TestStep id="EIDa1e36437-422b-43ba-adc5-5b88e9981b54">
-              <label>MyConditionName</label>
-              <description><![CDATA[MyConditionDescription]]></description>
-              <parent ref="EID97e58a18-b363-455a-86d6-5f5f814cbef5"/>
-              <statementForExecution>not applicable</statementForExecution>
-              <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
-              <testAssertions>
-                <TestAssertion id="EID946306ae-7af7-480a-b796-80947f49af8a">
-                  <label>MyConditionName</label>
-                  <description><![CDATA[MyConditionDescription]]></description>
-                  <parent ref="EIDa1e36437-422b-43ba-adc5-5b88e9981b54"/>
-                  <expectedResult>NOT_APPLICABLE</expectedResult>
-                  <expression>
-let $messages0 :=
-    (for $record in $db
-     let $typesFound := $record//*[local-name()='MD_Metadata' and namespace-uri()='http://www.isotc211.org/2005/gmd']
-     for $typeFound in $typesFound 
-       let $ifPropertyCount := count($typeFound/*[local-name()='identificationInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_DataIdentification' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='resourceConstraints' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_LegalConstraints' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='otherConstraints' and namespace-uri()='http://www.isotc211.org/2005/gmd'])
-       let $thenPropertyCount := count($typeFound/*[local-name()='identificationInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_DataIdentification' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='resourceConstraints' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_LegalConstraints' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='accessConstraints' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_RestrictionCode' and namespace-uri()='http://www.isotc211.org/2005/gmd'][@codeListValue='otherRestrictions'])
-       return 
-       if ($ifPropertyCount gt 0) then 
-         if ($thenPropertyCount eq 0) then 
-           local:addMessage('TR.conditionNotMatchingValue', map { 'localName': 'codeListValue', 'namespace': '', 'expectedValue': 'otherRestrictions' })
-         else ()
-       else ()
-    )[position() le $limitErrors]
- let $messages := ($messages0)
-return
-(if ($messages) then 'FAILED' else 'PASSED',
- local:error-statistics('TR.recordsWithErrors', count(fn:distinct-values($messages//etf:argument[@token='id']/text()))),
- $messages)</expression>
-                  <testItemType ref="EIDf0edc596-49d2-48d6-a1a1-1ac581dcde0a"/>
-                  <translationTemplates>
-                    <translationTemplate ref="TR.recordsWithErrors"/>
-                    <translationTemplate ref="TR.missingMandatoryTypeError"/>
-                  </translationTemplates>
-                </TestAssertion>
-              </testAssertions>
-            </TestStep>
-          </testSteps>
-        </TestCase>
-      </testCases>
-    </TestModule>
-  </testModules>
-</ExecutableTestSuite>
+<gmd:MD_Metadata xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.isotc211.org/2005/gmd http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd">
+  <gmd:fileIdentifier>
+    <gco:CharacterString>550e8400-e29b-11d4-a716-446655440000</gco:CharacterString>
+  </gmd:fileIdentifier>
+  <gmd:language>
+    <gco:CharacterString>ger</gco:CharacterString>
+  </gmd:language>
+  <gmd:characterSet>
+    <gmd:MD_CharacterSetCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#MD_CharacterSetCode" codeListValue="8859part3"/>
+  </gmd:characterSet>
+  <gmd:parentIdentifier>
+    <gco:CharacterString>550e8400-e29b-11d4-a716-446655440000</gco:CharacterString>
+  </gmd:parentIdentifier>
+  <gmd:hierarchyLevel>
+    <gmd:MD_ScopeCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#MD_ScopeCode" codeListValue="attributeType"/>
+  </gmd:hierarchyLevel>
+  <gmd:hierarchyLevelName>
+    <gco:CharacterString>ATKIS</gco:CharacterString>
+  </gmd:hierarchyLevelName>
+  <gmd:contact>
+    <gmd:CI_ResponsibleParty>
+      <gmd:individualName>
+        <gco:CharacterString>Mustermann, Erika, Dr.</gco:CharacterString>
+      </gmd:individualName>
+      <gmd:organisationName>
+        <gco:CharacterString>Landesamt für Geoinformation und Landentwicklung</gco:CharacterString>
+      </gmd:organisationName>
+      <gmd:positionName>
+        <gco:CharacterString>Kundenberaterin</gco:CharacterString>
+      </gmd:positionName>
+      <gmd:contactInfo>
+        <gmd:CI_Contact>
+          <gmd:phone>
+            <gmd:CI_Telephone>
+              <gmd:voice>
+                <gco:CharacterString>+49 711 123-999</gco:CharacterString>
+              </gmd:voice>
+              <gmd:facsimile>
+                <gco:CharacterString>+49 711 123-998</gco:CharacterString>
+              </gmd:facsimile>
+            </gmd:CI_Telephone>
+          </gmd:phone>
+          <gmd:address>
+            <gmd:CI_Address>
+              <gmd:deliveryPoint>
+                <gco:CharacterString>Büchsenstraße 54</gco:CharacterString>
+              </gmd:deliveryPoint>
+              <gmd:city>
+                <gco:CharacterString>Stuttgart</gco:CharacterString>
+              </gmd:city>
+              <gmd:administrativeArea>
+                <gco:CharacterString>Baden-Württemberg</gco:CharacterString>
+              </gmd:administrativeArea>
+              <gmd:postalCode>
+                <gco:CharacterString>70174</gco:CharacterString>
+              </gmd:postalCode>
+              <gmd:country>
+                <gco:CharacterString>Deutschland</gco:CharacterString>
+              </gmd:country>
+              <gmd:electronicMailAddress>
+                <gco:CharacterString>e.mustermann@lgl.bwl.de</gco:CharacterString>
+              </gmd:electronicMailAddress>
+            </gmd:CI_Address>
+          </gmd:address>
+          <gmd:onlineResource/>
+        </gmd:CI_Contact>
+      </gmd:contactInfo>
+      <gmd:role>
+        <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_RoleCode" codeListValue="custodian"/>
+      </gmd:role>
+    </gmd:CI_ResponsibleParty>
+  </gmd:contact>
+  <gmd:dateStamp>
+    <gco:DateTime>2009-02-11</gco:DateTime>
+  </gmd:dateStamp>
+  <gmd:metadataStandardName>
+    <gco:CharacterString>ISO 19115:2003 (GDI-BW)</gco:CharacterString>
+  </gmd:metadataStandardName>
+  <gmd:metadataStandardVersion>
+    <gco:CharacterString>1.3</gco:CharacterString>
+  </gmd:metadataStandardVersion>
+  <gmd:spatialRepresentationInfo>
+    <gmd:MD_GridSpatialRepresentation>
+      <gmd:numberOfDimensions>
+        <gco:Integer>726</gco:Integer>
+      </gmd:numberOfDimensions>
+      <gmd:cellGeometry>
+        <gmd:MD_CellGeometryCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#MD_CellGeometryCode" codeListValue="area"/>
+      </gmd:cellGeometry>
+      <gmd:transformationParameterAvailability>
+        <gco:Boolean>true</gco:Boolean>
+      </gmd:transformationParameterAvailability>
+    </gmd:MD_GridSpatialRepresentation>
+  </gmd:spatialRepresentationInfo>
+  <gmd:referenceSystemInfo>
+    <gmd:MD_ReferenceSystem>
+      <gmd:referenceSystemIdentifier>
+        <gmd:RS_Identifier>
+          <gmd:authority>
+            <gmd:CI_Citation>
+              <gmd:title>
+                <gco:CharacterString>alphanumerischer Wert (Beispiel hängt von konkreter Verwendung des Elements ab)
+
+Digitale Orthophotos
+
+GDI-BW-Schlüsselwortliste
+
+Themenbeschreibung der Geodatenbasis Baden-Württemberg
+
+OGDD-Kategorien</gco:CharacterString>
+              </gmd:title>
+              <gmd:alternateTitle>
+                <gco:CharacterString>DOP</gco:CharacterString>
+              </gmd:alternateTitle>
+              <gmd:date>
+                <gmd:CI_Date>
+                  <gmd:date>
+                    <gco:DateTime>2018-05-30T09:00:00</gco:DateTime>
+                  </gmd:date>
+                  <gmd:dateType>
+                    <gmd:CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_DateTypeCode" codeListValue="creation"/>
+                  </gmd:dateType>
+                </gmd:CI_Date>
+              </gmd:date>
+              <gmd:identifier>
+                <gmd:MD_Identifier>
+                  <gmd:authority/>
+                  <gmd:code>
+                    <gco:CharacterString>EPSG:31467</gco:CharacterString>
+                  </gmd:code>
+                </gmd:MD_Identifier>
+              </gmd:identifier>
+            </gmd:CI_Citation>
+          </gmd:authority>
+          <gmd:code>
+            <gco:CharacterString>alphanumerischer Wert (Beispiel hängt von konkreter Verwendung des Elements ab)
+
+EPSG:31467
+
+Gregorianischer Kalender
+
+72379; Postleitzahlenbuch
+
+550e8400-e29b-11d4-a716-446655440000
+(UUID nach ISO/IEC 9834-8:2008)
+
+Nr. 779-6; Produktverzeichnis 2010
+
+http://www.lgl-bw.de#c91bf0a0-1456-11e1-be50-0800200c9a66 (i.S.v. GDI-DE auslaufend) bzw. http://www.lgl-bw.de/c91bf0a0-1456-11e1-be50-0800200c9a66
+bei Anwendung des Elements zur Beschreibung der Daten-Dienste-Kopplung</gco:CharacterString>
+          </gmd:code>
+          <gmd:codeSpace>
+            <gco:CharacterString>EPSG</gco:CharacterString>
+          </gmd:codeSpace>
+        </gmd:RS_Identifier>
+      </gmd:referenceSystemIdentifier>
+    </gmd:MD_ReferenceSystem>
+  </gmd:referenceSystemInfo>
+  <gmd:identificationInfo>
+    <gmd:MD_DataIdentification>
+      <gmd:citation>
+        <gmd:CI_Citation>
+          <gmd:title>
+            <gco:CharacterString>alphanumerischer Wert (Beispiel hängt von konkreter Verwendung des Elements ab)
+
+Digitale Orthophotos
+
+GDI-BW-Schlüsselwortliste
+
+Themenbeschreibung der Geodatenbasis Baden-Württemberg
+
+OGDD-Kategorien</gco:CharacterString>
+          </gmd:title>
+          <gmd:alternateTitle>
+            <gco:CharacterString>DOP</gco:CharacterString>
+          </gmd:alternateTitle>
+          <gmd:date>
+            <gmd:CI_Date>
+              <gmd:date>
+                <gco:DateTime>2018-05-30T09:00:00</gco:DateTime>
+              </gmd:date>
+              <gmd:dateType>
+                <gmd:CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_DateTypeCode" codeListValue="creation"/>
+              </gmd:dateType>
+            </gmd:CI_Date>
+          </gmd:date>
+          <gmd:identifier>
+            <gmd:MD_Identifier>
+              <gmd:authority/>
+              <gmd:code>
+                <gco:CharacterString>EPSG:31467</gco:CharacterString>
+              </gmd:code>
+            </gmd:MD_Identifier>
+          </gmd:identifier>
+        </gmd:CI_Citation>
+      </gmd:citation>
+      <gmd:abstract>
+        <gco:CharacterString>Als Ergebnis der jährlich in Auftrag gegebenen Befliegungen des Landes Baden-Württemberg erhält das Landesamt für Geoinformation und Landentwicklung Luftbilder, die Grundlage für die Herstellung von Orthophotos sind. Orthophotos stellen die Erdoberfläche mit der Genauigkeit einer Karte realitätstreu dar. (...)</gco:CharacterString>
+      </gmd:abstract>
+      <gmd:purpose>
+        <gco:CharacterString>Digitaler Orthophoto-Datenbestand, der im Rahmen der staatlichen Daseinsvorsorge vorgehalten und als staatliche Dienstleistung öffentlichen und privaten Bedarfsträgern angeboten wird.</gco:CharacterString>
+      </gmd:purpose>
+      <gmd:status>
+        <gmd:MD_ProgressCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#MD_ProgressCode" codeListValue="planned"/>
+      </gmd:status>
+      <gmd:pointOfContact>
+        <gmd:CI_ResponsibleParty>
+          <gmd:individualName>
+            <gco:CharacterString>Mustermann, Erika, Dr.</gco:CharacterString>
+          </gmd:individualName>
+          <gmd:organisationName>
+            <gco:CharacterString>Landesamt für Geoinformation und Landentwicklung</gco:CharacterString>
+          </gmd:organisationName>
+          <gmd:positionName>
+            <gco:CharacterString>Kundenberaterin</gco:CharacterString>
+          </gmd:positionName>
+          <gmd:contactInfo>
+            <gmd:CI_Contact>
+              <gmd:phone>
+                <gmd:CI_Telephone>
+                  <gmd:voice>
+                    <gco:CharacterString>+49 711 123-999</gco:CharacterString>
+                  </gmd:voice>
+                  <gmd:facsimile>
+                    <gco:CharacterString>+49 711 123-998</gco:CharacterString>
+                  </gmd:facsimile>
+                </gmd:CI_Telephone>
+              </gmd:phone>
+              <gmd:address>
+                <gmd:CI_Address>
+                  <gmd:deliveryPoint>
+                    <gco:CharacterString>Büchsenstraße 54</gco:CharacterString>
+                  </gmd:deliveryPoint>
+                  <gmd:city>
+                    <gco:CharacterString>Stuttgart</gco:CharacterString>
+                  </gmd:city>
+                  <gmd:administrativeArea>
+                    <gco:CharacterString>Baden-Württemberg</gco:CharacterString>
+                  </gmd:administrativeArea>
+                  <gmd:postalCode>
+                    <gco:CharacterString>70174</gco:CharacterString>
+                  </gmd:postalCode>
+                  <gmd:country>
+                    <gco:CharacterString>Deutschland</gco:CharacterString>
+                  </gmd:country>
+                  <gmd:electronicMailAddress>
+                    <gco:CharacterString>e.mustermann@lgl.bwl.de</gco:CharacterString>
+                  </gmd:electronicMailAddress>
+                </gmd:CI_Address>
+              </gmd:address>
+              <gmd:onlineResource/>
+            </gmd:CI_Contact>
+          </gmd:contactInfo>
+          <gmd:role>
+            <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_RoleCode" codeListValue="custodian"/>
+          </gmd:role>
+        </gmd:CI_ResponsibleParty>
+      </gmd:pointOfContact>
+      <gmd:resourceMaintenance>
+        <gmd:MD_MaintenanceInformation>
+          <gmd:maintenanceAndUpdateFrequency>
+            <gmd:MD_MaintenanceFrequencyCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#MD_MaintenanceFrequencyCode" codeListValue="irregular"/>
+          </gmd:maintenanceAndUpdateFrequency>
+          <gmd:dateOfNextUpdate>
+            <gco:DateTime>2018-05-30T09:00:00</gco:DateTime>
+          </gmd:dateOfNextUpdate>
+          <gmd:maintenanceNote>
+            <gco:CharacterString>Der Datenbestand wird anlassbezogen, mindestens jedoch alle 3 Jahre aktualisiert.</gco:CharacterString>
+          </gmd:maintenanceNote>
+          <gmd:contact>
+            <gmd:CI_ResponsibleParty>
+              <gmd:individualName>
+                <gco:CharacterString>Mustermann, Erika, Dr.</gco:CharacterString>
+              </gmd:individualName>
+              <gmd:organisationName>
+                <gco:CharacterString>Landesamt für Geoinformation und Landentwicklung</gco:CharacterString>
+              </gmd:organisationName>
+              <gmd:positionName>
+                <gco:CharacterString>Kundenberaterin</gco:CharacterString>
+              </gmd:positionName>
+              <gmd:contactInfo>
+                <gmd:CI_Contact>
+                  <gmd:phone>
+                    <gmd:CI_Telephone>
+                      <gmd:voice>
+                        <gco:CharacterString>+49 711 123-999</gco:CharacterString>
+                      </gmd:voice>
+                      <gmd:facsimile>
+                        <gco:CharacterString>+49 711 123-998</gco:CharacterString>
+                      </gmd:facsimile>
+                    </gmd:CI_Telephone>
+                  </gmd:phone>
+                  <gmd:address>
+                    <gmd:CI_Address>
+                      <gmd:deliveryPoint>
+                        <gco:CharacterString>Büchsenstraße 54</gco:CharacterString>
+                      </gmd:deliveryPoint>
+                      <gmd:city>
+                        <gco:CharacterString>Stuttgart</gco:CharacterString>
+                      </gmd:city>
+                      <gmd:administrativeArea>
+                        <gco:CharacterString>Baden-Württemberg</gco:CharacterString>
+                      </gmd:administrativeArea>
+                      <gmd:postalCode>
+                        <gco:CharacterString>70174</gco:CharacterString>
+                      </gmd:postalCode>
+                      <gmd:country>
+                        <gco:CharacterString>Deutschland</gco:CharacterString>
+                      </gmd:country>
+                      <gmd:electronicMailAddress>
+                        <gco:CharacterString>e.mustermann@lgl.bwl.de</gco:CharacterString>
+                      </gmd:electronicMailAddress>
+                    </gmd:CI_Address>
+                  </gmd:address>
+                  <gmd:onlineResource/>
+                </gmd:CI_Contact>
+              </gmd:contactInfo>
+              <gmd:role>
+                <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_RoleCode" codeListValue="custodian"/>
+              </gmd:role>
+            </gmd:CI_ResponsibleParty>
+          </gmd:contact>
+        </gmd:MD_MaintenanceInformation>
+      </gmd:resourceMaintenance>
+      <gmd:graphicOverview>
+        <gmd:MD_BrowseGraphic>
+          <gmd:fileName>
+            <gco:CharacterString>http://www.lv-bw.de/lvshop2/ProduktInfo/luftbilder/farbbild.htm</gco:CharacterString>
+          </gmd:fileName>
+        </gmd:MD_BrowseGraphic>
+      </gmd:graphicOverview>
+      <gmd:descriptiveKeywords>
+        <gmd:MD_Keywords>
+          <gmd:keyword>
+            <gco:CharacterString>inspireidentifiziert
+Orthofotografie 
+Fernerkundung; Geographie; Geobasisdaten</gco:CharacterString>
+          </gmd:keyword>
+          <gmd:thesaurusName>
+            <gmd:CI_Citation>
+              <gmd:title>
+                <gco:CharacterString>alphanumerischer Wert (Beispiel hängt von konkreter Verwendung des Elements ab)
+
+Digitale Orthophotos
+
+GDI-BW-Schlüsselwortliste
+
+Themenbeschreibung der Geodatenbasis Baden-Württemberg
+
+OGDD-Kategorien</gco:CharacterString>
+              </gmd:title>
+              <gmd:alternateTitle>
+                <gco:CharacterString>DOP</gco:CharacterString>
+              </gmd:alternateTitle>
+              <gmd:date>
+                <gmd:CI_Date>
+                  <gmd:date>
+                    <gco:DateTime>2018-05-30T09:00:00</gco:DateTime>
+                  </gmd:date>
+                  <gmd:dateType>
+                    <gmd:CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_DateTypeCode" codeListValue="creation"/>
+                  </gmd:dateType>
+                </gmd:CI_Date>
+              </gmd:date>
+              <gmd:identifier>
+                <gmd:MD_Identifier>
+                  <gmd:authority/>
+                  <gmd:code>
+                    <gco:CharacterString>EPSG:31467</gco:CharacterString>
+                  </gmd:code>
+                </gmd:MD_Identifier>
+              </gmd:identifier>
+            </gmd:CI_Citation>
+          </gmd:thesaurusName>
+        </gmd:MD_Keywords>
+      </gmd:descriptiveKeywords>
+      <gmd:resourceConstraints>
+        <gmd:MD_SecurityConstraints>
+          <gmd:useLimitation>
+            <gco:CharacterString>Es gelten keine Bedingungen.</gco:CharacterString>
+          </gmd:useLimitation>
+          <gmd:classification>
+            <gmd:MD_ClassificationCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#MD_ClassificationCode" codeListValue="restricted"/>
+          </gmd:classification>
+        </gmd:MD_SecurityConstraints>
+      </gmd:resourceConstraints>
+      <gmd:aggregationInfo>
+        <gmd:MD_AggregateInformation>
+          <gmd:aggregateDataSetName>
+            <gmd:CI_Citation>
+              <gmd:title>
+                <gco:CharacterString>alphanumerischer Wert (Beispiel hängt von konkreter Verwendung des Elements ab)
+
+Digitale Orthophotos
+
+GDI-BW-Schlüsselwortliste
+
+Themenbeschreibung der Geodatenbasis Baden-Württemberg
+
+OGDD-Kategorien</gco:CharacterString>
+              </gmd:title>
+              <gmd:alternateTitle>
+                <gco:CharacterString>DOP</gco:CharacterString>
+              </gmd:alternateTitle>
+              <gmd:date>
+                <gmd:CI_Date>
+                  <gmd:date>
+                    <gco:DateTime>2018-05-30T09:00:00</gco:DateTime>
+                  </gmd:date>
+                  <gmd:dateType>
+                    <gmd:CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_DateTypeCode" codeListValue="creation"/>
+                  </gmd:dateType>
+                </gmd:CI_Date>
+              </gmd:date>
+              <gmd:identifier>
+                <gmd:MD_Identifier>
+                  <gmd:authority/>
+                  <gmd:code>
+                    <gco:CharacterString>EPSG:31467</gco:CharacterString>
+                  </gmd:code>
+                </gmd:MD_Identifier>
+              </gmd:identifier>
+            </gmd:CI_Citation>
+          </gmd:aggregateDataSetName>
+          <gmd:associationType>
+            <gmd:DS_AssociationTypeCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#DS_AssociationTypeCode" codeListValue="partOfSeamlessDatabase"/>
+          </gmd:associationType>
+        </gmd:MD_AggregateInformation>
+      </gmd:aggregationInfo>
+      <gmd:spatialRepresentationType>
+        <gmd:MD_SpatialRepresentationTypeCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#MD_SpatialRepresentationTypeCode" codeListValue="tin"/>
+      </gmd:spatialRepresentationType>
+      <gmd:spatialResolution>
+        <gmd:MD_Resolution>
+          <gmd:equivalentScale>
+            <gmd:MD_RepresentativeFraction>
+              <gmd:denominator>
+                <gco:Integer>25000</gco:Integer>
+              </gmd:denominator>
+            </gmd:MD_RepresentativeFraction>
+          </gmd:equivalentScale>
+        </gmd:MD_Resolution>
+      </gmd:spatialResolution>
+      <gmd:language>
+        <gco:CharacterString>ger</gco:CharacterString>
+      </gmd:language>
+      <gmd:characterSet>
+        <gmd:MD_CharacterSetCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#MD_CharacterSetCode" codeListValue="8859part3"/>
+      </gmd:characterSet>
+      <gmd:topicCategory>
+        <gmd:MD_TopicCategoryCode>farming</gmd:MD_TopicCategoryCode>
+      </gmd:topicCategory>
+      <gmd:extent>
+        <gmd:EX_Extent>
+          <gmd:description>
+            <gco:CharacterString>Daten liegen nur für den ehemals badischen Landesteil vor.</gco:CharacterString>
+          </gmd:description>
+          <gmd:geographicElement>
+            <gmd:EX_GeographicBoundingBox>
+              <gmd:extentTypeCode>
+                <gco:Boolean>1</gco:Boolean>
+              </gmd:extentTypeCode>
+              <gmd:westBoundLongitude>
+                <gco:Decimal>7,20</gco:Decimal>
+              </gmd:westBoundLongitude>
+              <gmd:eastBoundLongitude>
+                <gco:Decimal>10,70</gco:Decimal>
+              </gmd:eastBoundLongitude>
+              <gmd:southBoundLatitude>
+                <gco:Decimal>47,40</gco:Decimal>
+              </gmd:southBoundLatitude>
+              <gmd:northBoundLatitude>
+                <gco:Decimal>50,00</gco:Decimal>
+              </gmd:northBoundLatitude>
+            </gmd:EX_GeographicBoundingBox>
+          </gmd:geographicElement>
+          <gmd:temporalElement>
+            <gmd:EX_TemporalExtent>
+              <gmd:extent>
+                <gml:TimeInstant gml:id="ID-4745">
+                  <gml:timePosition/>
+                </gml:TimeInstant>
+              </gmd:extent>
+            </gmd:EX_TemporalExtent>
+          </gmd:temporalElement>
+          <gmd:verticalElement>
+            <gmd:EX_VerticalExtent>
+              <gmd:minimumValue>
+                <gco:Real>84</gco:Real>
+              </gmd:minimumValue>
+              <gmd:maximumValue>
+                <gco:Real>1495</gco:Real>
+              </gmd:maximumValue>
+              <gmd:verticalCRS>
+                <gml:CompoundCRS gml:id="ID-1550">
+                  <gml:identifier codeSpace="complexValue-codeSpace"/>
+                  <gml:scope>example string</gml:scope>
+                  <gml:componentReferenceSystem>
+                    <gml:EngineeringCRS gml:id="ID-2019">
+                      <gml:identifier codeSpace="complexValue-codeSpace"/>
+                      <gml:scope>example string</gml:scope>
+                      <gml:coordinateSystem>
+                        <gml:AffineCS gml:id="ID-4983">
+                          <gml:identifier codeSpace="complexValue-codeSpace"/>
+                          <gml:axis/>
+                        </gml:AffineCS>
+                      </gml:coordinateSystem>
+                      <gml:engineeringDatum/>
+                    </gml:EngineeringCRS>
+                  </gml:componentReferenceSystem>
+                  <gml:componentReferenceSystem>
+                    <gml:EngineeringCRS gml:id="ID-94">
+                      <gml:identifier codeSpace="complexValue-codeSpace"/>
+                      <gml:scope>example string</gml:scope>
+                      <gml:coordinateSystem>
+                        <gml:AffineCS gml:id="ID-3593">
+                          <gml:identifier codeSpace="complexValue-codeSpace"/>
+                          <gml:axis/>
+                        </gml:AffineCS>
+                      </gml:coordinateSystem>
+                      <gml:engineeringDatum/>
+                    </gml:EngineeringCRS>
+                  </gml:componentReferenceSystem>
+                </gml:CompoundCRS>
+              </gmd:verticalCRS>
+            </gmd:EX_VerticalExtent>
+          </gmd:verticalElement>
+        </gmd:EX_Extent>
+      </gmd:extent>
+      <gmd:supplementalInformation>
+        <gco:CharacterString>http://www.adv-online.de/icc/extdeu/med/975/97570463-c652-f121-d618-f04208a438ad,11111111-1111-1111-1111-111111111111 
+(AdV-Produktstandard DOP)</gco:CharacterString>
+      </gmd:supplementalInformation>
+    </gmd:MD_DataIdentification>
+  </gmd:identificationInfo>
+  <gmd:contentInfo>
+    <gmd:MD_CoverageDescription>
+      <gmd:attributeDescription>
+        <gco:RecordType/>
+      </gmd:attributeDescription>
+      <gmd:contentType>
+        <gmd:MD_CoverageContentTypeCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#MD_CoverageContentTypeCode" codeListValue="thematicClassification"/>
+      </gmd:contentType>
+    </gmd:MD_CoverageDescription>
+  </gmd:contentInfo>
+  <gmd:distributionInfo>
+    <gmd:MD_Distribution>
+      <gmd:distributionFormat>
+        <gmd:MD_Format>
+          <gmd:name>
+            <gco:CharacterString>GeoTIFF</gco:CharacterString>
+          </gmd:name>
+          <gmd:version>
+            <gco:CharacterString>n/a (default)</gco:CharacterString>
+          </gmd:version>
+          <gmd:specification>
+            <gco:CharacterString>http://www.esri.com/library/whitepapers/ pdfs/shapefile.pdf</gco:CharacterString>
+          </gmd:specification>
+        </gmd:MD_Format>
+      </gmd:distributionFormat>
+      <gmd:distributor>
+        <gmd:MD_Distributor>
+          <gmd:distributorContact>
+            <gmd:CI_ResponsibleParty>
+              <gmd:individualName>
+                <gco:CharacterString>Mustermann, Erika, Dr.</gco:CharacterString>
+              </gmd:individualName>
+              <gmd:organisationName>
+                <gco:CharacterString>Landesamt für Geoinformation und Landentwicklung</gco:CharacterString>
+              </gmd:organisationName>
+              <gmd:positionName>
+                <gco:CharacterString>Kundenberaterin</gco:CharacterString>
+              </gmd:positionName>
+              <gmd:contactInfo>
+                <gmd:CI_Contact>
+                  <gmd:phone>
+                    <gmd:CI_Telephone>
+                      <gmd:voice>
+                        <gco:CharacterString>+49 711 123-999</gco:CharacterString>
+                      </gmd:voice>
+                      <gmd:facsimile>
+                        <gco:CharacterString>+49 711 123-998</gco:CharacterString>
+                      </gmd:facsimile>
+                    </gmd:CI_Telephone>
+                  </gmd:phone>
+                  <gmd:address>
+                    <gmd:CI_Address>
+                      <gmd:deliveryPoint>
+                        <gco:CharacterString>Büchsenstraße 54</gco:CharacterString>
+                      </gmd:deliveryPoint>
+                      <gmd:city>
+                        <gco:CharacterString>Stuttgart</gco:CharacterString>
+                      </gmd:city>
+                      <gmd:administrativeArea>
+                        <gco:CharacterString>Baden-Württemberg</gco:CharacterString>
+                      </gmd:administrativeArea>
+                      <gmd:postalCode>
+                        <gco:CharacterString>70174</gco:CharacterString>
+                      </gmd:postalCode>
+                      <gmd:country>
+                        <gco:CharacterString>Deutschland</gco:CharacterString>
+                      </gmd:country>
+                      <gmd:electronicMailAddress>
+                        <gco:CharacterString>e.mustermann@lgl.bwl.de</gco:CharacterString>
+                      </gmd:electronicMailAddress>
+                    </gmd:CI_Address>
+                  </gmd:address>
+                  <gmd:onlineResource>
+                    <gmd:CI_OnlineResource>
+                      <gmd:linkage>
+                        <gmd:URL>ftp://download.spatialdata-for-free.org</gmd:URL>
+                      </gmd:linkage>
+                    </gmd:CI_OnlineResource>
+                  </gmd:onlineResource>
+                </gmd:CI_Contact>
+              </gmd:contactInfo>
+              <gmd:role>
+                <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_RoleCode" codeListValue="custodian"/>
+              </gmd:role>
+            </gmd:CI_ResponsibleParty>
+          </gmd:distributorContact>
+          <gmd:distributionOrderProcess>
+            <gmd:MD_StandardOrderProcess>
+              <gmd:fees>
+                <gco:CharacterString>Es werden Gebühren nach der Verordnung des Ministeriums für Ländlichen Raum, Ernährung und Verbraucherschutz über die Festsetzung der Gebührensätze für öffentliche Leistungen der staatlichen Behörden (Gebührenverordnung - MLR-GebVO - ) in der jeweils geltenden Fassung erhoben. Die Gebühr berechnet sich (...)</gco:CharacterString>
+              </gmd:fees>
+              <gmd:orderingInstructions>
+                <gco:CharacterString>Aktualisierung des Datenbestands möglich, Selektion nach Datum der letzten Fortführung eines Objekts. Bezug als vollständiger Datenbestand oder als Differenzdatenbestand möglich.</gco:CharacterString>
+              </gmd:orderingInstructions>
+              <gmd:turnaround>
+                <gco:CharacterString>Maximale Lieferzeit: Abhängig von der Auftragslage und Gebietsgröße wenige Stunden bis maximal 4 Wochen.</gco:CharacterString>
+              </gmd:turnaround>
+            </gmd:MD_StandardOrderProcess>
+          </gmd:distributionOrderProcess>
+        </gmd:MD_Distributor>
+      </gmd:distributor>
+      <gmd:transferOptions>
+        <gmd:MD_DigitalTransferOptions>
+          <gmd:unitsOfDistribution>
+            <gco:CharacterString>1 km X 1 km Kacheln</gco:CharacterString>
+          </gmd:unitsOfDistribution>
+          <gmd:transferSize>
+            <gco:Real>10</gco:Real>
+          </gmd:transferSize>
+          <gmd:onLine>
+            <gmd:CI_OnlineResource>
+              <gmd:linkage>
+                <gmd:URL>ftp://download.spatialdata-for-free.org</gmd:URL>
+              </gmd:linkage>
+            </gmd:CI_OnlineResource>
+          </gmd:onLine>
+          <gmd:offLine>
+            <gmd:MD_Medium>
+              <gmd:name>
+                <gmd:MD_MediumNameCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#MD_MediumNameCode" codeListValue="telephoneLink"/>
+              </gmd:name>
+            </gmd:MD_Medium>
+          </gmd:offLine>
+        </gmd:MD_DigitalTransferOptions>
+      </gmd:transferOptions>
+    </gmd:MD_Distribution>
+  </gmd:distributionInfo>
+  <gmd:dataQualityInfo>
+    <gmd:DQ_DataQuality>
+      <gmd:scope>
+        <gmd:DQ_Scope>
+          <gmd:level>
+            <gmd:MD_ScopeCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#MD_ScopeCode" codeListValue="attributeType"/>
+          </gmd:level>
+        </gmd:DQ_Scope>
+      </gmd:scope>
+      <gmd:report>
+        <gmd:DQ_CompletenessCommission>
+          <gmd:nameOfMeasure>
+            <gco:CharacterString>Automatische Auswertung aus Metadaten</gco:CharacterString>
+          </gmd:nameOfMeasure>
+          <gmd:measureIdentification>
+            <gmd:MD_Identifier>
+              <gmd:authority/>
+              <gmd:code>
+                <gco:CharacterString>EPSG:31467</gco:CharacterString>
+              </gmd:code>
+            </gmd:MD_Identifier>
+          </gmd:measureIdentification>
+          <gmd:evaluationMethodDescription>
+            <gco:CharacterString>Quotient der Ist- und Sollwerte</gco:CharacterString>
+          </gmd:evaluationMethodDescription>
+          <gmd:dateTime>
+            <gco:DateTime>2018-05-30T09:00:00</gco:DateTime>
+          </gmd:dateTime>
+          <gmd:result>
+            <gmd:DQ_ConformanceResult>
+              <gmd:specification>
+                <gmd:CI_Citation>
+                  <gmd:title>
+                    <gco:CharacterString>alphanumerischer Wert (Beispiel hängt von konkreter Verwendung des Elements ab)
+
+Digitale Orthophotos
+
+GDI-BW-Schlüsselwortliste
+
+Themenbeschreibung der Geodatenbasis Baden-Württemberg
+
+OGDD-Kategorien</gco:CharacterString>
+                  </gmd:title>
+                  <gmd:alternateTitle>
+                    <gco:CharacterString>DOP</gco:CharacterString>
+                  </gmd:alternateTitle>
+                  <gmd:date>
+                    <gmd:CI_Date>
+                      <gmd:date>
+                        <gco:DateTime>2018-05-30T09:00:00</gco:DateTime>
+                      </gmd:date>
+                      <gmd:dateType>
+                        <gmd:CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_DateTypeCode" codeListValue="creation"/>
+                      </gmd:dateType>
+                    </gmd:CI_Date>
+                  </gmd:date>
+                  <gmd:identifier>
+                    <gmd:MD_Identifier>
+                      <gmd:authority/>
+                      <gmd:code>
+                        <gco:CharacterString>EPSG:31467</gco:CharacterString>
+                      </gmd:code>
+                    </gmd:MD_Identifier>
+                  </gmd:identifier>
+                </gmd:CI_Citation>
+              </gmd:specification>
+              <gmd:explanation>
+                <gco:CharacterString>siehe referenzierte Spezifikation</gco:CharacterString>
+              </gmd:explanation>
+              <gmd:pass>
+                <gco:Boolean>""</gco:Boolean>
+              </gmd:pass>
+            </gmd:DQ_ConformanceResult>
+          </gmd:result>
+        </gmd:DQ_CompletenessCommission>
+      </gmd:report>
+      <gmd:lineage>
+        <gmd:LI_Lineage>
+          <gmd:statement>
+            <gco:CharacterString>Berechnung aus Original-Luftbildern</gco:CharacterString>
+          </gmd:statement>
+          <gmd:processStep>
+            <gmd:LI_ProcessStep>
+              <gmd:description>
+                <gco:CharacterString>Luftbildaufnahme, Georeferenzierung und geometrische Entzerrung</gco:CharacterString>
+              </gmd:description>
+              <gmd:rationale>
+                <gco:CharacterString>Ohne Georeferenzierung und geometrische Entzerrung der Originalluftbilder ist die Herstellung von Orthophotos nicht möglich.</gco:CharacterString>
+              </gmd:rationale>
+              <gmd:dateTime>
+                <gco:DateTime>2018-05-30T09:00:00</gco:DateTime>
+              </gmd:dateTime>
+            </gmd:LI_ProcessStep>
+          </gmd:processStep>
+          <gmd:source>
+            <gmd:LI_Source>
+              <gmd:description>
+                <gco:CharacterString>Archiv der Originärluftaufnahmen des LGL</gco:CharacterString>
+              </gmd:description>
+              <gmd:scaleDenominator>
+                <gmd:MD_RepresentativeFraction>
+                  <gmd:denominator>
+                    <gco:Integer>25000</gco:Integer>
+                  </gmd:denominator>
+                </gmd:MD_RepresentativeFraction>
+              </gmd:scaleDenominator>
+            </gmd:LI_Source>
+          </gmd:source>
+        </gmd:LI_Lineage>
+      </gmd:lineage>
+    </gmd:DQ_DataQuality>
+  </gmd:dataQualityInfo>
+  <gmd:portrayalCatalogueInfo>
+    <gmd:MD_PortrayalCatalogueReference>
+      <gmd:portrayalCatalogueCitation>
+        <gmd:CI_Citation>
+          <gmd:title>
+            <gco:CharacterString>alphanumerischer Wert (Beispiel hängt von konkreter Verwendung des Elements ab)
+
+Digitale Orthophotos
+
+GDI-BW-Schlüsselwortliste
+
+Themenbeschreibung der Geodatenbasis Baden-Württemberg
+
+OGDD-Kategorien</gco:CharacterString>
+          </gmd:title>
+          <gmd:alternateTitle>
+            <gco:CharacterString>DOP</gco:CharacterString>
+          </gmd:alternateTitle>
+          <gmd:date>
+            <gmd:CI_Date>
+              <gmd:date>
+                <gco:DateTime>2018-05-30T09:00:00</gco:DateTime>
+              </gmd:date>
+              <gmd:dateType>
+                <gmd:CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_DateTypeCode" codeListValue="creation"/>
+              </gmd:dateType>
+            </gmd:CI_Date>
+          </gmd:date>
+          <gmd:identifier>
+            <gmd:MD_Identifier>
+              <gmd:authority>
+                <gmd:CI_Citation>
+                  <gmd:title>
+                    <gco:CharacterString>alphanumerischer Wert (Beispiel hängt von konkreter Verwendung des Elements ab)
+
+Digitale Orthophotos
+
+GDI-BW-Schlüsselwortliste
+
+Themenbeschreibung der Geodatenbasis Baden-Württemberg
+
+OGDD-Kategorien</gco:CharacterString>
+                  </gmd:title>
+                  <gmd:alternateTitle>
+                    <gco:CharacterString>DOP</gco:CharacterString>
+                  </gmd:alternateTitle>
+                  <gmd:date>
+                    <gmd:CI_Date>
+                      <gmd:date>
+                        <gco:DateTime>2018-05-30T09:00:00</gco:DateTime>
+                      </gmd:date>
+                      <gmd:dateType>
+                        <gmd:CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/codeList.xml#CI_DateTypeCode" codeListValue="creation"/>
+                      </gmd:dateType>
+                    </gmd:CI_Date>
+                  </gmd:date>
+                  <gmd:identifier>
+                    <gmd:MD_Identifier>
+                      <gmd:authority/>
+                      <gmd:code>
+                        <gco:CharacterString>EPSG:31467</gco:CharacterString>
+                      </gmd:code>
+                    </gmd:MD_Identifier>
+                  </gmd:identifier>
+                </gmd:CI_Citation>
+              </gmd:authority>
+              <gmd:code>
+                <gco:CharacterString>EPSG:31467</gco:CharacterString>
+              </gmd:code>
+            </gmd:MD_Identifier>
+          </gmd:identifier>
+        </gmd:CI_Citation>
+      </gmd:portrayalCatalogueCitation>
+    </gmd:MD_PortrayalCatalogueReference>
+  </gmd:portrayalCatalogueInfo>
+</gmd:MD_Metadata>
