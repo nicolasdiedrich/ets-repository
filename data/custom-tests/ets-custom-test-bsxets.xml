@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<ExecutableTestSuite xmlns="http://www.interactive-instruments.de/etf/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EID1dd4690b-c8a1-4e9e-af60-618c256bce7b" xsi:schemaLocation="http://www.interactive-instruments.de/etf/2.0 ../../schema/model/resultSet.xsd">
+<ExecutableTestSuite xmlns="http://www.interactive-instruments.de/etf/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EID240f6f5e-64ba-4c83-984a-527c91818ccf" xsi:schemaLocation="http://www.interactive-instruments.de/etf/2.0 ../../schema/model/resultSet.xsd">
   <itemHash>bQ==</itemHash>
   <remoteResource>http://github.com/inspire-eu-validation/ets-repository/metadata/iso</remoteResource>
   <localPath>/auto</localPath>
-  <label>yyy</label>
+  <label>yyyy</label>
   <description><![CDATA[This test was generated automatically from a Schema profile in haleconnect]]></description>
   <reference>../../inspire-md-bsxets.xq</reference>
   <version>1.0.0</version>
@@ -32,27 +32,27 @@
     <testObjectType ref="EID5a60dded-0cb0-4977-9b06-16c6c2321d2e"/>
   </supportedTestObjectTypes>
   <testModules>
-    <TestModule id="EID07dfa530-87b4-4035-93fe-5a26c863c68f">
+    <TestModule id="EIDfb13d05f-2688-427f-afcf-d36081cce6c9">
       <label>Default test module</label>
       <description><![CDATA[This is the default test module]]></description>
-      <parent ref="EID1dd4690b-c8a1-4e9e-af60-618c256bce7b"/>
+      <parent ref="EID240f6f5e-64ba-4c83-984a-527c91818ccf"/>
       <testCases>
-        <TestCase id="EIDb017103a-3e77-4079-9160-48097c91e445">
+        <TestCase id="EIDe7a5d04b-68da-4bf9-aa0d-1fb64b50d106">
           <label>Einschränkungen bei Objektarten</label>
           <description><![CDATA[Einschränkungen bei Objektarten]]></description>
-          <parent ref="EID07dfa530-87b4-4035-93fe-5a26c863c68f"/>
+          <parent ref="EIDfb13d05f-2688-427f-afcf-d36081cce6c9"/>
           <testSteps>
-            <TestStep id="EID1327fd87-c24d-487b-9fe0-5a292d847c8a">
+            <TestStep id="EIDbfce9538-56c9-4e8a-b030-16416847baac">
               <label>Mandatory type test</label>
               <description><![CDATA[Constraints TestCase for Feature Type with name 'MD_Metadata' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
-              <parent ref="EIDb017103a-3e77-4079-9160-48097c91e445"/>
+              <parent ref="EIDe7a5d04b-68da-4bf9-aa0d-1fb64b50d106"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EID02927388-f6f6-4a1b-ae40-5859c77437d5">
+                <TestAssertion id="EID9b4ca508-f70d-494f-9689-eb351e2f4a1e">
                   <label>TestAssertion</label>
                   <description><![CDATA[The type with localName 'MD_Metadata' and namespace 'http://www.isotc211.org/2005/gmd' should be present in the file]]></description>
-                  <parent ref="EID1327fd87-c24d-487b-9fe0-5a292d847c8a"/>
+                  <parent ref="EIDbfce9538-56c9-4e8a-b030-16416847baac"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $messages :=
     (for $record in $db
@@ -77,17 +77,17 @@ return
                 </TestAssertion>
               </testAssertions>
             </TestStep>
-            <TestStep id="EID37c138ad-52b6-4131-9b4f-904ab70807a4">
+            <TestStep id="EID894410dd-5d1f-42ae-bb54-91933ca3cef3">
               <label>label</label>
               <description><![CDATA[Constraints TestCase for Feature Type with name 'MD_Metadata' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
-              <parent ref="EIDb017103a-3e77-4079-9160-48097c91e445"/>
+              <parent ref="EIDe7a5d04b-68da-4bf9-aa0d-1fb64b50d106"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EID2d8c6159-bac3-46b1-ad80-80d0fad9cbb9">
+                <TestAssertion id="EIDdf813a99-747f-4af8-9cee-4ca6304d0fde">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'fileIdentifier' and namespace 'http://www.isotc211.org/2005/gmd' should have a minimum cardinality of 1 and a maximum cardinality of 1]]></description>
-                  <parent ref="EID37c138ad-52b6-4131-9b4f-904ab70807a4"/>
+                  <parent ref="EID894410dd-5d1f-42ae-bb54-91933ca3cef3"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $messages :=
   (for $record in $db
@@ -114,17 +114,17 @@ return
                 </TestAssertion>
               </testAssertions>
             </TestStep>
-            <TestStep id="EIDb0b1ab05-6c6d-4534-b180-cb03e182390a">
+            <TestStep id="EIDb8f3dc70-b5c4-4507-83b9-34de4ee7653b">
               <label>label</label>
               <description><![CDATA[Constraints TestCase for Feature Type with name 'MD_Metadata' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
-              <parent ref="EIDb017103a-3e77-4079-9160-48097c91e445"/>
+              <parent ref="EIDe7a5d04b-68da-4bf9-aa0d-1fb64b50d106"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EID1a7ee9dd-683e-4b31-89c2-7dbedd39b70d">
+                <TestAssertion id="EID6d463510-9ad8-4365-a85a-a0971b4f3f13">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'fileIdentifier' and namespace 'http://www.isotc211.org/2005/gmd' should not be empty if it's present]]></description>
-                  <parent ref="EIDb0b1ab05-6c6d-4534-b180-cb03e182390a"/>
+                  <parent ref="EIDb8f3dc70-b5c4-4507-83b9-34de4ee7653b"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $messages :=
   (for $record in $db
