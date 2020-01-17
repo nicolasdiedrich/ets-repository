@@ -1623,7 +1623,7 @@ In other cases, gmd:otherConstraints shall include a non-empty free text element
 	  </LangTranslationTemplateCollection>
 	  <LangTranslationTemplateCollection name="TR.xorAllConditionsMatched">
 		 <translationTemplates>
-			<TranslationTemplate language="en" name="TR.xorAllConditionsMatched">XML document '{filename}': Evaluation of the XOR conditon failed: All conditions were matched</TranslationTemplate>
+			<TranslationTemplate language="en" name="TR.xorAllConditionsMatched">Evaluation of the XOR conditon failed: All conditions were matched</TranslationTemplate>
 		 </translationTemplates>
 	  </LangTranslationTemplateCollection>
 		<LangTranslationTemplateCollection name="TR.invalidPropertyValueError">
