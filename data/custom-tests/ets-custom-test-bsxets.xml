@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<ExecutableTestSuite xmlns="http://www.interactive-instruments.de/etf/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EIDcd31a3cc-8723-485f-9613-2f422c181f5f" xsi:schemaLocation="http://www.interactive-instruments.de/etf/2.0 ../../schema/model/resultSet.xsd">
+<ExecutableTestSuite xmlns="http://www.interactive-instruments.de/etf/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EID85ed6e99-af09-4c2d-929c-25ef64311b10" xsi:schemaLocation="http://www.interactive-instruments.de/etf/2.0 ../../schema/model/resultSet.xsd">
   <itemHash>bQ==</itemHash>
   <remoteResource>http://github.com/inspire-eu-validation/ets-repository/metadata/iso</remoteResource>
   <localPath>/auto</localPath>
-  <label>Test-Profil - copy</label>
+  <label>Test-Profil</label>
   <description><![CDATA[This test was generated automatically from a Schema profile in haleconnect]]></description>
   <reference>../../inspire-md-bsxets.xq</reference>
   <version>1.0.0</version>
   <author>wetransform Support</author>
-  <creationDate>2021-02-26T10:39:46.150Z</creationDate>
+  <creationDate>2021-01-26T09:30:07.239Z</creationDate>
   <lastEditor>wetransform Support</lastEditor>
-  <lastUpdateDate>2021-02-26T10:44:42.171Z</lastUpdateDate>
+  <lastUpdateDate>2021-02-26T07:40:12.606Z</lastUpdateDate>
   <tags>
     <tag ref="EIDfe1f3796-0ebf-4960-a6f7-f935e087fa4c"/>
   </tags>
@@ -32,27 +32,27 @@
     <testObjectType ref="EID5a60dded-0cb0-4977-9b06-16c6c2321d2e"/>
   </supportedTestObjectTypes>
   <testModules>
-    <TestModule id="EIDdb2b9499-b33c-49b5-9566-cd7309efb51c">
+    <TestModule id="EIDe2bf5da8-db41-4be5-8efe-3c4c34d454bb">
       <label>Default test module</label>
       <description><![CDATA[This is the default test module]]></description>
-      <parent ref="EIDcd31a3cc-8723-485f-9613-2f422c181f5f"/>
+      <parent ref="EID85ed6e99-af09-4c2d-929c-25ef64311b10"/>
       <testCases>
-        <TestCase id="EIDe4376b49-e180-492b-8c0c-f79b5c2d2517">
+        <TestCase id="EID729f1e7f-8b5c-40cd-95e2-bfe01a4fa3e0">
           <label>Komplexe Einschränkungen (Constraint Editor)</label>
           <description><![CDATA[Komplexe Einschränkungen (Constraint Editor)]]></description>
-          <parent ref="EIDdb2b9499-b33c-49b5-9566-cd7309efb51c"/>
+          <parent ref="EIDe2bf5da8-db41-4be5-8efe-3c4c34d454bb"/>
           <testSteps>
-            <TestStep id="EID084a7fce-5771-4631-90b7-a88e40643c28">
+            <TestStep id="EID0aef9fc1-aba5-4af7-9372-74f9e3923d18">
               <label>Bedingung1</label>
               <description><![CDATA[Ich bin eine Beschreibung]]></description>
-              <parent ref="EIDe4376b49-e180-492b-8c0c-f79b5c2d2517"/>
+              <parent ref="EID729f1e7f-8b5c-40cd-95e2-bfe01a4fa3e0"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EID0922a0ab-355d-4339-acd2-e8a999710c36">
+                <TestAssertion id="EID05a27607-997e-410d-aefa-ffe58244dc1f">
                   <label>Bedingung1</label>
                   <description><![CDATA[Ich bin eine Beschreibung]]></description>
-                  <parent ref="EID084a7fce-5771-4631-90b7-a88e40643c28"/>
+                  <parent ref="EID0aef9fc1-aba5-4af7-9372-74f9e3923d18"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>
 let $messages0 :=
@@ -85,25 +85,25 @@ return
                 </TestAssertion>
               </testAssertions>
             </TestStep>
-            <TestStep id="EID96783bab-069b-49c0-bc86-4e35c03d5760">
-              <label>extent test verschachtelt</label>
+            <TestStep id="EIDd0ef3c0e-5657-4b87-b90b-2fe62ab4648b">
+              <label>extent test</label>
               <description><![CDATA[No description specified]]></description>
-              <parent ref="EIDe4376b49-e180-492b-8c0c-f79b5c2d2517"/>
+              <parent ref="EID729f1e7f-8b5c-40cd-95e2-bfe01a4fa3e0"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EIDe52b3827-589c-4188-921b-11d02eab04d2">
-                  <label>extent test verschachtelt</label>
+                <TestAssertion id="EID6ac038fc-ad14-47ef-b70d-24083d762871">
+                  <label>extent test</label>
                   <description><![CDATA[No description specified]]></description>
-                  <parent ref="EID96783bab-069b-49c0-bc86-4e35c03d5760"/>
+                  <parent ref="EIDd0ef3c0e-5657-4b87-b90b-2fe62ab4648b"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>
 let $messages0 :=
     (for $record in $db
        let $rid := $record//*[local-name()='fileIdentifier' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*/text()
-       let $typesFound := $record//*[local-name()='MD_Metadata' and namespace-uri()='http://www.isotc211.org/2005/gmd']
+       let $typesFound := $record//*[local-name()='EX_Extent' and namespace-uri()='http://www.isotc211.org/2005/gmd']
        for $typeFound in $typesFound 
-         let $ifPropertyCount := count($typeFound/*[local-name()='identificationInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_DataIdentification' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='extent' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='EX_Extent' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='description' and namespace-uri()='http://www.isotc211.org/2005/gmd'])
+         let $ifPropertyCount := count($typeFound/*[local-name()='description' and namespace-uri()='http://www.isotc211.org/2005/gmd'])
          return 
        if ($ifPropertyCount eq 0) then 
            local:addMessage('TR.conditionNotExistingValue', map { 'localName': 'description', 'namespace': 'http://www.isotc211.org/2005/gmd', 'fileIdentifier': $rid, 'filename': local:filename($record) })       else ()
@@ -111,9 +111,9 @@ let $messages0 :=
 let $messages1 :=
     (for $record in $db
        let $rid := $record//*[local-name()='fileIdentifier' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*/text()
-       let $typesFound := $record//*[local-name()='MD_Metadata' and namespace-uri()='http://www.isotc211.org/2005/gmd']
+       let $typesFound := $record//*[local-name()='EX_Extent' and namespace-uri()='http://www.isotc211.org/2005/gmd']
        for $typeFound in $typesFound 
-         let $ifPropertyCount := count($typeFound/*[local-name()='identificationInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_DataIdentification' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='extent' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='EX_Extent' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='geographicElement' and namespace-uri()='http://www.isotc211.org/2005/gmd'])
+         let $ifPropertyCount := count($typeFound/*[local-name()='geographicElement' and namespace-uri()='http://www.isotc211.org/2005/gmd'])
          return 
        if ($ifPropertyCount eq 0) then 
            local:addMessage('TR.conditionNotExistingValue', map { 'localName': 'geographicElement', 'namespace': 'http://www.isotc211.org/2005/gmd', 'fileIdentifier': $rid, 'filename': local:filename($record) })       else ()
@@ -121,9 +121,9 @@ let $messages1 :=
 let $messages2 :=
     (for $record in $db
        let $rid := $record//*[local-name()='fileIdentifier' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*/text()
-       let $typesFound := $record//*[local-name()='MD_Metadata' and namespace-uri()='http://www.isotc211.org/2005/gmd']
+       let $typesFound := $record//*[local-name()='EX_Extent' and namespace-uri()='http://www.isotc211.org/2005/gmd']
        for $typeFound in $typesFound 
-         let $ifPropertyCount := count($typeFound/*[local-name()='identificationInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_DataIdentification' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='extent' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='EX_Extent' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='temporalElement' and namespace-uri()='http://www.isotc211.org/2005/gmd'])
+         let $ifPropertyCount := count($typeFound/*[local-name()='temporalElement' and namespace-uri()='http://www.isotc211.org/2005/gmd'])
          return 
        if ($ifPropertyCount eq 0) then 
            local:addMessage('TR.conditionNotExistingValue', map { 'localName': 'temporalElement', 'namespace': 'http://www.isotc211.org/2005/gmd', 'fileIdentifier': $rid, 'filename': local:filename($record) })       else ()
@@ -131,9 +131,9 @@ let $messages2 :=
 let $messages3 :=
     (for $record in $db
        let $rid := $record//*[local-name()='fileIdentifier' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*/text()
-       let $typesFound := $record//*[local-name()='MD_Metadata' and namespace-uri()='http://www.isotc211.org/2005/gmd']
+       let $typesFound := $record//*[local-name()='EX_Extent' and namespace-uri()='http://www.isotc211.org/2005/gmd']
        for $typeFound in $typesFound 
-         let $ifPropertyCount := count($typeFound/*[local-name()='identificationInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_DataIdentification' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='extent' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='EX_Extent' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='verticalElement' and namespace-uri()='http://www.isotc211.org/2005/gmd'])
+         let $ifPropertyCount := count($typeFound/*[local-name()='verticalElement' and namespace-uri()='http://www.isotc211.org/2005/gmd'])
          return 
        if ($ifPropertyCount eq 0) then 
            local:addMessage('TR.conditionNotExistingValue', map { 'localName': 'verticalElement', 'namespace': 'http://www.isotc211.org/2005/gmd', 'fileIdentifier': $rid, 'filename': local:filename($record) })       else ()
@@ -158,22 +158,22 @@ return
             </TestStep>
           </testSteps>
         </TestCase>
-        <TestCase id="EIDab095c18-1386-468d-b244-98d6fac8388b">
+        <TestCase id="EID2fc16ac6-e0a7-4ffd-92b3-79ed276f4907">
           <label>Einschränkungen bei Objektarten</label>
           <description><![CDATA[Einschränkungen bei Objektarten]]></description>
-          <parent ref="EIDdb2b9499-b33c-49b5-9566-cd7309efb51c"/>
+          <parent ref="EIDe2bf5da8-db41-4be5-8efe-3c4c34d454bb"/>
           <testSteps>
-            <TestStep id="EID43c9ce76-4d83-4209-94a7-082303ba5256">
+            <TestStep id="EID32850181-324a-455a-bd34-77a1377d0466">
               <label>label</label>
               <description><![CDATA[Constraints TestCase for Feature Type with name 'MD_VectorSpatialRepresentation' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
-              <parent ref="EIDab095c18-1386-468d-b244-98d6fac8388b"/>
+              <parent ref="EID2fc16ac6-e0a7-4ffd-92b3-79ed276f4907"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EID53180e20-cfa3-4b41-9f6d-ff28fa406843">
+                <TestAssertion id="EID30d4c7c5-9668-4fce-a03f-872731b75142">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'topologyLevel' and namespace 'http://www.isotc211.org/2005/gmd' should have a value that corresponds to one from the following list: <br><ul><li>fullPlanarGraph</li><li>geometryOnly</li><li>surfaceGraph</li><li>fullSurfaceGraph</li><li>topology1D</li><li>planarGraph</li><li>fullTopology3D</li><li>abstract</li><li>topology3D</li></ul>]]></description>
-                  <parent ref="EID43c9ce76-4d83-4209-94a7-082303ba5256"/>
+                  <parent ref="EID32850181-324a-455a-bd34-77a1377d0466"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $codes := ('fullPlanarGraph', 'geometryOnly', 'surfaceGraph', 'fullSurfaceGraph', 'topology1D', 'planarGraph', 'fullTopology3D', 'abstract', 'topology3D')
 let $messages :=
@@ -202,17 +202,17 @@ return
                 </TestAssertion>
               </testAssertions>
             </TestStep>
-            <TestStep id="EID7c75d2f7-7925-4250-89c7-ece54705baf8">
+            <TestStep id="EIDd9b419c2-818f-42d8-9aee-41e13594402b">
               <label>label</label>
               <description><![CDATA[Constraints TestCase for Feature Type with name 'MD_GeometricObjects' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
-              <parent ref="EIDab095c18-1386-468d-b244-98d6fac8388b"/>
+              <parent ref="EID2fc16ac6-e0a7-4ffd-92b3-79ed276f4907"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EIDfcd0ea3e-4023-4f6f-b6d2-411ccafd199e">
+                <TestAssertion id="EID9948944d-d7b9-42be-9d22-896077950961">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'geometricObjectType' and namespace 'http://www.isotc211.org/2005/gmd' should have a value that corresponds to one from the following list: <br><ul><li>complex</li><li>point</li><li>composite</li><li>curve</li><li>solid</li><li>surface</li></ul>]]></description>
-                  <parent ref="EID7c75d2f7-7925-4250-89c7-ece54705baf8"/>
+                  <parent ref="EIDd9b419c2-818f-42d8-9aee-41e13594402b"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $codes := ('complex', 'point', 'composite', 'curve', 'solid', 'surface')
 let $messages :=
@@ -241,17 +241,17 @@ return
                 </TestAssertion>
               </testAssertions>
             </TestStep>
-            <TestStep id="EIDc8b0145a-b0f6-44a1-a0fc-6d44f7089de3">
+            <TestStep id="EID0cc2051a-992c-4ed8-b5ab-0dbfc1789095">
               <label>label</label>
               <description><![CDATA[Constraints TestCase for Feature Type with name 'SV_PlatformSpecificServiceSpecification' and namespace 'http://www.isotc211.org/2005/srv']]></description>
-              <parent ref="EIDab095c18-1386-468d-b244-98d6fac8388b"/>
+              <parent ref="EID2fc16ac6-e0a7-4ffd-92b3-79ed276f4907"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EID3a15e72e-8a86-401f-8073-d59ac39ced67">
+                <TestAssertion id="EID2791f4ef-c18b-403c-8fb6-32411f6725cc">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'DCP' and namespace 'http://www.isotc211.org/2005/srv' should have a value that corresponds to one from the following list: <br><ul><li>CORBA</li><li>COM</li><li>JAVA</li><li>WebServices</li><li>XML</li><li>SQL</li></ul>]]></description>
-                  <parent ref="EIDc8b0145a-b0f6-44a1-a0fc-6d44f7089de3"/>
+                  <parent ref="EID0cc2051a-992c-4ed8-b5ab-0dbfc1789095"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $codes := ('CORBA', 'COM', 'JAVA', 'WebServices', 'XML', 'SQL')
 let $messages :=
@@ -280,17 +280,17 @@ return
                 </TestAssertion>
               </testAssertions>
             </TestStep>
-            <TestStep id="EIDcc5f03cb-6769-4a3f-a386-519f69f04da1">
+            <TestStep id="EIDacd6d66e-c8ba-4863-9ecd-8cbdfd4b88fa">
               <label>label</label>
               <description><![CDATA[Constraints TestCase for Feature Type with name 'CI_ResponsibleParty' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
-              <parent ref="EIDab095c18-1386-468d-b244-98d6fac8388b"/>
+              <parent ref="EID2fc16ac6-e0a7-4ffd-92b3-79ed276f4907"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EID5ba35326-b702-4f83-857a-932b8d14faec">
+                <TestAssertion id="EIDed39f8fe-7325-4956-b5d6-7fe678c65b47">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'role' and namespace 'http://www.isotc211.org/2005/gmd' should have a value that corresponds to one from the following list: <br><ul><li>custodian</li><li>processor</li><li>publisher</li><li>originator</li><li>pointOfContact</li><li>user</li><li>distributor</li><li>resourceProvider</li><li>owner</li><li>principalInvestigator</li><li>author</li></ul>]]></description>
-                  <parent ref="EIDcc5f03cb-6769-4a3f-a386-519f69f04da1"/>
+                  <parent ref="EIDacd6d66e-c8ba-4863-9ecd-8cbdfd4b88fa"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $codes := ('custodian', 'processor', 'publisher', 'originator', 'pointOfContact', 'user', 'distributor', 'resourceProvider', 'owner', 'principalInvestigator', 'author')
 let $messages :=
@@ -319,17 +319,17 @@ return
                 </TestAssertion>
               </testAssertions>
             </TestStep>
-            <TestStep id="EIDefb845b9-0a94-4e5e-a1ac-a3c860f196b3">
+            <TestStep id="EID29896b08-180a-487e-a41c-17307c1830cc">
               <label>label</label>
               <description><![CDATA[Constraints TestCase for Feature Type with name 'PT_Locale' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
-              <parent ref="EIDab095c18-1386-468d-b244-98d6fac8388b"/>
+              <parent ref="EID2fc16ac6-e0a7-4ffd-92b3-79ed276f4907"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EIDd2946235-54db-4936-96ad-62c19accf086">
+                <TestAssertion id="EIDbe752db5-8684-422d-bb4b-0e1bfef57454">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'languageCode' and namespace 'http://www.isotc211.org/2005/gmd' should have a value that corresponds to one from the following list: <br><ul><li>French</li><li>English</li></ul>]]></description>
-                  <parent ref="EIDefb845b9-0a94-4e5e-a1ac-a3c860f196b3"/>
+                  <parent ref="EID29896b08-180a-487e-a41c-17307c1830cc"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $codes := ('French', 'English')
 let $messages :=
@@ -358,17 +358,17 @@ return
                 </TestAssertion>
               </testAssertions>
             </TestStep>
-            <TestStep id="EID38bd41c9-a4bd-4d8e-b73b-251803ae65dc">
+            <TestStep id="EIDe395a651-5cb7-4451-b762-6cd6a9b604ac">
               <label>label</label>
               <description><![CDATA[Constraints TestCase for Feature Type with name 'PT_Locale' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
-              <parent ref="EIDab095c18-1386-468d-b244-98d6fac8388b"/>
+              <parent ref="EID2fc16ac6-e0a7-4ffd-92b3-79ed276f4907"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EIDc337bbcc-fb9d-497a-b947-71ad4639fefd">
+                <TestAssertion id="EIDf715ae4a-13cf-4111-95f2-ffd15867eb12">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'country' and namespace 'http://www.isotc211.org/2005/gmd' should have a value that corresponds to one from the following list: <br><ul><li>United Kingdom</li><li>France</li></ul>]]></description>
-                  <parent ref="EID38bd41c9-a4bd-4d8e-b73b-251803ae65dc"/>
+                  <parent ref="EIDe395a651-5cb7-4451-b762-6cd6a9b604ac"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $codes := ('United Kingdom', 'France')
 let $messages :=
@@ -397,17 +397,17 @@ return
                 </TestAssertion>
               </testAssertions>
             </TestStep>
-            <TestStep id="EID9bfcc10f-fd49-4aae-858c-a0687a07af07">
+            <TestStep id="EID5a29f864-d3fb-434f-b1b4-fe943153f5ee">
               <label>label</label>
               <description><![CDATA[Constraints TestCase for Feature Type with name 'PT_Locale' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
-              <parent ref="EIDab095c18-1386-468d-b244-98d6fac8388b"/>
+              <parent ref="EID2fc16ac6-e0a7-4ffd-92b3-79ed276f4907"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EID10dab97d-86c8-4fc6-b28b-060e40cd91f2">
+                <TestAssertion id="EID37db44b0-832b-44e1-b945-3ebda1d2eaa7">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'characterEncoding' and namespace 'http://www.isotc211.org/2005/gmd' should have a value that corresponds to one from the following list: <br><ul><li>8859part3</li><li>ucs2</li><li>8859part6</li><li>8859part4</li><li>eucKR</li><li>8859part1</li><li>ebcdic</li><li>usAscii</li><li>8859part15</li><li>8859part10</li><li>eucJP</li><li>8859part11</li><li>shiftJIS</li><li>GB2312</li><li>8859part16</li><li>utf16</li><li>8859part7</li><li>ucs4</li><li>8859part2</li><li>8859part9</li><li>8859part5</li><li>8859part8</li><li>8859part14</li><li>big5</li><li>utf7</li><li>utf8</li><li>jis</li><li>8859part13</li></ul>]]></description>
-                  <parent ref="EID9bfcc10f-fd49-4aae-858c-a0687a07af07"/>
+                  <parent ref="EID5a29f864-d3fb-434f-b1b4-fe943153f5ee"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $codes := ('8859part3', 'ucs2', '8859part6', '8859part4', 'eucKR', '8859part1', 'ebcdic', 'usAscii', '8859part15', '8859part10', 'eucJP', '8859part11', 'shiftJIS', 'GB2312', '8859part16', 'utf16', '8859part7', 'ucs4', '8859part2', '8859part9', '8859part5', '8859part8', '8859part14', 'big5', 'utf7', 'utf8', 'jis', '8859part13')
 let $messages :=
@@ -436,17 +436,17 @@ return
                 </TestAssertion>
               </testAssertions>
             </TestStep>
-            <TestStep id="EID0b6360c4-1109-495e-9013-4789098f765a">
+            <TestStep id="EIDeb950892-2d9f-43f8-88f6-04e9e60037a9">
               <label>label</label>
               <description><![CDATA[Constraints TestCase for Feature Type with name 'MD_AggregateInformation' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
-              <parent ref="EIDab095c18-1386-468d-b244-98d6fac8388b"/>
+              <parent ref="EID2fc16ac6-e0a7-4ffd-92b3-79ed276f4907"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EID6219968a-ea8f-4b46-80e9-0d827e5c0dea">
+                <TestAssertion id="EIDa207e2b7-0f2d-41ed-9e5f-c423a85a092d">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'associationType' and namespace 'http://www.isotc211.org/2005/gmd' should have a value that corresponds to one from the following list: <br><ul><li>partOfSeamlessDatabase</li><li>stereoMate</li><li>largerWorkCitation</li><li>source</li><li>crossReference</li></ul>]]></description>
-                  <parent ref="EID0b6360c4-1109-495e-9013-4789098f765a"/>
+                  <parent ref="EIDeb950892-2d9f-43f8-88f6-04e9e60037a9"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $codes := ('partOfSeamlessDatabase', 'stereoMate', 'largerWorkCitation', 'source', 'crossReference')
 let $messages :=
@@ -475,17 +475,17 @@ return
                 </TestAssertion>
               </testAssertions>
             </TestStep>
-            <TestStep id="EIDb94efbe7-d5c6-4cd8-811a-54467425d61c">
+            <TestStep id="EIDba1a5738-84b9-4a41-bf78-1bfe6c00ca82">
               <label>label</label>
               <description><![CDATA[Constraints TestCase for Feature Type with name 'MD_AggregateInformation' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
-              <parent ref="EIDab095c18-1386-468d-b244-98d6fac8388b"/>
+              <parent ref="EID2fc16ac6-e0a7-4ffd-92b3-79ed276f4907"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EID03bdb1b8-23db-45c5-9907-734ac969160e">
+                <TestAssertion id="EIDafba0624-2257-43cb-8373-5d75e0c31958">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'initiativeType' and namespace 'http://www.isotc211.org/2005/gmd' should have a value that corresponds to one from the following list: <br><ul><li>operation</li><li>project</li><li>exercise</li><li>task</li><li>mission</li><li>process</li><li>program</li><li>collection</li><li>campaign</li><li>experiment</li><li>trial</li><li>sensor</li><li>platform</li><li>study</li><li>investigation</li></ul>]]></description>
-                  <parent ref="EIDb94efbe7-d5c6-4cd8-811a-54467425d61c"/>
+                  <parent ref="EIDba1a5738-84b9-4a41-bf78-1bfe6c00ca82"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $codes := ('operation', 'project', 'exercise', 'task', 'mission', 'process', 'program', 'collection', 'campaign', 'experiment', 'trial', 'sensor', 'platform', 'study', 'investigation')
 let $messages :=
@@ -514,17 +514,17 @@ return
                 </TestAssertion>
               </testAssertions>
             </TestStep>
-            <TestStep id="EID76cfd996-40bb-4cbd-b15b-c94d3f0ef80b">
+            <TestStep id="EIDc2748585-3d6b-4f27-a5fa-e647abf8cd86">
               <label>label</label>
               <description><![CDATA[Constraints TestCase for Feature Type with name 'MD_ImageDescription' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
-              <parent ref="EIDab095c18-1386-468d-b244-98d6fac8388b"/>
+              <parent ref="EID2fc16ac6-e0a7-4ffd-92b3-79ed276f4907"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EIDdfdfd72c-a6a5-4282-9e7a-ed5841146c4e">
+                <TestAssertion id="EID958505ff-aad4-4fe8-89d1-784ecf44a5aa">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'imagingCondition' and namespace 'http://www.isotc211.org/2005/gmd' should have a value that corresponds to one from the following list: <br><ul><li>terrainMasking</li><li>heavySmokeOrDust</li><li>rain</li><li>snow</li><li>blurredImage</li><li>semiDarkness</li><li>night</li><li>shadow</li><li>cloud</li><li>degradingObliquity</li><li>fog</li></ul>]]></description>
-                  <parent ref="EID76cfd996-40bb-4cbd-b15b-c94d3f0ef80b"/>
+                  <parent ref="EIDc2748585-3d6b-4f27-a5fa-e647abf8cd86"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $codes := ('terrainMasking', 'heavySmokeOrDust', 'rain', 'snow', 'blurredImage', 'semiDarkness', 'night', 'shadow', 'cloud', 'degradingObliquity', 'fog')
 let $messages :=
@@ -553,17 +553,17 @@ return
                 </TestAssertion>
               </testAssertions>
             </TestStep>
-            <TestStep id="EID6655c798-a4c2-4eca-a96d-d6c79e2f20b4">
+            <TestStep id="EID217b9272-b558-4eed-b0c1-1e09b3f2da5f">
               <label>label</label>
               <description><![CDATA[Constraints TestCase for Feature Type with name 'MD_Medium' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
-              <parent ref="EIDab095c18-1386-468d-b244-98d6fac8388b"/>
+              <parent ref="EID2fc16ac6-e0a7-4ffd-92b3-79ed276f4907"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EID8fec8dad-fdfa-4cb8-8450-6ba920321f91">
+                <TestAssertion id="EIDc79c7255-94c6-4aaa-8192-b15631ff17ee">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'name' and namespace 'http://www.isotc211.org/2005/gmd' should have a value that corresponds to one from the following list: <br><ul><li>telephoneLink</li><li>7trackTape</li><li>9trackType</li><li>3490Cartridge</li><li>5quarterInchFloppy</li><li>1quarterInchCartridgeTape</li><li>8mmCartridgeTape</li><li>digitalLinearTape</li><li>dvdRom</li><li>3480Cartridge</li><li>dvd</li><li>3halfInchFloppy</li><li>3580Cartridge</li><li>4mmCartridgeTape</li><li>cdRom</li><li>satellite</li><li>onLine</li><li>hardcopy</li></ul>]]></description>
-                  <parent ref="EID6655c798-a4c2-4eca-a96d-d6c79e2f20b4"/>
+                  <parent ref="EID217b9272-b558-4eed-b0c1-1e09b3f2da5f"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $codes := ('telephoneLink', '7trackTape', '9trackType', '3490Cartridge', '5quarterInchFloppy', '1quarterInchCartridgeTape', '8mmCartridgeTape', 'digitalLinearTape', 'dvdRom', '3480Cartridge', 'dvd', '3halfInchFloppy', '3580Cartridge', '4mmCartridgeTape', 'cdRom', 'satellite', 'onLine', 'hardcopy')
 let $messages :=
@@ -592,17 +592,17 @@ return
                 </TestAssertion>
               </testAssertions>
             </TestStep>
-            <TestStep id="EID787902d7-b222-40a4-a684-9cf6a7ddcbf8">
+            <TestStep id="EID05fc454b-669b-4249-b22c-bc3da3db136f">
               <label>label</label>
               <description><![CDATA[Constraints TestCase for Feature Type with name 'MD_Medium' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
-              <parent ref="EIDab095c18-1386-468d-b244-98d6fac8388b"/>
+              <parent ref="EID2fc16ac6-e0a7-4ffd-92b3-79ed276f4907"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EIDe204dc69-1313-4698-8f8f-d2650d5db0d2">
+                <TestAssertion id="EIDa497bcad-d46e-48ed-9908-1ab49c78c643">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'mediumFormat' and namespace 'http://www.isotc211.org/2005/gmd' should have a value that corresponds to one from the following list: <br><ul><li>iso9660RockRidge</li><li>cpio</li><li>iso9660AppleHFS</li><li>iso9660</li><li>tar</li><li>highSierra</li></ul>]]></description>
-                  <parent ref="EID787902d7-b222-40a4-a684-9cf6a7ddcbf8"/>
+                  <parent ref="EID05fc454b-669b-4249-b22c-bc3da3db136f"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $codes := ('iso9660RockRidge', 'cpio', 'iso9660AppleHFS', 'iso9660', 'tar', 'highSierra')
 let $messages :=
@@ -631,17 +631,17 @@ return
                 </TestAssertion>
               </testAssertions>
             </TestStep>
-            <TestStep id="EID8be89ea2-60bd-4c99-b315-def6c246f61d">
+            <TestStep id="EID80c40ec9-3ded-4b94-955f-ba96cefd1a9e">
               <label>label</label>
               <description><![CDATA[Constraints TestCase for Feature Type with name 'CI_Date' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
-              <parent ref="EIDab095c18-1386-468d-b244-98d6fac8388b"/>
+              <parent ref="EID2fc16ac6-e0a7-4ffd-92b3-79ed276f4907"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EIDcf394495-81a8-4319-b67b-2b64ef1d21e5">
+                <TestAssertion id="EIDba96e5f0-e556-460d-886d-7f08a82eb4ef">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'dateType' and namespace 'http://www.isotc211.org/2005/gmd' should have a value that corresponds to one from the following list: <br><ul><li>creation</li><li>publication</li><li>revision</li></ul>]]></description>
-                  <parent ref="EID8be89ea2-60bd-4c99-b315-def6c246f61d"/>
+                  <parent ref="EID80c40ec9-3ded-4b94-955f-ba96cefd1a9e"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $codes := ('creation', 'publication', 'revision')
 let $messages :=
@@ -670,17 +670,17 @@ return
                 </TestAssertion>
               </testAssertions>
             </TestStep>
-            <TestStep id="EID6fffd7b2-0f12-454a-8af6-6bbb850033c7">
+            <TestStep id="EID55824456-89fa-4071-824a-d94594b0dc2a">
               <label>label</label>
               <description><![CDATA[Constraints TestCase for Feature Type with name 'CI_OnlineResource' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
-              <parent ref="EIDab095c18-1386-468d-b244-98d6fac8388b"/>
+              <parent ref="EID2fc16ac6-e0a7-4ffd-92b3-79ed276f4907"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EID1b81c1d5-e332-42f1-816f-01659ee602b8">
+                <TestAssertion id="EIDebaef968-d437-405f-9b29-e0e1dade9a47">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'function' and namespace 'http://www.isotc211.org/2005/gmd' should have a value that corresponds to one from the following list: <br><ul><li>download</li><li>information</li><li>offlineAccess</li><li>order</li><li>search</li></ul>]]></description>
-                  <parent ref="EID6fffd7b2-0f12-454a-8af6-6bbb850033c7"/>
+                  <parent ref="EID55824456-89fa-4071-824a-d94594b0dc2a"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $codes := ('download', 'information', 'offlineAccess', 'order', 'search')
 let $messages :=
@@ -709,17 +709,17 @@ return
                 </TestAssertion>
               </testAssertions>
             </TestStep>
-            <TestStep id="EID24cbdd2f-dd0e-4b1b-a67b-a65de8d3e52c">
+            <TestStep id="EIDc822feb4-5180-416f-9395-e2e6e597863c">
               <label>label</label>
               <description><![CDATA[Constraints TestCase for Feature Type with name 'SV_PortSpecification' and namespace 'http://www.isotc211.org/2005/srv']]></description>
-              <parent ref="EIDab095c18-1386-468d-b244-98d6fac8388b"/>
+              <parent ref="EID2fc16ac6-e0a7-4ffd-92b3-79ed276f4907"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EID3ada3b49-04fd-4404-9b6d-68908303f6cf">
+                <TestAssertion id="EIDae0d3915-a708-4110-a60e-f4a3f95f4ace">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'binding' and namespace 'http://www.isotc211.org/2005/srv' should have a value that corresponds to one from the following list: <br><ul><li>CORBA</li><li>COM</li><li>JAVA</li><li>WebServices</li><li>XML</li><li>SQL</li></ul>]]></description>
-                  <parent ref="EID24cbdd2f-dd0e-4b1b-a67b-a65de8d3e52c"/>
+                  <parent ref="EIDc822feb4-5180-416f-9395-e2e6e597863c"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $codes := ('CORBA', 'COM', 'JAVA', 'WebServices', 'XML', 'SQL')
 let $messages :=
@@ -748,17 +748,17 @@ return
                 </TestAssertion>
               </testAssertions>
             </TestStep>
-            <TestStep id="EID10606f87-d5ef-46cd-9ec7-810862056a3b">
+            <TestStep id="EID90742796-245a-408e-9291-319aec1657fb">
               <label>label</label>
               <description><![CDATA[Constraints TestCase for Feature Type with name 'SV_ServiceIdentification' and namespace 'http://www.isotc211.org/2005/srv']]></description>
-              <parent ref="EIDab095c18-1386-468d-b244-98d6fac8388b"/>
+              <parent ref="EID2fc16ac6-e0a7-4ffd-92b3-79ed276f4907"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EID930ec598-55cf-4e5e-9241-355854f70abc">
+                <TestAssertion id="EID5eb2833e-30e9-40e1-aeaa-d0f818602dda">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'couplingType' and namespace 'http://www.isotc211.org/2005/srv' should have a value that corresponds to one from the following list: <br><ul><li>loose</li><li>mixed</li><li>tight</li></ul>]]></description>
-                  <parent ref="EID10606f87-d5ef-46cd-9ec7-810862056a3b"/>
+                  <parent ref="EID90742796-245a-408e-9291-319aec1657fb"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $codes := ('loose', 'mixed', 'tight')
 let $messages :=
@@ -787,17 +787,17 @@ return
                 </TestAssertion>
               </testAssertions>
             </TestStep>
-            <TestStep id="EID327df78e-a4d8-4623-bd8d-585b95317d0f">
+            <TestStep id="EID8467f70d-607a-4342-9026-dd66cf7760b8">
               <label>label</label>
               <description><![CDATA[Constraints TestCase for Feature Type with name 'CI_Citation' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
-              <parent ref="EIDab095c18-1386-468d-b244-98d6fac8388b"/>
+              <parent ref="EID2fc16ac6-e0a7-4ffd-92b3-79ed276f4907"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EID2f1193b2-f2f3-49ac-864c-636ec0fece8a">
+                <TestAssertion id="EID59b391a6-0679-4e96-ba46-46378391081c">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'presentationForm' and namespace 'http://www.isotc211.org/2005/gmd' should have a value that corresponds to one from the following list: <br><ul><li>mapHardcopy</li><li>videoHardcopy</li><li>profileHardcopy</li><li>documentDigital</li><li>modelDigital</li><li>documentHardcopy</li><li>modelHardcopy</li><li>videoDigital</li><li>mapDigital</li><li>profileDigital</li><li>imageHardcopy</li><li>tableDigital</li><li>imageDigital</li><li>tableHardcopy</li></ul>]]></description>
-                  <parent ref="EID327df78e-a4d8-4623-bd8d-585b95317d0f"/>
+                  <parent ref="EID8467f70d-607a-4342-9026-dd66cf7760b8"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $codes := ('mapHardcopy', 'videoHardcopy', 'profileHardcopy', 'documentDigital', 'modelDigital', 'documentHardcopy', 'modelHardcopy', 'videoDigital', 'mapDigital', 'profileDigital', 'imageHardcopy', 'tableDigital', 'imageDigital', 'tableHardcopy')
 let $messages :=
@@ -826,17 +826,17 @@ return
                 </TestAssertion>
               </testAssertions>
             </TestStep>
-            <TestStep id="EID3777e874-d3ba-41f8-ac4a-5a3a4de301c2">
+            <TestStep id="EID3699d3f8-1d7e-46c2-9d86-c84337f2ff9f">
               <label>label</label>
               <description><![CDATA[Constraints TestCase for Feature Type with name 'MD_Georectified' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
-              <parent ref="EIDab095c18-1386-468d-b244-98d6fac8388b"/>
+              <parent ref="EID2fc16ac6-e0a7-4ffd-92b3-79ed276f4907"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EIDe96b0193-b33d-4c65-ae0c-39d9cac82490">
+                <TestAssertion id="EIDe3d502c2-76b5-4fb2-bec0-0105d97ffa92">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'pointInPixel' and namespace 'http://www.isotc211.org/2005/gmd' should have a value that corresponds to one from the following list: <br><ul><li>lowerLeft</li><li>center</li><li>lowerRight</li><li>upperRight</li><li>upperLeft</li></ul>]]></description>
-                  <parent ref="EID3777e874-d3ba-41f8-ac4a-5a3a4de301c2"/>
+                  <parent ref="EID3699d3f8-1d7e-46c2-9d86-c84337f2ff9f"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $codes := ('lowerLeft', 'center', 'lowerRight', 'upperRight', 'upperLeft')
 let $messages :=
@@ -865,17 +865,17 @@ return
                 </TestAssertion>
               </testAssertions>
             </TestStep>
-            <TestStep id="EID220d2d30-9c43-4e4f-9764-176606ab5e11">
+            <TestStep id="EIDa97fb25d-f17b-4961-81a6-7a7c659aed6a">
               <label>Mandatory type test</label>
               <description><![CDATA[Constraints TestCase for Feature Type with name 'MD_Metadata' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
-              <parent ref="EIDab095c18-1386-468d-b244-98d6fac8388b"/>
+              <parent ref="EID2fc16ac6-e0a7-4ffd-92b3-79ed276f4907"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EIDe0101661-a45d-41ff-b9c1-dc0ea752a7c8">
+                <TestAssertion id="EID4869df0c-633a-414e-be05-2b00def9b826">
                   <label>TestAssertion</label>
                   <description><![CDATA[The type with localName 'MD_Metadata' and namespace 'http://www.isotc211.org/2005/gmd' should be present in the file]]></description>
-                  <parent ref="EID220d2d30-9c43-4e4f-9764-176606ab5e11"/>
+                  <parent ref="EIDa97fb25d-f17b-4961-81a6-7a7c659aed6a"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $messages :=
     (for $record in $db
@@ -901,17 +901,17 @@ return
                 </TestAssertion>
               </testAssertions>
             </TestStep>
-            <TestStep id="EIDeaf5785c-fde3-4393-8b4e-0bfc4ebdd737">
+            <TestStep id="EID6c6b9efd-b3cc-4bbd-b9af-c96459e1e5b0">
               <label>label</label>
               <description><![CDATA[Constraints TestCase for Feature Type with name 'MD_Metadata' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
-              <parent ref="EIDab095c18-1386-468d-b244-98d6fac8388b"/>
+              <parent ref="EID2fc16ac6-e0a7-4ffd-92b3-79ed276f4907"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EIDe2305e71-434a-4001-80c5-050f956d65bb">
+                <TestAssertion id="EIDd7ba9f60-a00c-40e9-b24c-d9e77d782ccf">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'fileIdentifier' and namespace 'http://www.isotc211.org/2005/gmd' should have a minimum cardinality of 1 and a maximum cardinality of 1]]></description>
-                  <parent ref="EIDeaf5785c-fde3-4393-8b4e-0bfc4ebdd737"/>
+                  <parent ref="EID6c6b9efd-b3cc-4bbd-b9af-c96459e1e5b0"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $messages :=
   (for $record in $db
@@ -939,17 +939,17 @@ return
                 </TestAssertion>
               </testAssertions>
             </TestStep>
-            <TestStep id="EIDfd763d8e-a441-44ef-8ca1-f7a9d943349b">
+            <TestStep id="EID2db56acd-7904-41c1-a7fb-390559c63cd8">
               <label>label</label>
               <description><![CDATA[Constraints TestCase for Feature Type with name 'MD_Metadata' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
-              <parent ref="EIDab095c18-1386-468d-b244-98d6fac8388b"/>
+              <parent ref="EID2fc16ac6-e0a7-4ffd-92b3-79ed276f4907"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EID0dd6d6ac-5f17-492a-b0d9-69a03d9fc962">
+                <TestAssertion id="EID1f3c92a7-7c5f-444f-b06a-d23a49cd4ba8">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'fileIdentifier' and namespace 'http://www.isotc211.org/2005/gmd' should not be empty if it's present]]></description>
-                  <parent ref="EIDfd763d8e-a441-44ef-8ca1-f7a9d943349b"/>
+                  <parent ref="EID2db56acd-7904-41c1-a7fb-390559c63cd8"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $messages :=
   (for $record in $db
@@ -976,17 +976,17 @@ return
                 </TestAssertion>
               </testAssertions>
             </TestStep>
-            <TestStep id="EIDbdc8f50f-79fe-41ef-8c48-db7b6fb600e5">
+            <TestStep id="EID25ce6c47-1f47-49eb-a204-9a79872d1212">
               <label>label</label>
               <description><![CDATA[Constraints TestCase for Feature Type with name 'MD_Metadata' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
-              <parent ref="EIDab095c18-1386-468d-b244-98d6fac8388b"/>
+              <parent ref="EID2fc16ac6-e0a7-4ffd-92b3-79ed276f4907"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EIDb11c020e-f5ad-4734-9755-1ab2c140938c">
+                <TestAssertion id="EIDb44f391f-1f65-4f3e-986c-e2636ee99572">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'language' and namespace 'http://www.isotc211.org/2005/gmd' should have a minimum cardinality of 1 and a maximum cardinality of 1]]></description>
-                  <parent ref="EIDbdc8f50f-79fe-41ef-8c48-db7b6fb600e5"/>
+                  <parent ref="EID25ce6c47-1f47-49eb-a204-9a79872d1212"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $messages :=
   (for $record in $db
@@ -1014,17 +1014,17 @@ return
                 </TestAssertion>
               </testAssertions>
             </TestStep>
-            <TestStep id="EID81ac1e1f-0aa2-47cc-95fc-38457cced16c">
+            <TestStep id="EIDbb0a4ebe-b042-4b0b-8597-0a1a4e8f3711">
               <label>label</label>
               <description><![CDATA[Constraints TestCase for Feature Type with name 'MD_Metadata' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
-              <parent ref="EIDab095c18-1386-468d-b244-98d6fac8388b"/>
+              <parent ref="EID2fc16ac6-e0a7-4ffd-92b3-79ed276f4907"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EIDb959f8e4-6175-494a-a2fc-bdc35bb53186">
+                <TestAssertion id="EIDc0d6b3af-a488-491d-86c8-ba78e7a61cc2">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'language' and namespace 'http://www.isotc211.org/2005/gmd' should not be empty if it's present]]></description>
-                  <parent ref="EID81ac1e1f-0aa2-47cc-95fc-38457cced16c"/>
+                  <parent ref="EIDbb0a4ebe-b042-4b0b-8597-0a1a4e8f3711"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $messages :=
   (for $record in $db
@@ -1051,17 +1051,17 @@ return
                 </TestAssertion>
               </testAssertions>
             </TestStep>
-            <TestStep id="EID943fe920-2a26-47ea-b6a9-d74c3e1e2ddc">
+            <TestStep id="EIDe39ee7f2-ab4a-4b5f-a41c-49933a19b604">
               <label>label</label>
               <description><![CDATA[Constraints TestCase for Feature Type with name 'MD_Metadata' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
-              <parent ref="EIDab095c18-1386-468d-b244-98d6fac8388b"/>
+              <parent ref="EID2fc16ac6-e0a7-4ffd-92b3-79ed276f4907"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EIDea10e5bb-9d0d-4fa3-bafd-a9c4b2e40df3">
+                <TestAssertion id="EIDd1a63c25-f4ee-4817-8365-e58c17af501a">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'characterSet' and namespace 'http://www.isotc211.org/2005/gmd' should have a value that corresponds to one from the following list: <br><ul><li>8859part3</li><li>ucs2</li><li>8859part6</li><li>8859part4</li><li>eucKR</li><li>8859part1</li><li>ebcdic</li><li>usAscii</li><li>8859part15</li><li>8859part10</li><li>eucJP</li><li>8859part11</li><li>shiftJIS</li><li>GB2312</li><li>8859part16</li><li>utf16</li><li>8859part7</li><li>ucs4</li><li>8859part2</li><li>8859part5</li><li>8859part8</li><li>big5</li><li>utf7</li><li>utf8</li><li>jis</li></ul>]]></description>
-                  <parent ref="EID943fe920-2a26-47ea-b6a9-d74c3e1e2ddc"/>
+                  <parent ref="EIDe39ee7f2-ab4a-4b5f-a41c-49933a19b604"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $codes := ('8859part3', 'ucs2', '8859part6', '8859part4', 'eucKR', '8859part1', 'ebcdic', 'usAscii', '8859part15', '8859part10', 'eucJP', '8859part11', 'shiftJIS', 'GB2312', '8859part16', 'utf16', '8859part7', 'ucs4', '8859part2', '8859part5', '8859part8', 'big5', 'utf7', 'utf8', 'jis')
 let $messages :=
@@ -1090,17 +1090,17 @@ return
                 </TestAssertion>
               </testAssertions>
             </TestStep>
-            <TestStep id="EID735ecd11-ca1c-44e0-a693-5eff3e95f853">
+            <TestStep id="EID7a14446c-5706-4ce2-ba16-cd103b52032d">
               <label>label</label>
               <description><![CDATA[Constraints TestCase for Feature Type with name 'AbstractCT_Catalogue' and namespace 'http://www.isotc211.org/2005/gmx']]></description>
-              <parent ref="EIDab095c18-1386-468d-b244-98d6fac8388b"/>
+              <parent ref="EID2fc16ac6-e0a7-4ffd-92b3-79ed276f4907"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EIDda68a6e1-a200-4f7a-979b-2c121cfd3f6c">
+                <TestAssertion id="EIDb7e57ef0-4cfe-4546-af47-d53c41a14b62">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'characterSet' and namespace 'http://www.isotc211.org/2005/gmx' should have a value that corresponds to one from the following list: <br><ul><li>8859part3</li><li>ucs2</li><li>8859part6</li><li>8859part4</li><li>eucKR</li><li>8859part1</li><li>ebcdic</li><li>usAscii</li><li>8859part15</li><li>8859part10</li><li>eucJP</li><li>8859part11</li><li>shiftJIS</li><li>GB2312</li><li>8859part16</li><li>utf16</li><li>8859part7</li><li>ucs4</li><li>8859part2</li><li>8859part9</li><li>8859part5</li><li>8859part8</li><li>8859part14</li><li>big5</li><li>utf7</li><li>utf8</li><li>jis</li><li>8859part13</li></ul>]]></description>
-                  <parent ref="EID735ecd11-ca1c-44e0-a693-5eff3e95f853"/>
+                  <parent ref="EID7a14446c-5706-4ce2-ba16-cd103b52032d"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $codes := ('8859part3', 'ucs2', '8859part6', '8859part4', 'eucKR', '8859part1', 'ebcdic', 'usAscii', '8859part15', '8859part10', 'eucJP', '8859part11', 'shiftJIS', 'GB2312', '8859part16', 'utf16', '8859part7', 'ucs4', '8859part2', '8859part9', '8859part5', '8859part8', '8859part14', 'big5', 'utf7', 'utf8', 'jis', '8859part13')
 let $messages :=
@@ -1129,17 +1129,17 @@ return
                 </TestAssertion>
               </testAssertions>
             </TestStep>
-            <TestStep id="EIDdc403aae-dba5-4a89-a029-b005ada03912">
+            <TestStep id="EID40c4c450-52b2-4001-8c1a-8bcb9b2c7cde">
               <label>label</label>
               <description><![CDATA[Constraints TestCase for Feature Type with name 'MD_Dimension' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
-              <parent ref="EIDab095c18-1386-468d-b244-98d6fac8388b"/>
+              <parent ref="EID2fc16ac6-e0a7-4ffd-92b3-79ed276f4907"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EIDc2f55704-0a82-4f91-9eaf-88fc159950fb">
+                <TestAssertion id="EID8735f40f-229a-445a-beb3-94aa428eb2a0">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'dimensionName' and namespace 'http://www.isotc211.org/2005/gmd' should have a value that corresponds to one from the following list: <br><ul><li>column</li><li>crossTrack</li><li>vertical</li><li>line</li><li>sample</li><li>track</li><li>row</li><li>time</li></ul>]]></description>
-                  <parent ref="EIDdc403aae-dba5-4a89-a029-b005ada03912"/>
+                  <parent ref="EID40c4c450-52b2-4001-8c1a-8bcb9b2c7cde"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $codes := ('column', 'crossTrack', 'vertical', 'line', 'sample', 'track', 'row', 'time')
 let $messages :=
@@ -1168,17 +1168,17 @@ return
                 </TestAssertion>
               </testAssertions>
             </TestStep>
-            <TestStep id="EIDb427558a-aac3-4791-989b-957ecadafb72">
+            <TestStep id="EID240ba8ea-4e38-42b6-b042-9e9a9d55f5fd">
               <label>label</label>
               <description><![CDATA[Constraints TestCase for Feature Type with name 'MD_CoverageDescription' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
-              <parent ref="EIDab095c18-1386-468d-b244-98d6fac8388b"/>
+              <parent ref="EID2fc16ac6-e0a7-4ffd-92b3-79ed276f4907"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EID28f4bac7-9cff-43db-98a6-7fb3d5d862dc">
+                <TestAssertion id="EIDadd5dbf1-37a9-4796-97be-1e8a47ef7728">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'contentType' and namespace 'http://www.isotc211.org/2005/gmd' should have a value that corresponds to one from the following list: <br><ul><li>thematicClassification</li><li>image</li><li>physicalMeasurement</li></ul>]]></description>
-                  <parent ref="EIDb427558a-aac3-4791-989b-957ecadafb72"/>
+                  <parent ref="EID240ba8ea-4e38-42b6-b042-9e9a9d55f5fd"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $codes := ('thematicClassification', 'image', 'physicalMeasurement')
 let $messages :=
@@ -1207,17 +1207,17 @@ return
                 </TestAssertion>
               </testAssertions>
             </TestStep>
-            <TestStep id="EID3f37bb81-6463-4da1-8a29-521f8267b741">
+            <TestStep id="EIDf45b7919-5d08-41bf-9617-d8e7317a34c1">
               <label>label</label>
               <description><![CDATA[Constraints TestCase for Feature Type with name 'AbstractDQ_Element' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
-              <parent ref="EIDab095c18-1386-468d-b244-98d6fac8388b"/>
+              <parent ref="EID2fc16ac6-e0a7-4ffd-92b3-79ed276f4907"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EID3ef622ea-c9f8-488f-bcc5-50d200fa0c4e">
+                <TestAssertion id="EID4494f45b-a4c8-4201-b1ef-1f8baf0d7fb8">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'evaluationMethodType' and namespace 'http://www.isotc211.org/2005/gmd' should have a value that corresponds to one from the following list: <br><ul><li>directInternal</li><li>directExternal</li><li>indirect</li></ul>]]></description>
-                  <parent ref="EID3f37bb81-6463-4da1-8a29-521f8267b741"/>
+                  <parent ref="EIDf45b7919-5d08-41bf-9617-d8e7317a34c1"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $codes := ('directInternal', 'directExternal', 'indirect')
 let $messages :=
@@ -1246,17 +1246,17 @@ return
                 </TestAssertion>
               </testAssertions>
             </TestStep>
-            <TestStep id="EID573eb6f0-4f86-43c6-96c0-36c764d40181">
+            <TestStep id="EID0400a32f-626b-4166-b2db-3bfac52806af">
               <label>label</label>
               <description><![CDATA[Constraints TestCase for Feature Type with name 'MD_Keywords' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
-              <parent ref="EIDab095c18-1386-468d-b244-98d6fac8388b"/>
+              <parent ref="EID2fc16ac6-e0a7-4ffd-92b3-79ed276f4907"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EID69ff1997-817b-46cf-b9e5-f47bcb1afd42">
+                <TestAssertion id="EID269c50f5-08df-4a1a-9948-ae312d1a6dcf">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'type' and namespace 'http://www.isotc211.org/2005/gmd' should have a value that corresponds to one from the following list: <br><ul><li>stratum</li><li>theme</li><li>discipline</li><li>place</li><li>temporal</li></ul>]]></description>
-                  <parent ref="EID573eb6f0-4f86-43c6-96c0-36c764d40181"/>
+                  <parent ref="EID0400a32f-626b-4166-b2db-3bfac52806af"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $codes := ('stratum', 'theme', 'discipline', 'place', 'temporal')
 let $messages :=
@@ -1285,17 +1285,17 @@ return
                 </TestAssertion>
               </testAssertions>
             </TestStep>
-            <TestStep id="EID0a4b89fd-0520-4280-aafb-de53fcbf367d">
+            <TestStep id="EIDc6a5af58-e9f7-4f4e-bae1-9a5ee99c897c">
               <label>label</label>
               <description><![CDATA[Constraints TestCase for Feature Type with name 'SV_OperationMetadata' and namespace 'http://www.isotc211.org/2005/srv']]></description>
-              <parent ref="EIDab095c18-1386-468d-b244-98d6fac8388b"/>
+              <parent ref="EID2fc16ac6-e0a7-4ffd-92b3-79ed276f4907"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EID7c901269-abc6-47b5-976f-baa7cf466d16">
+                <TestAssertion id="EIDbbfed7c1-82f3-4cd4-88a5-aced5bc12d99">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'DCP' and namespace 'http://www.isotc211.org/2005/srv' should have a value that corresponds to one from the following list: <br><ul><li>CORBA</li><li>COM</li><li>JAVA</li><li>WebServices</li><li>XML</li><li>SQL</li></ul>]]></description>
-                  <parent ref="EID0a4b89fd-0520-4280-aafb-de53fcbf367d"/>
+                  <parent ref="EIDc6a5af58-e9f7-4f4e-bae1-9a5ee99c897c"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $codes := ('CORBA', 'COM', 'JAVA', 'WebServices', 'XML', 'SQL')
 let $messages :=
@@ -1324,17 +1324,17 @@ return
                 </TestAssertion>
               </testAssertions>
             </TestStep>
-            <TestStep id="EIDda8407d1-71f8-4804-aa13-8de38ae6a13a">
+            <TestStep id="EID9a19cc77-5a6d-4dff-84dd-39c1548500b1">
               <label>label</label>
               <description><![CDATA[Constraints TestCase for Feature Type with name 'MD_SecurityConstraints' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
-              <parent ref="EIDab095c18-1386-468d-b244-98d6fac8388b"/>
+              <parent ref="EID2fc16ac6-e0a7-4ffd-92b3-79ed276f4907"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EIDbb73919d-8f1e-44be-97c8-3aea5ec98107">
+                <TestAssertion id="EID6dd009b6-bd44-4c08-813b-6226f8d62fdc">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'classification' and namespace 'http://www.isotc211.org/2005/gmd' should have a value that corresponds to one from the following list: <br><ul><li>restricted</li><li>unclassified</li><li>confidential</li><li>secret</li><li>topSecret</li></ul>]]></description>
-                  <parent ref="EIDda8407d1-71f8-4804-aa13-8de38ae6a13a"/>
+                  <parent ref="EID9a19cc77-5a6d-4dff-84dd-39c1548500b1"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $codes := ('restricted', 'unclassified', 'confidential', 'secret', 'topSecret')
 let $messages :=
@@ -1363,17 +1363,17 @@ return
                 </TestAssertion>
               </testAssertions>
             </TestStep>
-            <TestStep id="EIDd97987ae-36f1-485b-a69d-f645b841c9f6">
+            <TestStep id="EID56a3364b-b02d-4883-bf06-3ac7e5ad00a3">
               <label>label</label>
               <description><![CDATA[Constraints TestCase for Feature Type with name 'AbstractMD_Identification' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
-              <parent ref="EIDab095c18-1386-468d-b244-98d6fac8388b"/>
+              <parent ref="EID2fc16ac6-e0a7-4ffd-92b3-79ed276f4907"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EID286ef550-8d09-44cc-9b04-e659056ad3b8">
+                <TestAssertion id="EID729f39a8-ea02-4154-b647-57e3036b41fb">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'status' and namespace 'http://www.isotc211.org/2005/gmd' should have a value that corresponds to one from the following list: <br><ul><li>planned</li><li>underDevelopment</li><li>historicalArchive</li><li>obsolete</li><li>onGoing</li><li>required</li><li>completed</li></ul>]]></description>
-                  <parent ref="EIDd97987ae-36f1-485b-a69d-f645b841c9f6"/>
+                  <parent ref="EID56a3364b-b02d-4883-bf06-3ac7e5ad00a3"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $codes := ('planned', 'underDevelopment', 'historicalArchive', 'obsolete', 'onGoing', 'required', 'completed')
 let $messages :=
@@ -1402,17 +1402,17 @@ return
                 </TestAssertion>
               </testAssertions>
             </TestStep>
-            <TestStep id="EID01779633-4beb-4705-b389-af90f3cdfd24">
+            <TestStep id="EIDfd62fd05-edb7-4b3c-bd89-7a2ceb614519">
               <label>label</label>
               <description><![CDATA[Constraints TestCase for Feature Type with name 'MD_LegalConstraints' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
-              <parent ref="EIDab095c18-1386-468d-b244-98d6fac8388b"/>
+              <parent ref="EID2fc16ac6-e0a7-4ffd-92b3-79ed276f4907"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EID9bff8cf4-6c89-4aa2-a4f4-e9a04401a259">
+                <TestAssertion id="EIDaeed7022-0e7c-4861-b171-23fb564e410a">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'accessConstraints' and namespace 'http://www.isotc211.org/2005/gmd' should have a value that corresponds to one from the following list: <br><ul><li>restricted</li><li>copyright</li><li>trademark</li><li>patentPending</li><li>intellectualPropertyRights</li><li>patent</li><li>license</li><li>otherRestrictions</li></ul>]]></description>
-                  <parent ref="EID01779633-4beb-4705-b389-af90f3cdfd24"/>
+                  <parent ref="EIDfd62fd05-edb7-4b3c-bd89-7a2ceb614519"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $codes := ('restricted', 'copyright', 'trademark', 'patentPending', 'intellectualPropertyRights', 'patent', 'license', 'otherRestrictions')
 let $messages :=
@@ -1441,17 +1441,17 @@ return
                 </TestAssertion>
               </testAssertions>
             </TestStep>
-            <TestStep id="EIDb65c5707-dd9e-44f4-bb28-0f17f88313b1">
+            <TestStep id="EID2e708171-f7ce-4fce-a039-1a2053ac51ec">
               <label>label</label>
               <description><![CDATA[Constraints TestCase for Feature Type with name 'MD_LegalConstraints' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
-              <parent ref="EIDab095c18-1386-468d-b244-98d6fac8388b"/>
+              <parent ref="EID2fc16ac6-e0a7-4ffd-92b3-79ed276f4907"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EIDf29c581d-2a8b-4bb0-b0ab-0a49528b40bd">
+                <TestAssertion id="EIDf55e5289-89de-4de2-9dba-fc033e37adc5">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'useConstraints' and namespace 'http://www.isotc211.org/2005/gmd' should have a value that corresponds to one from the following list: <br><ul><li>restricted</li><li>copyright</li><li>trademark</li><li>patentPending</li><li>intellectualPropertyRights</li><li>patent</li><li>license</li><li>otherRestrictions</li></ul>]]></description>
-                  <parent ref="EIDb65c5707-dd9e-44f4-bb28-0f17f88313b1"/>
+                  <parent ref="EID2e708171-f7ce-4fce-a039-1a2053ac51ec"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $codes := ('restricted', 'copyright', 'trademark', 'patentPending', 'intellectualPropertyRights', 'patent', 'license', 'otherRestrictions')
 let $messages :=
@@ -1480,17 +1480,17 @@ return
                 </TestAssertion>
               </testAssertions>
             </TestStep>
-            <TestStep id="EID77e95d32-bdcb-4173-aadb-7b87ca0b9213">
+            <TestStep id="EID21b6d22c-4633-4390-b2a3-df96c24cc8ee">
               <label>label</label>
               <description><![CDATA[Constraints TestCase for Feature Type with name 'MD_GridSpatialRepresentation' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
-              <parent ref="EIDab095c18-1386-468d-b244-98d6fac8388b"/>
+              <parent ref="EID2fc16ac6-e0a7-4ffd-92b3-79ed276f4907"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EIDe94faff0-e00a-4e64-b686-54300befba6c">
+                <TestAssertion id="EIDf12cb377-4e10-45a5-a8d0-ecb40dce771f">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'cellGeometry' and namespace 'http://www.isotc211.org/2005/gmd' should have a value that corresponds to one from the following list: <br><ul><li>area</li><li>point</li></ul>]]></description>
-                  <parent ref="EID77e95d32-bdcb-4173-aadb-7b87ca0b9213"/>
+                  <parent ref="EID21b6d22c-4633-4390-b2a3-df96c24cc8ee"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $codes := ('area', 'point')
 let $messages :=
@@ -1519,17 +1519,17 @@ return
                 </TestAssertion>
               </testAssertions>
             </TestStep>
-            <TestStep id="EIDc731a4a3-48d4-4f83-8b5a-56be84627d3b">
+            <TestStep id="EIDcdfbab6f-e2ab-4108-ba06-843ca44ed962">
               <label>label</label>
               <description><![CDATA[Constraints TestCase for Feature Type with name 'MD_MaintenanceInformation' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
-              <parent ref="EIDab095c18-1386-468d-b244-98d6fac8388b"/>
+              <parent ref="EID2fc16ac6-e0a7-4ffd-92b3-79ed276f4907"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EID461d9505-fbed-4a3b-9cf1-c61c3dd31d81">
+                <TestAssertion id="EIDa28294f7-404d-4167-8f6d-05a134ea2fff">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'maintenanceAndUpdateFrequency' and namespace 'http://www.isotc211.org/2005/gmd' should have a value that corresponds to one from the following list: <br><ul><li>irregular</li><li>continual</li><li>daily</li><li>biannually</li><li>monthly</li><li>quarterly</li><li>asNeeded</li><li>notPlanned</li><li>weekly</li><li>fortnightly</li><li>annually</li><li>unknown</li></ul>]]></description>
-                  <parent ref="EIDc731a4a3-48d4-4f83-8b5a-56be84627d3b"/>
+                  <parent ref="EIDcdfbab6f-e2ab-4108-ba06-843ca44ed962"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $codes := ('irregular', 'continual', 'daily', 'biannually', 'monthly', 'quarterly', 'asNeeded', 'notPlanned', 'weekly', 'fortnightly', 'annually', 'unknown')
 let $messages :=
@@ -1558,17 +1558,17 @@ return
                 </TestAssertion>
               </testAssertions>
             </TestStep>
-            <TestStep id="EID361f5ab4-83f6-4417-8705-f459443c3473">
+            <TestStep id="EID7fafed3b-b5eb-43e8-93f0-f1c96886cf2f">
               <label>label</label>
               <description><![CDATA[Constraints TestCase for Feature Type with name 'MD_ExtendedElementInformation' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
-              <parent ref="EIDab095c18-1386-468d-b244-98d6fac8388b"/>
+              <parent ref="EID2fc16ac6-e0a7-4ffd-92b3-79ed276f4907"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EIDa12c8ffc-77d6-4c54-bbb4-eeefc41b1d05">
+                <TestAssertion id="EID9f733cc0-e01e-4d71-a065-812450f21423">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'obligation' and namespace 'http://www.isotc211.org/2005/gmd' should have a value that corresponds to one from the following list: <br><ul><li>optional</li><li>conditional</li><li>mandatory</li></ul>]]></description>
-                  <parent ref="EID361f5ab4-83f6-4417-8705-f459443c3473"/>
+                  <parent ref="EID7fafed3b-b5eb-43e8-93f0-f1c96886cf2f"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $codes := ('optional', 'conditional', 'mandatory')
 let $messages :=
@@ -1597,17 +1597,17 @@ return
                 </TestAssertion>
               </testAssertions>
             </TestStep>
-            <TestStep id="EID8e187420-a392-461a-9004-9ba0cf11094d">
+            <TestStep id="EID043c5120-b514-4c0c-bb75-582112dc257b">
               <label>label</label>
               <description><![CDATA[Constraints TestCase for Feature Type with name 'MD_ExtendedElementInformation' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
-              <parent ref="EIDab095c18-1386-468d-b244-98d6fac8388b"/>
+              <parent ref="EID2fc16ac6-e0a7-4ffd-92b3-79ed276f4907"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EID70752a6b-0810-4bee-b3eb-fe193445b763">
+                <TestAssertion id="EIDf4e455e6-c38e-4687-a842-06575a0d593b">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'dataType' and namespace 'http://www.isotc211.org/2005/gmd' should have a value that corresponds to one from the following list: <br><ul><li>unionClass</li><li>interfaceClass</li><li>enumeration</li><li>integer</li><li>codelistElement</li><li>aggregateClass</li><li>datatypeClass</li><li>abstractClass</li><li>specifiedClass</li><li>association</li><li>typeClass</li><li>codelist</li><li>metaClass</li><li>characterString</li><li>class</li></ul>]]></description>
-                  <parent ref="EID8e187420-a392-461a-9004-9ba0cf11094d"/>
+                  <parent ref="EID043c5120-b514-4c0c-bb75-582112dc257b"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $codes := ('unionClass', 'interfaceClass', 'enumeration', 'integer', 'codelistElement', 'aggregateClass', 'datatypeClass', 'abstractClass', 'specifiedClass', 'association', 'typeClass', 'codelist', 'metaClass', 'characterString', 'class')
 let $messages :=
@@ -1636,17 +1636,17 @@ return
                 </TestAssertion>
               </testAssertions>
             </TestStep>
-            <TestStep id="EID5296f737-41ed-4cc6-84d4-7be91622b06c">
+            <TestStep id="EID4ce91ddf-ead2-41fd-94b1-5f38cc82df0f">
               <label>label</label>
               <description><![CDATA[Constraints TestCase for Feature Type with name 'MD_DataIdentification' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
-              <parent ref="EIDab095c18-1386-468d-b244-98d6fac8388b"/>
+              <parent ref="EID2fc16ac6-e0a7-4ffd-92b3-79ed276f4907"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EIDd2522e35-2d06-4e83-8fd2-9c559a5aaf0c">
+                <TestAssertion id="EIDb12b077b-592e-45e0-a522-6f44d9a11670">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'spatialRepresentationType' and namespace 'http://www.isotc211.org/2005/gmd' should have a value that corresponds to one from the following list: <br><ul><li>tin</li><li>stereoModel</li><li>video</li><li>vector</li><li>textTable</li><li>grid</li></ul>]]></description>
-                  <parent ref="EID5296f737-41ed-4cc6-84d4-7be91622b06c"/>
+                  <parent ref="EID4ce91ddf-ead2-41fd-94b1-5f38cc82df0f"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $codes := ('tin', 'stereoModel', 'video', 'vector', 'textTable', 'grid')
 let $messages :=
@@ -1675,17 +1675,17 @@ return
                 </TestAssertion>
               </testAssertions>
             </TestStep>
-            <TestStep id="EIDca962e11-53aa-4859-b459-22784181166c">
+            <TestStep id="EID83774bb0-4796-42ee-bd20-3c5b7633dab9">
               <label>label</label>
               <description><![CDATA[Constraints TestCase for Feature Type with name 'MD_DataIdentification' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
-              <parent ref="EIDab095c18-1386-468d-b244-98d6fac8388b"/>
+              <parent ref="EID2fc16ac6-e0a7-4ffd-92b3-79ed276f4907"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EIDede5b8ef-25c2-43e4-9b6c-fbee26f77e5f">
+                <TestAssertion id="EID67928ce4-a4f9-4da9-8199-5344cad926a7">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'characterSet' and namespace 'http://www.isotc211.org/2005/gmd' should have a value that corresponds to one from the following list: <br><ul><li>8859part3</li><li>ucs2</li><li>8859part6</li><li>8859part4</li><li>eucKR</li><li>8859part1</li><li>ebcdic</li><li>usAscii</li><li>8859part15</li><li>8859part10</li><li>eucJP</li><li>8859part11</li><li>shiftJIS</li><li>GB2312</li><li>8859part16</li><li>utf16</li><li>8859part7</li><li>ucs4</li><li>8859part2</li><li>8859part9</li><li>8859part5</li><li>8859part8</li><li>8859part14</li><li>big5</li><li>utf7</li><li>utf8</li><li>jis</li><li>8859part13</li></ul>]]></description>
-                  <parent ref="EIDca962e11-53aa-4859-b459-22784181166c"/>
+                  <parent ref="EID83774bb0-4796-42ee-bd20-3c5b7633dab9"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $codes := ('8859part3', 'ucs2', '8859part6', '8859part4', 'eucKR', '8859part1', 'ebcdic', 'usAscii', '8859part15', '8859part10', 'eucJP', '8859part11', 'shiftJIS', 'GB2312', '8859part16', 'utf16', '8859part7', 'ucs4', '8859part2', '8859part9', '8859part5', '8859part8', '8859part14', 'big5', 'utf7', 'utf8', 'jis', '8859part13')
 let $messages :=
@@ -1714,17 +1714,17 @@ return
                 </TestAssertion>
               </testAssertions>
             </TestStep>
-            <TestStep id="EID7681b688-7c4a-4e5e-ad10-f4a775ea4643">
+            <TestStep id="EID36f59e44-b274-4997-81d1-27702df7b710">
               <label>label</label>
               <description><![CDATA[Constraints TestCase for Feature Type with name 'MD_DataIdentification' and namespace 'http://www.isotc211.org/2005/gmd']]></description>
-              <parent ref="EIDab095c18-1386-468d-b244-98d6fac8388b"/>
+              <parent ref="EID2fc16ac6-e0a7-4ffd-92b3-79ed276f4907"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EID6825367a-d858-499d-ade7-2f932772691d">
+                <TestAssertion id="EID1d3604cf-fcda-4d67-aec8-da9955ee3f6e">
                   <label>TestAssertion</label>
                   <description><![CDATA[The property with localName 'topicCategory' and namespace 'http://www.isotc211.org/2005/gmd' should have a value that corresponds to one from the following list: <br><ul><li>biota</li><li>climatologyMeteorologyAtmosphere</li><li>economy</li><li>health</li><li>farming</li><li>location</li><li>inlandWaters</li><li>environment</li><li>society</li><li>transportation</li><li>utilitiesCommunication</li><li>elevation</li><li>intelligenceMilitary</li><li>geoscientificInformation</li><li>structure</li><li>oceans</li><li>imageryBaseMapsEarthCover</li><li>boundaries</li><li>planningCadastre</li></ul>]]></description>
-                  <parent ref="EID7681b688-7c4a-4e5e-ad10-f4a775ea4643"/>
+                  <parent ref="EID36f59e44-b274-4997-81d1-27702df7b710"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>let $codes := ('biota', 'climatologyMeteorologyAtmosphere', 'economy', 'health', 'farming', 'location', 'inlandWaters', 'environment', 'society', 'transportation', 'utilitiesCommunication', 'elevation', 'intelligenceMilitary', 'geoscientificInformation', 'structure', 'oceans', 'imageryBaseMapsEarthCover', 'boundaries', 'planningCadastre')
 let $messages :=
