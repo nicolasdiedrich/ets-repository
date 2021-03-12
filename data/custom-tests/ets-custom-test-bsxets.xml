@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<ExecutableTestSuite xmlns="http://www.interactive-instruments.de/etf/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EID8d20c360-e6a8-4439-bfc1-2c56e1d36061" xsi:schemaLocation="http://www.interactive-instruments.de/etf/2.0 ../../schema/model/resultSet.xsd">
+<ExecutableTestSuite xmlns="http://www.interactive-instruments.de/etf/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EIDab4d8a65-33fc-4f87-b7dc-53a6b5cd76df" xsi:schemaLocation="http://www.interactive-instruments.de/etf/2.0 ../../schema/model/resultSet.xsd">
   <itemHash>bQ==</itemHash>
   <remoteResource>http://github.com/inspire-eu-validation/ets-repository/metadata/iso</remoteResource>
   <localPath>/auto</localPath>
-  <label>Metadatenprofil GDI-BW Version 2.1 (Daten)</label>
-  <description><![CDATA[Das vom Begleitausschuss GDI-BW am 26.05.2009 erstmals beschlossene (Version 1.0) und zuletzt am 09.12.2020 fortgeschriebene Metadatenprofil GDI-BW (Version 2.1) legt Struktur, Umfang und Inhalte der Metadaten zur Beschreibung der in der GDI-BW angebotenen Geodaten und Geodatendienste (Geoinformationsressourcen) fest. 
-Das Metadatenprofil GDI-BW ist verbindlich für alle öffentlichen und privaten Stellen, die im Rahmen der GDI-BW ihre Geoinformationsressourcen für die fach- und stellenübergreifende Nutzung bereitstellen (GDI-Partner).]]></description>
+  <label>Metadatenprofil GDI-NW (Basis für alle Ressourcentypen) - WGS-1170 jo</label>
+  <description><![CDATA[Ausgehend von diesen Basisfestlegungen sollen später die spezifischen Profilausprägungen je Ressourcenart (Daten insgesamt, Dienste, Anwendungen) abgeleitet werden. Diese Basis ist daher eine Kopiervorlage zur weiteren Detaillierung/Anpassung.]]></description>
   <reference>../../inspire-md-bsxets.xq</reference>
   <version>1.0.0</version>
-  <author>GDI-BW</author>
-  <creationDate>2020-07-16T07:38:11.454Z</creationDate>
-  <lastEditor>GDI-BW</lastEditor>
-  <lastUpdateDate>2021-03-08T12:58:24.056Z</lastUpdateDate>
+  <author>Johanna Ott (wetransform)</author>
+  <creationDate>2021-03-10T07:57:45.467Z</creationDate>
+  <lastEditor>Johanna Ott (wetransform)</lastEditor>
+  <lastUpdateDate>2021-03-10T08:02:33.711Z</lastUpdateDate>
   <tags>
     <tag ref="EIDfe1f3796-0ebf-4960-a6f7-f935e087fa4c"/>
   </tags>
@@ -33,29 +32,29 @@ Das Metadatenprofil GDI-BW ist verbindlich für alle öffentlichen und privaten 
     <testObjectType ref="EID5a60dded-0cb0-4977-9b06-16c6c2321d2e"/>
   </supportedTestObjectTypes>
   <testModules>
-    <TestModule id="EIDa255e9d9-a251-46e0-90f2-6c33cc7b5dfb">
+    <TestModule id="EIDe3f6685b-4442-4d05-9011-d937bd1d0db1">
       <label>Default test module</label>
       <description><![CDATA[This is the default test module]]></description>
-      <parent ref="EID8d20c360-e6a8-4439-bfc1-2c56e1d36061"/>
+      <parent ref="EIDab4d8a65-33fc-4f87-b7dc-53a6b5cd76df"/>
       <testCases>
-        <TestCase id="EID9383da85-edc6-4185-8a57-c9da330486e3">
+        <TestCase id="EIDa3b83064-3ee7-4e11-8daf-4761afec85c2">
           <label>Komplexe Einschränkungen (Constraint Editor)</label>
           <description><![CDATA[Komplexe Einschränkungen (Constraint Editor)]]></description>
-          <parent ref="EIDa255e9d9-a251-46e0-90f2-6c33cc7b5dfb"/>
+          <parent ref="EIDe3f6685b-4442-4d05-9011-d937bd1d0db1"/>
           <testSteps>
-            <TestStep id="EIDadbd5119-2348-4d14-a7da-da37495add06">
-              <label>laufende Nummern 60 und 61</label>
+            <TestStep id="EIDb817c225-ae26-4aca-9b12-f05fff3d5911">
+              <label>#59</label>
               <description><![CDATA[verpflichtend, wenn Angaben zur Auflösung gemacht werden, aber dies nicht über Nr. 61 "Distanz" geschieht
 verpflichtend, wenn Angaben zur Auflösung gemacht werden, aber dies nicht über Nr. 60 "Vergleichsmaßstab" geschieht]]></description>
-              <parent ref="EID9383da85-edc6-4185-8a57-c9da330486e3"/>
+              <parent ref="EIDa3b83064-3ee7-4e11-8daf-4761afec85c2"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EID28eb8376-4306-4c27-be04-7105b386ad91">
-                  <label>laufende Nummern 60 und 61</label>
+                <TestAssertion id="EIDbb7bec22-f077-48a6-bdda-531a0146e864">
+                  <label>#59</label>
                   <description><![CDATA[verpflichtend, wenn Angaben zur Auflösung gemacht werden, aber dies nicht über Nr. 61 "Distanz" geschieht
 verpflichtend, wenn Angaben zur Auflösung gemacht werden, aber dies nicht über Nr. 60 "Vergleichsmaßstab" geschieht]]></description>
-                  <parent ref="EIDadbd5119-2348-4d14-a7da-da37495add06"/>
+                  <parent ref="EIDb817c225-ae26-4aca-9b12-f05fff3d5911"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>
 let $messages0 :=
