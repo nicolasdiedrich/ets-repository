@@ -43,6 +43,47 @@
           <parent ref="EIDe6c1754f-aed5-4600-821a-8d9d7cceb2cf"/>
           <testSteps>
             <TestStep id="EID887de242-2efc-4172-a57d-73e518a50546">
+              <label>Bedingung1</label>
+              <description><![CDATA[Ich bin eine Beschreibung]]></description>
+              <parent ref="EID49e54854-725f-42b5-86fd-014d0797c905"/>
+              <statementForExecution>not applicable</statementForExecution>
+              <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
+              <testAssertions>
+                <TestAssertion id="EIDa384bfc8-1c0b-4f84-9024-915bd90de867">
+                  <label>Bedingung1</label>
+                  <description><![CDATA[Ich bin eine Beschreibung]]></description>
+                  <parent ref="EID887de242-2efc-4172-a57d-73e518a50546"/>
+                  <expectedResult>NOT_APPLICABLE</expectedResult>
+                  <expression>
+let $messages0 :=
+    (for $record in $db
+       let $rid := $record//*[local-name()='fileIdentifier' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*/text()
+       let $typesFound := $record//*[local-name()='MD_Metadata' and namespace-uri()='http://www.isotc211.org/2005/gmd']
+       for $typeFound in $typesFound 
+         let $ifPropertyCount := count($typeFound/*[local-name()='language' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='CharacterString' and namespace-uri()='http://www.isotc211.org/2005/gco'])
+       let $thenPropertyCount := count($typeFound/*[local-name()='characterSet' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_CharacterSetCode' and namespace-uri()='http://www.isotc211.org/2005/gmd']/data(@codeListValue))
+         return 
+       if ($ifPropertyCount gt 0) then 
+         if ($thenPropertyCount eq 0) then 
+           local:addMessage('TR.conditionNotExistingValue', map { 'localName': 'codeListValue', 'namespace': '', 'fileIdentifier': $rid, 'filename': local:filename($record) })
+         else ()
+       else ()
+    )[position() le $limitErrors]
+ let $messages := ($messages0)
+return
+(if ($messages) then 'FAILED' else 'PASSED',
+ local:error-statistics('TR.recordsWithErrors', count(fn:distinct-values($messages//etf:argument[@token='id']/text()))),
+ $messages)</expression>
+                  <testItemType ref="EIDf0edc596-49d2-48d6-a1a1-1ac581dcde0a"/>
+                  <translationTemplates>
+                    <translationTemplate ref="TR.recordsWithErrors"/>
+                    <translationTemplate ref="TR.missingTypeContentError"/>
+                    <translationTemplate ref="TR.missingMandatoryTypeError"/>
+                    <translationTemplate ref="TR.invalidPropertyCardinalityError"/>
+                    <translationTemplate ref="TR.invalidPropertyValueError"/>
+                  </translationTemplates>
+                </TestAssertion>
+              </testAssertions>
             </TestStep>
           </testSteps>
         </TestCase>
