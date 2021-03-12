@@ -42,17 +42,17 @@
           <description><![CDATA[Komplexe Einschränkungen (Constraint Editor)]]></description>
           <parent ref="EIDe3f6685b-4442-4d05-9011-d937bd1d0db1"/>
           <testSteps>
-            <TestStep id="EIDb817c225-ae26-4aca-9b12-f05fff3d5911">
-              <label>#59</label>
-              <description><![CDATA[bedingtes Pflichtelement in MD_Resolution: eines der Elemente equivalentScale oder distance muss belegt sein.]]></description>
+            <TestStep id="EIDee43cb1f-2030-44f7-a6c9-87776cf67f3d">
+              <label>#82</label>
+              <description><![CDATA[bedingtes Pflichtelement in LI_Lineage: eines der Elemente statement, processStep oder source muss belegt sein.]]></description>
               <parent ref="EIDa3b83064-3ee7-4e11-8daf-4761afec85c2"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EIDbb7bec22-f077-48a6-bdda-531a0146e864">
-                  <label>#59</label>
-                  <description><![CDATA[bedingtes Pflichtelement in MD_Resolution: eines der Elemente equivalentScale oder distance muss belegt sein.]]></description>
-                  <parent ref="EIDb817c225-ae26-4aca-9b12-f05fff3d5911"/>
+                <TestAssertion id="EIDbd65d993-9938-4791-bf62-2ad59d263c79">
+                  <label>#82</label>
+                  <description><![CDATA[bedingtes Pflichtelement in LI_Lineage: eines der Elemente statement, processStep oder source muss belegt sein.]]></description>
+                  <parent ref="EIDee43cb1f-2030-44f7-a6c9-87776cf67f3d"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>
 let $messages0 :=
@@ -60,12 +60,12 @@ let $messages0 :=
        let $rid := $record//*[local-name()='fileIdentifier' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*/text()
        let $typesFound := $record//*[local-name()='MD_Metadata' and namespace-uri()='http://www.isotc211.org/2005/gmd']
        for $typeFound in $typesFound 
-         let $ifPropertyCount := count($typeFound/*[local-name()='identificationInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_DataIdentification' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='spatialResolution' and namespace-uri()='http://www.isotc211.org/2005/gmd'])
-       let $thenPropertyCount := count($typeFound/*[local-name()='identificationInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_DataIdentification' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='spatialResolution' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_Resolution' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='equivalentScale' and namespace-uri()='http://www.isotc211.org/2005/gmd'])
+         let $ifPropertyCount := count($typeFound/*[local-name()='dataQualityInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='DQ_DataQuality' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='lineage' and namespace-uri()='http://www.isotc211.org/2005/gmd'])
+       let $thenPropertyCount := count($typeFound/*[local-name()='dataQualityInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='DQ_DataQuality' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='lineage' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='LI_Lineage' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='statement' and namespace-uri()='http://www.isotc211.org/2005/gmd'])
          return 
        if ($ifPropertyCount gt 0) then 
          if ($thenPropertyCount eq 0) then 
-           local:addMessage('TR.conditionNotExistingValue', map { 'localName': 'equivalentScale', 'namespace': 'http://www.isotc211.org/2005/gmd', 'fileIdentifier': $rid, 'filename': local:filename($record) })
+           local:addMessage('TR.conditionNotExistingValue', map { 'localName': 'statement', 'namespace': 'http://www.isotc211.org/2005/gmd', 'fileIdentifier': $rid, 'filename': local:filename($record) })
          else ()
        else ()
     )[position() le $limitErrors]
@@ -74,18 +74,32 @@ let $messages1 :=
        let $rid := $record//*[local-name()='fileIdentifier' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*/text()
        let $typesFound := $record//*[local-name()='MD_Metadata' and namespace-uri()='http://www.isotc211.org/2005/gmd']
        for $typeFound in $typesFound 
-         let $ifPropertyCount := count($typeFound/*[local-name()='identificationInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_DataIdentification' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='spatialResolution' and namespace-uri()='http://www.isotc211.org/2005/gmd'])
-       let $thenPropertyCount := count($typeFound/*[local-name()='identificationInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_DataIdentification' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='spatialResolution' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_Resolution' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='distance' and namespace-uri()='http://www.isotc211.org/2005/gmd'])
+         let $ifPropertyCount := count($typeFound/*[local-name()='dataQualityInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='DQ_DataQuality' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='lineage' and namespace-uri()='http://www.isotc211.org/2005/gmd'])
+       let $thenPropertyCount := count($typeFound/*[local-name()='dataQualityInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='DQ_DataQuality' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='lineage' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='LI_Lineage' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='processStep' and namespace-uri()='http://www.isotc211.org/2005/gmd'])
          return 
        if ($ifPropertyCount gt 0) then 
          if ($thenPropertyCount eq 0) then 
-           local:addMessage('TR.conditionNotExistingValue', map { 'localName': 'distance', 'namespace': 'http://www.isotc211.org/2005/gmd', 'fileIdentifier': $rid, 'filename': local:filename($record) })
+           local:addMessage('TR.conditionNotExistingValue', map { 'localName': 'processStep', 'namespace': 'http://www.isotc211.org/2005/gmd', 'fileIdentifier': $rid, 'filename': local:filename($record) })
+         else ()
+       else ()
+    )[position() le $limitErrors]
+let $messages2 :=
+    (for $record in $db
+       let $rid := $record//*[local-name()='fileIdentifier' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*/text()
+       let $typesFound := $record//*[local-name()='MD_Metadata' and namespace-uri()='http://www.isotc211.org/2005/gmd']
+       for $typeFound in $typesFound 
+         let $ifPropertyCount := count($typeFound/*[local-name()='dataQualityInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='DQ_DataQuality' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='lineage' and namespace-uri()='http://www.isotc211.org/2005/gmd'])
+       let $thenPropertyCount := count($typeFound/*[local-name()='dataQualityInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='DQ_DataQuality' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='lineage' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='LI_Lineage' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='source' and namespace-uri()='http://www.isotc211.org/2005/gmd'])
+         return 
+       if ($ifPropertyCount gt 0) then 
+         if ($thenPropertyCount eq 0) then 
+           local:addMessage('TR.conditionNotExistingValue', map { 'localName': 'source', 'namespace': 'http://www.isotc211.org/2005/gmd', 'fileIdentifier': $rid, 'filename': local:filename($record) })
          else ()
        else ()
     )[position() le $limitErrors]
  let $messages := 
-   if ((count($messages0) eq 0) or (count($messages1) eq 0)) then ()
-   else ($messages0, $messages1)
+   if ((count($messages0) eq 0) or (count($messages1) eq 0) or (count($messages2) eq 0)) then ()
+   else ($messages0, $messages1, $messages2)
 return
 (if ($messages) then 'FAILED' else 'PASSED',
  local:error-statistics('TR.recordsWithErrors', count(fn:distinct-values($messages//etf:argument[@token='id']/text()))),
