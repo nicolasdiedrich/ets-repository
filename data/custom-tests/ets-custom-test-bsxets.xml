@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<ExecutableTestSuite xmlns="http://www.interactive-instruments.de/etf/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EIDab4d8a65-33fc-4f87-b7dc-53a6b5cd76df" xsi:schemaLocation="http://www.interactive-instruments.de/etf/2.0 ../../schema/model/resultSet.xsd">
+<ExecutableTestSuite xmlns="http://www.interactive-instruments.de/etf/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EIDd1aab8c9-69ca-47fc-b95e-05860dfd3f2b" xsi:schemaLocation="http://www.interactive-instruments.de/etf/2.0 ../../schema/model/resultSet.xsd">
   <itemHash>bQ==</itemHash>
   <remoteResource>http://github.com/inspire-eu-validation/ets-repository/metadata/iso</remoteResource>
   <localPath>/auto</localPath>
-  <label>Metadatenprofil GDI-NW (Basis für alle Ressourcentypen) - WGS-1170 jo</label>
-  <description><![CDATA[Ausgehend von diesen Basisfestlegungen sollen später die spezifischen Profilausprägungen je Ressourcenart (Daten insgesamt, Dienste, Anwendungen) abgeleitet werden. Diese Basis ist daher eine Kopiervorlage zur weiteren Detaillierung/Anpassung.]]></description>
+  <label>Metadatenprofil GDI-BW Version 2.1 (Daten)</label>
+  <description><![CDATA[Das vom Begleitausschuss GDI-BW am 26.05.2009 erstmals beschlossene (Version 1.0) und zuletzt am 09.12.2020 fortgeschriebene Metadatenprofil GDI-BW (Version 2.1) legt Struktur, Umfang und Inhalte der Metadaten zur Beschreibung der in der GDI-BW angebotenen Geodaten und Geodatendienste (Geoinformationsressourcen) fest. 
+Das Metadatenprofil GDI-BW ist verbindlich für alle öffentlichen und privaten Stellen, die im Rahmen der GDI-BW ihre Geoinformationsressourcen für die fach- und stellenübergreifende Nutzung bereitstellen (GDI-Partner).]]></description>
   <reference>../../inspire-md-bsxets.xq</reference>
   <version>1.0.0</version>
-  <author>Johanna Ott (wetransform)</author>
-  <creationDate>2021-03-10T07:57:45.467Z</creationDate>
-  <lastEditor>Johanna Ott (wetransform)</lastEditor>
-  <lastUpdateDate>2021-03-10T08:02:33.711Z</lastUpdateDate>
+  <author>GDI-BW</author>
+  <creationDate>2020-07-16T07:38:11.454Z</creationDate>
+  <lastEditor>GDI-BW</lastEditor>
+  <lastUpdateDate>2021-03-08T12:58:24.056Z</lastUpdateDate>
   <tags>
     <tag ref="EIDfe1f3796-0ebf-4960-a6f7-f935e087fa4c"/>
   </tags>
@@ -32,36 +33,36 @@
     <testObjectType ref="EID5a60dded-0cb0-4977-9b06-16c6c2321d2e"/>
   </supportedTestObjectTypes>
   <testModules>
-    <TestModule id="EIDe3f6685b-4442-4d05-9011-d937bd1d0db1">
+    <TestModule id="EIDc87c3cd5-c3da-41f4-8484-e1d74fc34e81">
       <label>Default test module</label>
       <description><![CDATA[This is the default test module]]></description>
-      <parent ref="EIDab4d8a65-33fc-4f87-b7dc-53a6b5cd76df"/>
+      <parent ref="EIDd1aab8c9-69ca-47fc-b95e-05860dfd3f2b"/>
       <testCases>
-        <TestCase id="EIDa3b83064-3ee7-4e11-8daf-4761afec85c2">
+        <TestCase id="EIDb15ce8ec-2bb1-4fa1-b758-2aad01c2dd99">
           <label>Komplexe Einschränkungen (Constraint Editor)</label>
           <description><![CDATA[Komplexe Einschränkungen (Constraint Editor)]]></description>
-          <parent ref="EIDe3f6685b-4442-4d05-9011-d937bd1d0db1"/>
+          <parent ref="EIDc87c3cd5-c3da-41f4-8484-e1d74fc34e81"/>
           <testSteps>
-            <TestStep id="EIDa3015e41-90f1-4b61-b28f-317a9c77695c">
-              <label>#72</label>
-              <description><![CDATA[bedingtes Pflichtelement in MD_LegalConstraints: bei einem Wert "otherRestrictions" für accessConstraints muss das Element otherConstraints belegt sein.]]></description>
-              <parent ref="EIDa3b83064-3ee7-4e11-8daf-4761afec85c2"/>
+            <TestStep id="EID067ac728-71c3-4d67-8f1e-936d079a5180">
+              <label>laufende Nummer 72</label>
+              <description><![CDATA[Nr. 72 ist verpflichtend zu belegen, wenn in Nr. 70 der Wert der Codelist B.5.24 Nr. 9 "other Restrictions / andere Beschränkungen" angegeben wird.]]></description>
+              <parent ref="EIDb15ce8ec-2bb1-4fa1-b758-2aad01c2dd99"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
-                <TestAssertion id="EID40ef3602-699e-4a0c-a2f0-4c1421e17df0">
-                  <label>#72</label>
-                  <description><![CDATA[bedingtes Pflichtelement in MD_LegalConstraints: bei einem Wert "otherRestrictions" für accessConstraints muss das Element otherConstraints belegt sein.]]></description>
-                  <parent ref="EIDa3015e41-90f1-4b61-b28f-317a9c77695c"/>
+                <TestAssertion id="EIDd680fd8b-a357-4c3b-83a5-02ec8e6f12ea">
+                  <label>laufende Nummer 72</label>
+                  <description><![CDATA[Nr. 72 ist verpflichtend zu belegen, wenn in Nr. 70 der Wert der Codelist B.5.24 Nr. 9 "other Restrictions / andere Beschränkungen" angegeben wird.]]></description>
+                  <parent ref="EID067ac728-71c3-4d67-8f1e-936d079a5180"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
                   <expression>
 let $messages0 :=
     (for $record in $db
        let $rid := $record//*[local-name()='fileIdentifier' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*/text()
-       let $typesFound := $record//*[local-name()='MD_LegalConstraints' and namespace-uri()='http://www.isotc211.org/2005/gmd']
+       let $typesFound := $record//*[local-name()='MD_Metadata' and namespace-uri()='http://www.isotc211.org/2005/gmd']
        for $typeFound in $typesFound 
-         let $ifPropertyCount := count($typeFound/*[local-name()='accessConstraints' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_RestrictionCode' and namespace-uri()='http://www.isotc211.org/2005/gmd'][@codeListValue='otherRestrictions'])
-       let $thenPropertyCount := count($typeFound/*[local-name()='otherConstraints' and namespace-uri()='http://www.isotc211.org/2005/gmd'])
+         let $ifPropertyCount := count($typeFound/*[local-name()='identificationInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_DataIdentification' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='resourceConstraints' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_LegalConstraints' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='accessConstraints' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_RestrictionCode' and namespace-uri()='http://www.isotc211.org/2005/gmd'][@codeListValue='otherRestrictions'])
+       let $thenPropertyCount := count($typeFound/*[local-name()='identificationInfo' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_DataIdentification' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='resourceConstraints' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_LegalConstraints' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='otherConstraints' and namespace-uri()='http://www.isotc211.org/2005/gmd'])
          return 
        if ($ifPropertyCount gt 0) then 
          if ($thenPropertyCount eq 0) then 
