@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<ExecutableTestSuite xmlns="http://www.interactive-instruments.de/etf/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EID16e743fc-39b3-474b-9ffe-d65a705f66c1" xsi:schemaLocation="http://www.interactive-instruments.de/etf/2.0 ../../schema/model/resultSet.xsd">
+<ExecutableTestSuite xmlns="http://www.interactive-instruments.de/etf/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="EIDab4d8a65-33fc-4f87-b7dc-53a6b5cd76df" xsi:schemaLocation="http://www.interactive-instruments.de/etf/2.0 ../../schema/model/resultSet.xsd">
   <itemHash>bQ==</itemHash>
   <remoteResource>http://github.com/inspire-eu-validation/ets-repository/metadata/iso</remoteResource>
   <localPath>/auto</localPath>
-  <label>Test-Profil</label>
-  <description><![CDATA[This test was generated automatically from a Schema profile in haleconnect]]></description>
+  <label>Metadatenprofil GDI-NW (Basis für alle Ressourcentypen) - WGS-1170 jo</label>
+  <description><![CDATA[Ausgehend von diesen Basisfestlegungen sollen später die spezifischen Profilausprägungen je Ressourcenart (Daten insgesamt, Dienste, Anwendungen) abgeleitet werden. Diese Basis ist daher eine Kopiervorlage zur weiteren Detaillierung/Anpassung.]]></description>
   <reference>../../inspire-md-bsxets.xq</reference>
   <version>1.0.0</version>
-  <author>wetransform Support</author>
-  <creationDate>2021-01-26T09:30:07.239Z</creationDate>
-  <lastEditor>wetransform Support</lastEditor>
-  <lastUpdateDate>2021-03-08T15:42:38.706Z</lastUpdateDate>
+  <author>Johanna Ott (wetransform)</author>
+  <creationDate>2021-03-10T07:57:45.467Z</creationDate>
+  <lastEditor>Johanna Ott (wetransform)</lastEditor>
+  <lastUpdateDate>2021-03-10T08:02:33.711Z</lastUpdateDate>
   <tags>
     <tag ref="EIDfe1f3796-0ebf-4960-a6f7-f935e087fa4c"/>
   </tags>
@@ -49,6 +49,40 @@
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
+                <TestAssertion id="EIDa384bfc8-1c0b-4f84-9024-915bd90de867">
+                  <label>Bedingung1</label>
+                  <description><![CDATA[Ich bin eine Beschreibung]]></description>
+                  <parent ref="EID887de242-2efc-4172-a57d-73e518a50546"/>
+                  <expectedResult>NOT_APPLICABLE</expectedResult>
+                  <expression>
+let $messages0 :=
+    (for $record in $db
+       let $rid := $record//*[local-name()='fileIdentifier' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*/text()
+       let $typesFound := $record//*[local-name()='MD_Metadata' and namespace-uri()='http://www.isotc211.org/2005/gmd']
+       for $typeFound in $typesFound 
+         let $ifPropertyCount := count($typeFound/*[local-name()='language' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='CharacterString' and namespace-uri()='http://www.isotc211.org/2005/gco'])
+       let $thenPropertyCount := count($typeFound/*[local-name()='characterSet' and namespace-uri()='http://www.isotc211.org/2005/gmd']/*[local-name()='MD_CharacterSetCode' and namespace-uri()='http://www.isotc211.org/2005/gmd']/data(@codeListValue))
+         return 
+       if ($ifPropertyCount gt 0) then 
+         if ($thenPropertyCount eq 0) then 
+           local:addMessage('TR.conditionNotExistingValue', map { 'localName': 'codeListValue', 'namespace': '', 'fileIdentifier': $rid, 'filename': local:filename($record) })
+         else ()
+       else ()
+    )[position() le $limitErrors]
+ let $messages := ($messages0)
+return
+(if ($messages) then 'FAILED' else 'PASSED',
+ local:error-statistics('TR.recordsWithErrors', count(fn:distinct-values($messages//etf:argument[@token='id']/text()))),
+ $messages)</expression>
+                  <testItemType ref="EIDf0edc596-49d2-48d6-a1a1-1ac581dcde0a"/>
+                  <translationTemplates>
+                    <translationTemplate ref="TR.recordsWithErrors"/>
+                    <translationTemplate ref="TR.missingTypeContentError"/>
+                    <translationTemplate ref="TR.missingMandatoryTypeError"/>
+                    <translationTemplate ref="TR.invalidPropertyCardinalityError"/>
+                    <translationTemplate ref="TR.invalidPropertyValueError"/>
+                  </translationTemplates>
+                </TestAssertion>
               </testAssertions>
             </TestStep>
           </testSteps>
