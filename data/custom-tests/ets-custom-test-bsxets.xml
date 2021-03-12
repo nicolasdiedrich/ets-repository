@@ -42,6 +42,8 @@
           <description><![CDATA[Komplexe Einschränkungen (Constraint Editor)]]></description>
           <parent ref="EIDe6c1754f-aed5-4600-821a-8d9d7cceb2cf"/>
           <testSteps>
+            <TestStep id="EID887de242-2efc-4172-a57d-73e518a50546">
+            </TestStep>
           </testSteps>
         </TestCase>
       </testCases>
