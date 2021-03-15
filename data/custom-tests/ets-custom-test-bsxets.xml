@@ -43,14 +43,14 @@
           <parent ref="EIDe3f6685b-4442-4d05-9011-d937bd1d0db1"/>
           <testSteps>
             <TestStep id="EIDb817c225-ae26-4aca-9b12-f05fff3d5911">
-              <label># 59</label>
+              <label>#59</label>
               <description><![CDATA[bedingtes Pflichtelement in MD_Resolution: eines der Elemente equivalentScale oder distance muss belegt sein.]]></description>
               <parent ref="EIDa3b83064-3ee7-4e11-8daf-4761afec85c2"/>
               <statementForExecution>not applicable</statementForExecution>
               <testItemType ref="EIDf483e8e8-06b9-4900-ab36-adad0d7f22f0"/>
               <testAssertions>
                 <TestAssertion id="EIDbb7bec22-f077-48a6-bdda-531a0146e864">
-                  <label># 59</label>
+                  <label>#59</label>
                   <description><![CDATA[bedingtes Pflichtelement in MD_Resolution: eines der Elemente equivalentScale oder distance muss belegt sein.]]></description>
                   <parent ref="EIDb817c225-ae26-4aca-9b12-f05fff3d5911"/>
                   <expectedResult>NOT_APPLICABLE</expectedResult>
