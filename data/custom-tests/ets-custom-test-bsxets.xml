@@ -33,23 +33,23 @@
   </supportedTestObjectTypes>
   <testModules>
     <TestModule id="EIDfe0d76da-c973-4e5d-9a3b-ee986eda45b2">
-      <label>EX_TemporalExtent</label>
+      <label>label</label>
       <description><![CDATA[This is a test module]]></description>
       <parent ref="EIDf91b2138-2eb5-4f93-b076-e7a8f8816ef6"/>
       <testCases/>
     </TestModule>
     <TestModule id="EIDfc9b5d50-9c12-4a3e-9b57-7fe08c486607">
-      <label>CI_Date</label>
+      <label>label</label>
       <description><![CDATA[This is a test module]]></description>
       <parent ref="EIDf91b2138-2eb5-4f93-b076-e7a8f8816ef6"/>
       <testCases>
         <TestCase id="EID9ec0d8a4-18c2-4ddc-8372-b3a2a11ecec4">
-          <label>ISOElement Nr. 395: Bedeutung des Datums</label>
+          <label>label</label>
           <description><![CDATA[Pflichtelement in Datumsangaben: die Bedeutung des Datums muss belegt sein.]]></description>
           <parent ref="EIDfc9b5d50-9c12-4a3e-9b57-7fe08c486607"/>
           <testSteps>
             <TestStep id="EID6808490f-1192-4660-9fd5-b40a1fb4fe4b">
-              <label>ISOElement Nr. 395: Bedeutung des Datums</label>
+              <label>label</label>
               <description><![CDATA[Pflichtelement in Datumsangaben: die Bedeutung des Datums muss belegt sein.]]></description>
               <parent ref="EID9ec0d8a4-18c2-4ddc-8372-b3a2a11ecec4"/>
               <statementForExecution>not applicable</statementForExecution>
