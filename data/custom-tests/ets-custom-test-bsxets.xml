@@ -32,12 +32,6 @@
     <testObjectType ref="EID5a60dded-0cb0-4977-9b06-16c6c2321d2e"/>
   </supportedTestObjectTypes>
   <testModules>
-    <TestModule id="EIDfe0d76da-c973-4e5d-9a3b-ee986eda45b2">
-      <label>label</label>
-      <description><![CDATA[This is a test module]]></description>
-      <parent ref="EIDf91b2138-2eb5-4f93-b076-e7a8f8816ef6"/>
-      <testCases/>
-    </TestModule>
     <TestModule id="EIDfc9b5d50-9c12-4a3e-9b57-7fe08c486607">
       <label>label</label>
       <description><![CDATA[This is a test module]]></description>
