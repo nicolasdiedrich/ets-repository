@@ -33,13 +33,13 @@
   </supportedTestObjectTypes>
   <testModules>
     <TestModule id="EIDfe0d76da-c973-4e5d-9a3b-ee986eda45b2">
-      <label>E­X_Temporal­Extent</label>
+      <label>E­X-Temporal­Extent</label>
       <description><![CDATA[This is a test module]]></description>
       <parent ref="EIDf91b2138-2eb5-4f93-b076-e7a8f8816ef6"/>
       <testCases/>
     </TestModule>
     <TestModule id="EIDfc9b5d50-9c12-4a3e-9b57-7fe08c486607">
-      <label>C­I_Date</label>
+      <label>C­I-Date</label>
       <description><![CDATA[This is a test module]]></description>
       <parent ref="EIDf91b2138-2eb5-4f93-b076-e7a8f8816ef6"/>
       <testCases>
@@ -522,7 +522,7 @@ return
       </testCases>
     </TestModule>
     <TestModule id="EID879699e0-1813-4e7e-be53-b7993618d93e">
-      <label>M­D_Format</label>
+      <label>M­D-Format</label>
       <description><![CDATA[This is a test module]]></description>
       <parent ref="EIDf91b2138-2eb5-4f93-b076-e7a8f8816ef6"/>
       <testCases>
@@ -619,7 +619,7 @@ return
       </testCases>
     </TestModule>
     <TestModule id="EID22ad2beb-5a08-4305-b45c-509cd28ccf1b">
-      <label>M­D_Security­Constraints</label>
+      <label>M­D-Security­Constraints</label>
       <description><![CDATA[This is a test module]]></description>
       <parent ref="EIDf91b2138-2eb5-4f93-b076-e7a8f8816ef6"/>
       <testCases>
@@ -807,7 +807,7 @@ return
       </testCases>
     </TestModule>
     <TestModule id="EID0d80ed56-38fe-4c88-b5da-1e6efa7a604c">
-      <label>E­X_Geographic­Description</label>
+      <label>E­X-Geographic­Description</label>
       <description><![CDATA[This is a test module]]></description>
       <parent ref="EIDf91b2138-2eb5-4f93-b076-e7a8f8816ef6"/>
       <testCases>
@@ -2258,7 +2258,7 @@ return
       </testCases>
     </TestModule>
     <TestModule id="EID8736cae5-aa92-4d98-9079-0dd021f2b769">
-      <label>M­D_Reference­System</label>
+      <label>M­D-Reference­System</label>
       <description><![CDATA[This is a test module]]></description>
       <parent ref="EIDf91b2138-2eb5-4f93-b076-e7a8f8816ef6"/>
       <testCases>
@@ -2354,7 +2354,7 @@ return
       </testCases>
     </TestModule>
     <TestModule id="EID81af5238-cdc7-443a-bee4-9e3477db1e78">
-      <label>E­X_Geographic­Bounding­Box</label>
+      <label>E­X-Geographic­Bounding­Box</label>
       <description><![CDATA[This is a test module]]></description>
       <parent ref="EIDf91b2138-2eb5-4f93-b076-e7a8f8816ef6"/>
       <testCases>
@@ -2914,7 +2914,7 @@ return
       </testCases>
     </TestModule>
     <TestModule id="EID3e14fa9b-38d6-4071-83cd-60b2ac388258">
-      <label>D­Q_Quantitative­Result</label>
+      <label>D­Q-Quantitative­Result</label>
       <description><![CDATA[This is a test module]]></description>
       <parent ref="EIDf91b2138-2eb5-4f93-b076-e7a8f8816ef6"/>
       <testCases>
@@ -2966,7 +2966,7 @@ return
       </testCases>
     </TestModule>
     <TestModule id="EID9a7a8078-3ce8-4a15-8af2-7c12b08d4393">
-      <label>M­D_Application­Schema­Information</label>
+      <label>M­D-Application­Schema­Information</label>
       <description><![CDATA[This is a test module]]></description>
       <parent ref="EIDf91b2138-2eb5-4f93-b076-e7a8f8816ef6"/>
       <testCases>
@@ -3153,7 +3153,7 @@ return
       </testCases>
     </TestModule>
     <TestModule id="EID1f71a82b-ffbd-4086-af5b-bf4ba1625c3c">
-      <label>L­I_Process­Step</label>
+      <label>L­I-Process­Step</label>
       <description><![CDATA[This is a test module]]></description>
       <parent ref="EIDf91b2138-2eb5-4f93-b076-e7a8f8816ef6"/>
       <testCases>
@@ -3295,7 +3295,7 @@ return
       </testCases>
     </TestModule>
     <TestModule id="EID562b5493-6188-417c-9d3f-beb01624a77a">
-      <label>M­D_Distributor</label>
+      <label>M­D-Distributor</label>
       <description><![CDATA[This is a test module]]></description>
       <parent ref="EIDf91b2138-2eb5-4f93-b076-e7a8f8816ef6"/>
       <testCases>
@@ -3392,7 +3392,7 @@ return
       </testCases>
     </TestModule>
     <TestModule id="EIDf0cd6b0c-2069-453b-9abe-0add5098ebf8">
-      <label>C­I_Online­Resource</label>
+      <label>C­I-Online­Resource</label>
       <description><![CDATA[This is a test module]]></description>
       <parent ref="EIDf91b2138-2eb5-4f93-b076-e7a8f8816ef6"/>
       <testCases>
@@ -3534,7 +3534,7 @@ return
       </testCases>
     </TestModule>
     <TestModule id="EID9bdcfc9f-6615-43f3-a023-aaf3aea55c6f">
-      <label>M­D_Aggregate­Information</label>
+      <label>M­D-Aggregate­Information</label>
       <description><![CDATA[This is a test module]]></description>
       <parent ref="EIDf91b2138-2eb5-4f93-b076-e7a8f8816ef6"/>
       <testCases>
@@ -3910,7 +3910,7 @@ return
       </testCases>
     </TestModule>
     <TestModule id="EID62103b36-80ea-4920-a26b-e0d5536afeaf">
-      <label>M­D_Image­Description</label>
+      <label>M­D-Image­Description</label>
       <description><![CDATA[This is a test module]]></description>
       <parent ref="EIDf91b2138-2eb5-4f93-b076-e7a8f8816ef6"/>
       <testCases>
@@ -4503,7 +4503,7 @@ return
       </testCases>
     </TestModule>
     <TestModule id="EID9e131820-e39c-49ed-97b7-cc3e59b87230">
-      <label>S­V_Service­Identification</label>
+      <label>S­V-Service­Identification</label>
       <description><![CDATA[This is a test module]]></description>
       <parent ref="EIDf91b2138-2eb5-4f93-b076-e7a8f8816ef6"/>
       <testCases>
@@ -5092,7 +5092,7 @@ return
       </testCases>
     </TestModule>
     <TestModule id="EID5d8b07c5-7bc8-4841-a4ed-57d256fd22c5">
-      <label>C­I_Responsible­Party</label>
+      <label>C­I-Responsible­Party</label>
       <description><![CDATA[This is a test module]]></description>
       <parent ref="EIDf91b2138-2eb5-4f93-b076-e7a8f8816ef6"/>
       <testCases>
@@ -5234,7 +5234,7 @@ return
       </testCases>
     </TestModule>
     <TestModule id="EID7aec425e-c1d7-4a92-a2e1-5da878221dba">
-      <label>M­D_Identifier</label>
+      <label>M­D-Identifier</label>
       <description><![CDATA[This is a test module]]></description>
       <parent ref="EIDf91b2138-2eb5-4f93-b076-e7a8f8816ef6"/>
       <testCases>
@@ -5481,7 +5481,7 @@ return
       </testCases>
     </TestModule>
     <TestModule id="EIDb336a5c9-148d-48a6-b195-bd8f00c5ce92">
-      <label>M­D_Distribution</label>
+      <label>M­D-Distribution</label>
       <description><![CDATA[This is a test module]]></description>
       <parent ref="EIDf91b2138-2eb5-4f93-b076-e7a8f8816ef6"/>
       <testCases>
@@ -5577,7 +5577,7 @@ return
       </testCases>
     </TestModule>
     <TestModule id="EID2b641f8e-b216-4315-93fe-27d3e03b276e">
-      <label>M­D_Maintenance­Information</label>
+      <label>M­D-Maintenance­Information</label>
       <description><![CDATA[This is a test module]]></description>
       <parent ref="EIDf91b2138-2eb5-4f93-b076-e7a8f8816ef6"/>
       <testCases>
@@ -5720,7 +5720,7 @@ return
       </testCases>
     </TestModule>
     <TestModule id="EID1b3cc91b-3466-42fe-8c1e-2344a8fb4f0b">
-      <label>M­D_Data­Identification</label>
+      <label>M­D-Data­Identification</label>
       <description><![CDATA[This is a test module]]></description>
       <parent ref="EIDf91b2138-2eb5-4f93-b076-e7a8f8816ef6"/>
       <testCases>
@@ -6694,7 +6694,7 @@ return
       </testCases>
     </TestModule>
     <TestModule id="EIDbb2e05f8-a0a7-4507-884a-2342ecf5d1c4">
-      <label>C­I_Contact</label>
+      <label>C­I-Contact</label>
       <description><![CDATA[This is a test module]]></description>
       <parent ref="EIDf91b2138-2eb5-4f93-b076-e7a8f8816ef6"/>
       <testCases>
@@ -6845,7 +6845,7 @@ return
       </testCases>
     </TestModule>
     <TestModule id="EID0f776d69-cfc9-43bf-ac10-89085094c0c8">
-      <label>L­I_Source</label>
+      <label>L­I-Source</label>
       <description><![CDATA[This is a test module]]></description>
       <parent ref="EIDf91b2138-2eb5-4f93-b076-e7a8f8816ef6"/>
       <testCases>
@@ -7031,7 +7031,7 @@ return
       </testCases>
     </TestModule>
     <TestModule id="EIDf69910f6-7ab7-4ae2-a823-cd35da908010">
-      <label>D­Q_Scope</label>
+      <label>D­Q-Scope</label>
       <description><![CDATA[This is a test module]]></description>
       <parent ref="EIDf91b2138-2eb5-4f93-b076-e7a8f8816ef6"/>
       <testCases>
@@ -7084,7 +7084,7 @@ return
       </testCases>
     </TestModule>
     <TestModule id="EID7bc9d050-d466-42c4-86ee-65ece7720746">
-      <label>C­I_Address</label>
+      <label>C­I-Address</label>
       <description><![CDATA[This is a test module]]></description>
       <parent ref="EIDf91b2138-2eb5-4f93-b076-e7a8f8816ef6"/>
       <testCases>
@@ -7272,7 +7272,7 @@ return
       </testCases>
     </TestModule>
     <TestModule id="EID4c77c9a3-8768-41f7-b006-72690d87ed08">
-      <label>C­I_Citation</label>
+      <label>C­I-Citation</label>
       <description><![CDATA[This is a test module]]></description>
       <parent ref="EIDf91b2138-2eb5-4f93-b076-e7a8f8816ef6"/>
       <testCases>
@@ -7595,7 +7595,7 @@ return
       </testCases>
     </TestModule>
     <TestModule id="EID70a0a87e-26a2-402c-bdaa-eb6fbf24a3df">
-      <label>D­Q_Domain­Consistency</label>
+      <label>D­Q-Domain­Consistency</label>
       <description><![CDATA[This is a test module]]></description>
       <parent ref="EIDf91b2138-2eb5-4f93-b076-e7a8f8816ef6"/>
       <testCases>
@@ -7827,7 +7827,7 @@ return
       </testCases>
     </TestModule>
     <TestModule id="EID35f72c2d-4c7b-4c93-9e8e-251bc4b88da6">
-      <label>M­D_Usage</label>
+      <label>M­D-Usage</label>
       <description><![CDATA[This is a test module]]></description>
       <parent ref="EIDf91b2138-2eb5-4f93-b076-e7a8f8816ef6"/>
       <testCases>
@@ -8402,7 +8402,7 @@ return
       </testCases>
     </TestModule>
     <TestModule id="EID7844ff1e-5855-45e6-899d-3b7ccbbefdaa">
-      <label>M­D_Coverage­Description</label>
+      <label>M­D-Coverage­Description</label>
       <description><![CDATA[This is a test module]]></description>
       <parent ref="EIDf91b2138-2eb5-4f93-b076-e7a8f8816ef6"/>
       <testCases>
@@ -8500,7 +8500,7 @@ return
       </testCases>
     </TestModule>
     <TestModule id="EID1be691ba-51d8-467b-95dc-6158b7cfbfbe">
-      <label>M­D_Medium</label>
+      <label>M­D-Medium</label>
       <description><![CDATA[This is a test module]]></description>
       <parent ref="EIDf91b2138-2eb5-4f93-b076-e7a8f8816ef6"/>
       <testCases>
@@ -8868,7 +8868,7 @@ return
       </testCases>
     </TestModule>
     <TestModule id="EID920f023d-3b39-4c55-b6bd-ed10842b7ec7">
-      <label>R­S_Identifier</label>
+      <label>R­S-Identifier</label>
       <description><![CDATA[This is a test module]]></description>
       <parent ref="EIDf91b2138-2eb5-4f93-b076-e7a8f8816ef6"/>
       <testCases>
@@ -8920,7 +8920,7 @@ return
       </testCases>
     </TestModule>
     <TestModule id="EID9e34385b-f888-4909-821a-22c411d37b2e">
-      <label>M­D_Scope­Description</label>
+      <label>M­D-Scope­Description</label>
       <description><![CDATA[This is a test module]]></description>
       <parent ref="EIDf91b2138-2eb5-4f93-b076-e7a8f8816ef6"/>
       <testCases>
@@ -8978,7 +8978,7 @@ return
       </testCases>
     </TestModule>
     <TestModule id="EIDf21ee95e-b9fe-4a9d-ab14-5c0d9da0ac22">
-      <label>S­V_Operation­Metadata</label>
+      <label>S­V-Operation­Metadata</label>
       <description><![CDATA[This is a test module]]></description>
       <parent ref="EIDf91b2138-2eb5-4f93-b076-e7a8f8816ef6"/>
       <testCases>
@@ -9211,7 +9211,7 @@ return
       </testCases>
     </TestModule>
     <TestModule id="EID49bd95ab-6e39-4233-82bd-e217f44b5309">
-      <label>M­D_Metadata</label>
+      <label>M­D-Metadata</label>
       <description><![CDATA[This is a test module]]></description>
       <parent ref="EIDf91b2138-2eb5-4f93-b076-e7a8f8816ef6"/>
       <testCases>
